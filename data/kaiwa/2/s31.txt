@@ -1,0 +1,169 @@
+
+;; (0) は 魔理沙 A(魔符)
+;; (1) は 輝夜
+
+OBJ_LOAD tachie/marisa1.png,0
+OBJ_LOAD tachie/kaguya2.png,1
+
+; 初期位置へ登場し、移動完了まで待つ。
+OBJ xy,0,128,144
+OBJ xy,1,256,144
+OBJ wait
+
+;; 3==輝夜(キャラ)を読み込んで表示
+BOSS load,3
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,3
+TEXT いらっしゃい\n
+HOLD
+TEXT 一緒に月でも\n
+TEXT 見ましょうよ
+HOLD
+
+;説明文
+DRAW color,7
+TEXT 永遠と須臾の罪人\n
+;TEXT 永遠のお姫様\n
+;TEXT 人間らしくないお姫様\n
+TEXT 蓬莱山 輝夜
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,6
+OBJ_LOAD tachie/marisa4.png,0
+;TEXT さすがに\nおなじ一日は飽きるんだぜ
+;TEXT さすがに\nおなじ一日は飽きるもんだぜ
+;TEXT さすがに\nおなじ一日は飽きるもんだ
+;魔理沙だから「ぜ」で終わるって訳でもない
+;TEXT おなじ一日は、\nさすがに飽きるもんだぜ
+TEXT おなじ一日は、\n
+TEXT さすがに飽きるもんだ
+;TEXT 同じ一日は、\nさすがに飽きるもんだ
+;TEXT 同じ一日は\n流石に飽きるもんだ
+HOLD
+
+OBJ_LOAD tachie/marisa2.png,0
+;TEXT 月もまたしかり、だ
+;TEXT 月もまたしかり、……だな
+;TEXT 月もまたしかり、…だな
+;601 冗長的になってしまうので軽く流すかんじで。
+;601 魔理沙本人はあまり意味深なことをいった気はないんです
+TEXT 月もまたしかり。
+HOLD
+;; 原作では「…」は必ず2個使います。(「…」と「……」の使い分けはしないという意味)
+;; 「あまり意味深なことをいった気はない」のなら、それが結論なのですから言い切ります。(その方が軽く流す感じになる)
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,3
+OBJ_LOAD tachie/kaguya5.png,1
+;原作の「あら」は単純な感嘆詞としては殆ど出てこない。
+;原作の「あら」が出る場合は、別に驚いてる訳ではなくて、大抵皮肉の強調語。
+;TEXT あら、同じ時間でも、\n何をもって過ごすかのか
+TEXT あら、同じ時間でも、\n何をもって過ごすのか
+HOLD
+;TEXT それだけでずいぶん違うものよ？
+;TEXT それだけでずいぶん違うもの
+TEXT それだけで\nずいぶん違うものよ
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,6
+OBJ_LOAD tachie/marisa1.png,0
+OBJ_LOAD tachie/kaguya1.png,1
+TEXT ちょっとまった！
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,3
+OBJ_LOAD tachie/kaguya4.png,1
+TEXT いつまでも待つわよ？
+HOLD
+;; (C)あみん
+
+BGM ,13
+DRAW color,7
+;--------12345678901234567890123456789012345678
+TEXT \n\n　　　 ♪竹取飛翔　～ Lunatic Princess
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,6
+OBJ_LOAD tachie/marisa4.png,0
+;TEXT ああ。\nでも、ちょっとでいいぜ。
+;TEXT ああ。\nでも、ちょっとでいい。
+;TEXT それじゃあ\n私が撃てないぜ。
+;TEXT それじゃあ\n私が撃てないな。
+;TEXT それじゃあ\n私の撃つ出番がないな。
+TEXT それじゃあ\n私の撃つ幕がないな。
+HOLD
+;(C) 永
+;231 幕は弾幕とも一応かけている。
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,3
+OBJ_LOAD tachie/kaguya6.png,1
+TEXT 犯人が知りたいんでしょう？
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,6
+TEXT よく分かったな
+HOLD
+TEXT 兎に教えてもらったのか？
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,3
+OBJ_LOAD tachie/kaguya4.png,1
+;TEXT 質問に質問で返さないの、
+;TEXT 教わらなかったのかしら。
+;TEXT 疑問文に疑問文で返したら、
+;TEXT テストじゃ０点なのよ？
+;TEXT 疑問文に疑問文で返すのは、
+;TEXT テストじゃ０点ね。
+;TEXT 疑問文に疑問文で返すのは、
+;TEXT テストじゃ０点なのよ？
+;601 元ネタ強調。輝夜の設定に多いジョジョから
+TEXT 疑問文に疑問文で返すとか、
+HOLD
+;TEXT ジョジョの世界じゃいい笑いものね。
+;TEXT ジョジョの世界じゃ逆ギレね。
+;ジョジョネタ多すぎるので。
+TEXT ゲッペルさんに笑われるわよ。
+HOLD
+;; (C)絶望先生
+OBJ_LOAD tachie/kaguya3.png,1
+TEXT 何を言ってるのか\n分からないと思うけど……。
+HOLD
+OBJ_LOAD tachie/kaguya5.png,1
+TEXT 私も分からないわ！
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,6
+TEXT ……。
+HOLD
+
+;; 通常退避位置[1]へ
+OBJ xy,0,-64,144
+OBJ xy,1,416,144
+
+; 全オブジェ移動完了まで待つ。
+OBJ wait
+
+BOSS start
+
+;ここまで来たら終了する。
+;; シナリオ修正について、基本的に原作になるべく近くなるように修正してるつもりですが
+;; かえっておかしくなってるかもしれないので、変な所はスレでフォローお願いします。

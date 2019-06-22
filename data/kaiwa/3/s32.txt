@@ -1,0 +1,57 @@
+
+;; (0) は 魔理沙 B(恋符)
+;; (1) は 輝夜
+
+OBJ_LOAD tachie/marisa1.png,0
+OBJ_LOAD tachie/kaguya2.png,1
+
+; 初期位置へ登場し、移動完了まで待つ。
+OBJ xy,0,128,144
+OBJ xy,1,256,144
+OBJ wait
+
+;; オブジェ1に注目
+OBJ look,1
+TEXT ゆっくりしたかしら？
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+OBJ_LOAD tachie/marisa4.png,0
+TEXT ああ、ゆっくりしたぜ
+;TEXT ああ、ゆっくりした
+HOLD
+OBJ_LOAD tachie/marisa3.png,0
+TEXT 何も教えてもらってないけどな
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+TEXT そんなことないわ
+HOLD
+
+OBJ_LOAD tachie/kaguya1.png,1
+TEXT 理解するためには\nゆっくりすることも必要よ
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+TEXT ところで、
+;TEXT ここには本はないのか？
+HOLD
+;そういう訳で５面は本があるよ
+TEXT マップが無いと迷うんだが？
+HOLD
+
+;; 通常退避位置[1]へ
+OBJ xy,0,-64,144
+OBJ xy,1,416,144
+
+; 全オブジェ移動完了まで待つ。
+OBJ wait
+
+BOSS result
+
+;ここまで来たら終了する。
+;; シナリオ修正について、基本的に原作になるべく近くなるように修正してるつもりですが
+;; かえっておかしくなってるかもしれないので、変な所はスレでフォローお願いします。

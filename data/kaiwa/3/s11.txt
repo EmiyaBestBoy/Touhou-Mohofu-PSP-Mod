@@ -1,0 +1,96 @@
+
+;; (0) は 魔理沙 B(恋符)
+;; (1) は アリス
+
+;;魔理沙(0)/アリス(1)読み込み
+OBJ_LOAD tachie/marisa1.png,0
+OBJ_LOAD tachie/alice4.png,1
+
+; 初期位置へ登場し、移動完了まで待つ。
+OBJ xy,0,128,144
+OBJ xy,1,256,144
+OBJ wait
+
+;; 1==アリス(キャラ)を読み込んで表示
+BOSS load,1
+
+;; オブジェ1に注目
+OBJ look,1
+TEXT そこまでよ！
+HOLD
+
+;説明文
+TEXT 死の少女\nアリス・マーガトロイド
+;TEXT 魔法の国のアリス\nアリス・マーガトロイド
+;TEXT 七色の人形使い\nアリス・マーガトロイド
+;TEXT 七色の人形遣い\nアリス・マーガトロイド
+;TEXT 見た目だけ賑やかな妖怪\nアリス・マーガトロイド
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+OBJ_LOAD tachie/marisa4.png,0
+TEXT 別にあんたが邪魔しなくたって\n魔界にでも行けるんだが……。
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+TEXT 人形作りの邪魔よ。
+HOLD
+OBJ_LOAD tachie/alice5.png,1
+TEXT 夜はもう少し静かにして貰いたいわ。
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+OBJ_LOAD tachie/marisa6.png,0
+TEXT 夜中に騒がなくて、いつ騒ぐんだよ。
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+;TEXT 昼間に騒ぐのを許可するわ。
+TEXT 昼間に騒ぐの許可する。
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+OBJ_LOAD tachie/marisa4.png,0
+TEXT お昼寝出来なくて困る。
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+;TEXT しなくても死なないんじゃなくて？
+TEXT しなくても死なないわよ。
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+OBJ_LOAD tachie/marisa6.png,0
+TEXT それは初耳だわ。
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+TEXT 少し騒いだ方が良い夢みれるかもね
+HOLD
+
+;; 通常退避位置[1]へ
+OBJ xy,0,-64,144
+OBJ xy,1,416,144
+
+BGM ,18
+DRAW color,7
+;--------12345678901234567890123456789012345678
+TEXT \n\n　　　　　　　　　 ♪Grimoire of Alice
+HOLD
+
+; 全オブジェ移動完了まで待つ。
+OBJ wait
+
+BOSS start
+
+;ここまで来たら終了する。
+;; シナリオ修正について、基本的に原作になるべく近くなるように修正してるつもりですが
+;; かえっておかしくなってるかもしれないので、変な所はスレでフォローお願いします。

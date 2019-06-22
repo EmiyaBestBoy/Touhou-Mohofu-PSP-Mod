@@ -1,0 +1,104 @@
+
+;; (0) は 魔理沙 B(恋符)
+;; (1) は 文
+
+OBJ_LOAD tachie/marisa1.png,0
+OBJ_LOAD tachie/aya4.png,1
+
+; 初期位置へ登場し、移動完了まで待つ。
+OBJ xy,0,128,144
+OBJ xy,1,256,144
+OBJ wait
+
+;; 4==文(キャラ)を読み込んで表示
+BOSS load,4
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,6
+;TEXT 射命丸じゃないか。
+TEXT 射命丸じゃないか\n今日も写真か？
+HOLD
+;魔理沙は一言多い
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,7
+OBJ_LOAD tachie/aya1.png,1
+TEXT 清く正しい射命丸です。
+HOLD
+
+;説明文
+DRAW color,7
+;TEXT 里に最も近い天狗\n
+TEXT 伝統の幻想ブン屋\n
+TEXT 射命丸 文
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,6
+OBJ_LOAD tachie/marisa6.png,0
+TEXT ……本当か？
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,7
+OBJ_LOAD tachie/aya3.png,1
+TEXT ところで何か面白いネタありませんか？
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,6
+OBJ_LOAD tachie/marisa4.png,0
+;TEXT 鄙びた温泉宿にゲームの関係で泊まると……
+;TEXT 何故か従業員に幽霊が見えるらしいぜ。
+;(C)ラブ＋
+TEXT 霊夢が赤ビールだとすると、\nわたしが黒ビール。
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,7
+OBJ_LOAD tachie/aya2.png,1
+;TEXT こわいこわい。
+TEXT 知ってます。黄ビールの話ですね。
+HOLD
+; 黄ビール==結局出なかった某没キャラ。
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,6
+OBJ_LOAD tachie/marisa3.png,0
+OBJ_LOAD tachie/aya3.png,1
+TEXT そこまで言ってない！
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,7
+OBJ_LOAD tachie/aya3.png,1
+TEXT 緑ビールは出てきたのに……
+HOLD
+; 緑ビール==早苗
+
+;; 通常退避位置[1]へ
+OBJ xy,0,-64,144
+OBJ xy,1,416,144
+
+BGM ,14
+DRAW color,7
+;--------12345678901234567890123456789012345678
+TEXT \n\n　　　　　　　　　　　　　　♪風神少女
+HOLD
+
+; 全オブジェ移動完了まで待つ。
+OBJ wait
+
+BOSS start
+
+;ここまで来たら終了する。
+;; シナリオ修正について、基本的に原作になるべく近くなるように修正してるつもりですが
+;; かえっておかしくなってるかもしれないので、変な所はスレでフォローお願いします。

@@ -1,0 +1,120 @@
+
+;; (0) は 魔理沙 A(魔符)
+;; (1) は 文
+
+OBJ_LOAD tachie/marisa1.png,0
+OBJ_LOAD tachie/aya4.png,1
+
+; 初期位置へ登場し、移動完了まで待つ。
+OBJ xy,0,128,144
+OBJ xy,1,256,144
+OBJ wait
+
+;; 4==文(キャラ)を読み込んで表示
+BOSS load,4
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,6
+;TEXT 射命丸じゃないか。
+TEXT 射命丸じゃないか\n今日も写真か？
+HOLD
+;魔理沙は一言多い
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,7
+OBJ_LOAD tachie/aya2.png,1
+;TEXT おや、魔理沙さん。
+TEXT おや、これは魔理沙さん。
+HOLD
+
+;説明文
+DRAW color,7
+;TEXT 里に最も近い天狗\n
+TEXT 伝統の幻想ブン屋\n
+TEXT 射命丸 文
+HOLD
+
+DRAW color,7
+;TEXT 取材に協力してくれるんですね。
+TEXT 取材に協力してくれるんですよね？
+HOLD
+;すでにあつかましい。
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,6
+OBJ_LOAD tachie/marisa4.png,0
+;TEXT そんなこと言ってないぜ。
+;TEXT ……そんなことは\n
+;TEXT 言ってないと思うぜ。
+TEXT ……そんなことは\n
+TEXT 言った事がないと思うぜ。
+HOLD
+;魔理沙はやはり一言多い。
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,7
+OBJ_LOAD tachie/aya1.png,1
+TEXT では、近年まれに見る大豊作を\n
+TEXT どう思いますか？
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,6
+;TEXT そういうのは、豊穣の神に聞けばいいじゃないか。
+;TEXT そういうのは、わたしより豊穣の神に聞くのがいいんじゃないのかね？
+TEXT そういうのは、わたしより豊穣の神に聞くのが良いんじゃないのか？
+HOLD
+;魔理沙はとぼける。
+;４面輝夜に質問を質問で返す伏線で、ここでも質問を質問で返す。
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,7
+OBJ_LOAD tachie/aya4.png,1
+;TEXT もちろん\nお伺いしましたよ。
+;TEXT もちろん\nお伺いしましたが、
+TEXT もちろん穣子にも\n
+TEXT お伺いしましたけどね。
+HOLD
+;「穣子に」：どうせあとで話題に出て来るので、判りにくくならないように初出時に断定(穣子＝＝豊穣の神)しておく。
+OBJ_LOAD tachie/aya3.png,1
+;TEXT 半日、\n
+;TEXT 茶のみ相手にされました。
+TEXT ……半日、\n
+TEXT 茶のみ相手にされたわ。
+HOLD
+;地が出る。
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,6
+OBJ_LOAD tachie/marisa3.png,0
+;TEXT よっぽど暇なんだな……。
+;魔理沙は(目の前に文がいる場合は)独白っぽく言わない。
+;TEXT よっぽど暇なんだか……。
+TEXT 緑茶は健康に良いんだぜ。
+HOLD
+
+;; 通常退避位置[1]へ
+OBJ xy,0,-64,144
+OBJ xy,1,416,144
+
+BGM ,14
+DRAW color,7
+;--------12345678901234567890123456789012345678
+TEXT \n\n　　　　　　　　　　　　　　♪風神少女
+HOLD
+
+; 全オブジェ移動完了まで待つ。
+OBJ wait
+
+BOSS start
+
+;ここまで来たら終了する。
+;; シナリオ修正について、基本的に原作になるべく近くなるように修正してるつもりですが
+;; かえっておかしくなってるかもしれないので、変な所はスレでフォローお願いします。

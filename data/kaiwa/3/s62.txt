@@ -1,0 +1,173 @@
+
+;; (0) は 魔理沙 B(恋符)
+;; (1) は 咲夜
+
+OBJ_LOAD tachie/marisa1.png,0
+OBJ_LOAD tachie/sakuya5.png,1
+
+; 初期位置へ登場し、移動完了まで待つ。
+OBJ xy,0,128,144
+OBJ xy,1,256,144
+OBJ wait
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,5
+TEXT 人間って、あんたと\n
+TEXT もう一人しか居ないじゃない。
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,6
+OBJ_LOAD tachie/marisa4.png,0
+TEXT あんたは人間じゃないのかよ。
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,5
+OBJ_LOAD tachie/sakuya3.png,1
+TEXT わたしは別に、\n
+TEXT 以外が必要な人間じゃないし。
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,6
+OBJ_LOAD tachie/marisa1.png,0
+TEXT 以外と必要な人間かも知れないぜ。
+;TEXT とにかく。\n多勢に無粋なんだぜ。
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,5
+OBJ_LOAD tachie/sakuya4.png,1
+TEXT おだてられてしまっては\n
+TEXT 仕方がない……。
+HOLD
+; (C)シルフィード
+
+;; 全画面用退避位置[2]へ
+OBJ xy,0,-64,144
+OBJ xy,1,544,144
+
+; 全オブジェ移動完了まで待つ。
+OBJ wait
+
+BGM ,25
+DRAW skip,0
+DRAW panel,0
+DRAW text,0
+DRAW bg,1
+;BG_LOAD story/ending.jpg,0
+BG_LOAD story/ending.jpg,0
+BG_FADE
+DRAW text,1
+DRAW color,7
+DRAW speed,1
+TEXT 東方模倣風 ～ Imitation Style.
+HOLD
+BG_LOAD story/ending(remilia).jpg
+;BG_LOAD story/arasuzi(reimu).jpg
+DRAW speed,2
+TEXT 繰り返していた十五夜は終わり、\n
+TEXT いつもどおりの幻想郷が戻ってきた。
+HOLD
+
+DRAW color,5
+DRAW speed,0
+TEXT 咲夜：
+DRAW speed,1
+TEXT お嬢様、紅茶が入りましたわ。
+HOLD
+
+DRAW color,2
+DRAW speed,0
+TEXT レミリア：
+DRAW speed,1
+TEXT きゃはは、ありがと。
+HOLD
+
+DRAW color,5
+DRAW speed,0
+TEXT 咲夜：
+DRAW speed,2
+TEXT 変ね。お嬢様、いつもおかしいけど、
+HOLD
+DRAW speed,4
+TEXT 今日は特におかしい。
+HOLD
+
+DRAW color,7
+DRAW speed,0
+TEXT 魔梨沙：
+DRAW speed,1
+TEXT あれ、私のはないのか？
+HOLD
+
+DRAW color,5
+DRAW speed,0
+TEXT 咲夜：
+DRAW speed,5
+TEXT ……いつの間に。
+HOLD
+
+DRAW color,7
+DRAW speed,0
+TEXT 魔梨沙：
+DRAW speed,1
+TEXT わたしのせいじゃないぜ。
+HOLD
+
+DRAW color,5
+DRAW speed,0
+TEXT 咲夜：
+DRAW speed,2
+;TEXT 何かやったな？
+TEXT 怪しすぎる。
+HOLD
+
+BG_LOAD story/356_end01.jpg
+
+DRAW color,2
+DRAW speed,0
+TEXT レミリア：
+DRAW speed,3
+TEXT あー苦しい、紅茶に何を入れたの？
+HOLD
+
+DRAW color,7
+DRAW speed,0
+TEXT 魔梨沙：
+DRAW speed,2
+TEXT 笑い茸を入れてみましたわ。
+HOLD
+
+DRAW color,5
+DRAW speed,0
+TEXT 咲夜：
+DRAW speed,2
+TEXT やっぱりあんたか。
+HOLD
+
+DRAW color,7
+DRAW speed,0
+TEXT 魔梨沙：
+TEXT ……。
+HOLD
+
+DRAW color,7
+DRAW speed,2
+TEXT 魔梨沙は吸血鬼にも笑い茸は効くんだな……、と初めて知った。
+HOLD
+DRAW speed,1
+TEXT \n　　　　　　　　 TO BE CONTINUED …… ?
+HOLD
+
+BOSS result
+
+;ここまで来たら終了する。
+;; シナリオ修正について、基本的に原作になるべく近くなるように修正してるつもりですが
+;; かえっておかしくなってるかもしれないので、変な所はスレでフォローお願いします。

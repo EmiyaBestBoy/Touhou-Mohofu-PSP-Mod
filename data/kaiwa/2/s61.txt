@@ -1,0 +1,101 @@
+
+;; (0) は 魔理沙 A(魔符)
+;; (1) は 咲夜
+
+;OBJ_LOAD tachie/sakuya1.png,1
+OBJ_LOAD tachie/sakuya5.png,1
+OBJ_LOAD tachie/marisa4.png,0
+
+; 初期位置へ登場し、移動完了まで待つ。
+OBJ xy,0,128,144
+OBJ xy,1,256,144
+OBJ wait
+
+;; 6==咲夜(キャラ)を読み込んで表示
+BOSS load,6
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,6
+TEXT ちょっといいか？
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,5
+;TEXT あら、めずらしい。
+;TEXT 十五夜のことかしら？
+TEXT あら、ねずみ。\n子猫にじゃれられる前に帰ったら？
+HOLD
+
+;説明文
+DRAW color,7
+;TEXT 完全で瀟洒な従者\n
+;TEXT 紅魔館のメイド\n
+;TEXT 完全で瀟洒なメイド\n
+TEXT 危険な手品師\n
+TEXT 十六夜 咲夜
+HOLD
+
+BGM ,16
+DRAW color,7
+;--------12345678901234567890123456789012345678
+TEXT \n\n　　　　　 ♪月時計　～ ルナ・ダイアル
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,6
+;TEXT おまえとは\n一日違いだな。
+TEXT 鈴が鳴らないのを確認して\n手品を見に来たんだぜ。
+HOLD
+; (鈴が鳴らない==美鈴が居ない。)
+; 鈴が鳴らない(猫に鈴を付けるのはネズミに出来ない)
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,5
+;TEXT いつまでも\n団子が食べられるわよ。
+;;TEXT お嬢様は\n名月を望んでいる。
+;TEXT そして、\nお嬢様は名月を望んでいる。
+TEXT あんた切ったら血が出る手品なら、\nレパートリーにあるね。
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,6
+;TEXT そろそろ、\nきのこ狩りもいいだろう？
+;TEXT 外を歩くのも\nいいもんだぜ。
+TEXT 痛い人も人が痛いのも\nごめんだぜ。
+HOLD
+
+;TEXT 月は年に少しずつ遠ざかっている。
+;TEXT 月見も月のあるうちにね。
+;TEXT そういえば、おまえは\n料理が得意だったな。
+;TEXT きのこ料理はしたくならんか？
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,5
+;TEXT 料理は食べる人を想って作るもの。
+;TEXT 望まれない調理はただの作業。
+OBJ_LOAD tachie/sakuya3.png,1
+;TEXT もう六面よ。\n
+;TEXT あんたは遅れてる痛い人ね。
+;TEXT 遅れてる痛い人はあんたね。
+TEXT もう六面よ。遅れてる痛い人は\n
+TEXT あんたの事じゃない？
+HOLD
+
+;; 通常退避位置[1]へ
+OBJ xy,0,-64,144
+OBJ xy,1,416,144
+
+; 全オブジェ移動完了まで待つ。
+OBJ wait
+
+BOSS start
+
+;ここまで来たら終了する。
+;; シナリオ修正について、基本的に原作になるべく近くなるように修正してるつもりですが
+;; かえっておかしくなってるかもしれないので、変な所はスレでフォローお願いします。

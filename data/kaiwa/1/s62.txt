@@ -1,0 +1,245 @@
+
+;; (0) は 霊夢 B(夢符)
+;; (1) は 咲夜
+
+OBJ_LOAD tachie/reimu6.png,0
+OBJ_LOAD tachie/sakuya1.png,1
+
+; 初期位置へ登場し、移動完了まで待つ。
+OBJ xy,0,128,144
+OBJ xy,1,256,144
+OBJ wait
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,2
+;;「あなた」の場合(旧作～紅魔郷)
+;TEXT このことを、\n
+;TEXT あなたの主人は知ってるのかしら
+;TEXT あなたの主人は知っているの？
+TEXT このことを、\nあなたの主人は知ってるのかしら？
+HOLD
+
+;;「あんた」の場合(妖々夢～)
+;TEXT このことを、あんたの主人は\n知らないんじゃないのかしら？
+;TEXT このことを、あんたの主人は\n知らないんじゃないの？
+;TEXT あんたの主人は、この事\n知らないんじゃないの？
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,5
+;TEXT お嬢様は知らない。
+TEXT お嬢様は知らないわ。
+;TEXT 私の独断。
+TEXT 私の独断よ。
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,2
+OBJ_LOAD tachie/reimu4.png,0
+TEXT やっぱり。
+HOLD
+OBJ_LOAD tachie/reimu3.png,0
+TEXT 言わないでおいてあげるから。\n
+TEXT 早く元に戻しなさい。
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,5
+OBJ_LOAD tachie/sakuya3.png,1
+TEXT しょうがないわね……。
+HOLD
+
+OBJ_LOAD tachie/sakuya1.png,1
+TEXT ところで……。
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,2
+OBJ_LOAD tachie/reimu2.png,0
+TEXT ？
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,5
+OBJ_LOAD tachie/sakuya5.png,1
+TEXT 中秋になると良い事あるの？
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,2
+OBJ_LOAD tachie/reimu5.png,0
+OBJ_LOAD tachie/sakuya3.png,1
+TEXT 宴会！
+HOLD
+
+;; 全画面用退避位置[2]へ
+OBJ xy,0,-64,144
+OBJ xy,1,544,144
+
+; 全オブジェ移動完了まで待つ。
+OBJ wait
+
+BGM ,25
+DRAW skip,0
+DRAW panel,0
+DRAW text,0
+DRAW bg,1
+;BG_LOAD story/ending.jpg,0
+BG_LOAD story/ending.jpg,0
+BG_FADE
+DRAW text,1
+DRAW color,7
+DRAW speed,1
+TEXT 東方模倣風 ～ Imitation Style.
+HOLD
+;BG_LOAD story/ending(reimu).jpg
+;BG_LOAD story/arasuzi(reimu).jpg
+BG_LOAD story/356_end01.jpg
+DRAW speed,2
+TEXT 季節は進み始め、博麗神社では十三夜。\n
+TEXT 名残月の宴会が開かれていた。
+HOLD
+
+DRAW color,2
+DRAW speed,0
+TEXT 輝夜：
+DRAW speed,1
+TEXT えへっ、永琳の目を盗んで\n
+TEXT 遊びにきちゃった。
+HOLD
+
+DRAW color,7
+DRAW speed,0
+TEXT 靈夢：
+DRAW speed,2
+TEXT ようこそ。\n
+TEXT これは予想外の客人よね。
+HOLD
+;(C)ZUN HP
+
+DRAW color,2
+DRAW speed,0
+TEXT 輝夜：
+DRAW speed,1
+TEXT ！！！
+HOLD
+
+DRAW color,7
+DRAW speed,0
+TEXT 魔梨沙：
+DRAW speed,2
+TEXT これって、そんなにレアか？\n
+TEXT だたの燕の巣だぜ。
+HOLD
+;(C)星蓮船/Izayoinet
+
+; 星蓮船 魔理沙1
+; だたの賊じゃない 
+; 普通の魔法使いさまだ！ 
+;「だた」？
+
+DRAW color,2
+DRAW speed,0
+TEXT 輝夜：
+DRAW speed,1
+TEXT 燕の巣って実在するのね。\n
+TEXT 本物は初めて。
+HOLD
+;「本物」輝夜は燕の巣そのものは、何度も見た事がありますが、
+; 軒先に付いてる状態を直接見るのは、初めてという意味。
+
+DRAW color,7
+DRAW speed,0
+TEXT 靈夢：
+DRAW speed,5
+TEXT とんだ知ったかね。
+HOLD
+
+DRAW color,2
+DRAW speed,0
+TEXT 輝夜：
+DRAW speed,1
+TEXT 半分に壊れたのなら前にも見たわ。
+HOLD
+; 燕の巣は元々半分とかなので壊れてないのですが、(それしか見てない)輝夜の認識として。
+
+DRAW color,5
+DRAW speed,0
+TEXT 咲夜：
+DRAW speed,2
+TEXT もうちょっと、早くくれば\n
+TEXT 燕もいたわよ。
+HOLD
+; レミリアの行動が心配で、尾行した事があるので知ってる。
+
+DRAW color,2
+DRAW speed,0
+TEXT 輝夜：
+DRAW speed,1
+TEXT 残念ね、本物も見たかったわ。\n
+TEXT 美しさはどれだけかしら？
+HOLD
+; 立場上、直接見る機会がなかった。意外なところで不便。
+
+DRAW color,5
+DRAW speed,0
+TEXT 咲夜：
+DRAW speed,2
+TEXT ほら、だから永遠の満月の方が\n
+TEXT 良いのに。輝夜もそう思うでしょ？
+HOLD
+
+DRAW color,2
+DRAW speed,0
+TEXT 輝夜：
+DRAW speed,1
+TEXT 月は永遠に美しいわ。
+HOLD
+
+DRAW color,7
+DRAW speed,0
+TEXT 靈夢：
+DRAW speed,5
+TEXT 良くない。
+HOLD
+
+DRAW color,7
+DRAW speed,0
+TEXT 魔梨沙：
+DRAW speed,5
+;TEXT 良くない。
+TEXT 不便だぜ。
+HOLD
+
+DRAW color,2
+DRAW speed,0
+TEXT 輝夜：
+DRAW speed,1
+TEXT 風情はあるわ。
+HOLD
+
+DRAW color,7
+DRAW speed,2
+TEXT みんなの意見を一通り聞いた咲夜は、
+HOLD
+TEXT やっぱり永遠の満月でも良いじゃない、\n
+TEXT と思った。
+HOLD
+;(C)紅魔郷
+; 「やっぱり」他のシナリオで咲夜が一方的に悪いにされてるのはどうかと思うので。
+
+DRAW speed,1
+TEXT \n　　　　　　　　 TO BE CONTINUED …… ?
+HOLD
+
+BOSS result
+
+;ここまで来たら終了する。
+;; シナリオ修正について、基本的に原作になるべく近くなるように修正してるつもりですが
+;; かえっておかしくなってるかもしれないので、変な所はスレでフォローお願いします。

@@ -1,0 +1,155 @@
+
+;; (0) は 魔理沙 A(魔符)
+;; (1) は パチェ
+
+OBJ_LOAD tachie/marisa1.png,0
+OBJ_LOAD tachie/pache1.png,1
+
+; オブジェ(1)のみ、初期位置へ登場し、移動完了まで待つ。
+OBJ xy,1,256,144
+OBJ wait
+
+;; 5==パチェ(キャラ)を読み込んで表示
+BOSS load,5
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,7
+;--- 0123456789012345678901234567980123456789
+TEXT ちょっと、ちょっとお。そんなに本\n
+TEXT 沢山抱えて、どういうつもり？
+HOLD
+
+;説明文
+DRAW color,7
+TEXT 知識と日陰の少女\n
+;TEXT 得体の知れない魔法の元\n
+TEXT パチュリー・ノーレッジ
+HOLD
+
+; オブジェ(0)のみ、特殊位置へ登場し、移動完了まで待つ。
+OBJ xy,0,-32,144
+OBJ wait
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,6
+;OBJ_LOAD tachie/marisa4.png,0
+TEXT うわ、みつかった！
+HOLD
+
+; オブジェ(0)のみ、初期位置へ登場。
+OBJ xy,0,128,144
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,7
+TEXT 持ってかないでって言ったでしょ？
+HOLD
+OBJ_LOAD tachie/pache4.png,1
+;TEXT えぇーと、本を持っていかれない方法は……。
+;--- 0123456789012345678901234567980123456789
+TEXT えぇーと、本を持っていかれない\n
+TEXT 方法が……。
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,6
+OBJ_LOAD tachie/marisa2.png,0
+TEXT （載ってるのか？）
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,7
+;TEXT うーん、最近、ますます目が悪くなったわ。
+;TEXT 載って無いのが\n
+;TEXT まず問題ね。
+;TEXT 載っててくれても\n
+;TEXT 良いじゃない。
+TEXT ……そんな方法は無い\n
+TEXT だって。
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,6
+TEXT 本は役に立つなー。
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,7
+OBJ_LOAD tachie/pache1.png,1
+;--- 0123456789012345678901234567980123456789
+TEXT 持ってった本達は、どうなったの？\n
+TEXT 心配で昼間も、寝れないわ。
+HOLD
+;231 「本達」パチェは本を大事にすると思うのですが、
+;231  若干間違った方向にも大事にするかも？
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,6
+OBJ_LOAD tachie/marisa4.png,0
+TEXT 昼間は無理に寝ないでも、\n
+TEXT いいんじゃないのか？
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,7
+OBJ_LOAD tachie/pache4.png,1
+TEXT だってお昼寝した方が健康に良いって\n
+TEXT 統計が……。
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,6
+OBJ_LOAD tachie/marisa1.png,0
+TEXT それなら、わたしは\n
+TEXT 二時間寝たぜ。
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,7
+;TEXT 小さな字で注意書きがある！
+TEXT 小さな字で注意書きがあった！
+HOLD
+OBJ_LOAD tachie/marisa3.png,0
+TEXT ……ただし、寝過ぎは逆効果。
+HOLD
+; 注意書きなので "！"マーク。
+; 小さな字==(目が悪いので)読み難い。
+; パチェの目が悪いという設定は、(近視もあると思うけど)近視の事ではなくて
+; 暗いところで見にくいという設定。(たぶん近視は目が悪いの範囲に入ってない)
+;
+; 近視==近くが見える==目が良い。
+; 遠視==遠くが見える==目が良い。
+; 斜視==物が曲がって見える==目が良い。
+; 暗いところで見にくい==目が悪い。
+; 緑内障==処々見えない==目が悪い。
+; 失明==見えない==目が悪い。
+; るーみあ==闇を出して見えない==頭が悪い。
+
+;; 通常退避位置[1]へ
+OBJ xy,0,-64,144
+OBJ xy,1,416,144
+
+BGM ,15
+DRAW color,7
+;--------12345678901234567890123456789012345678
+TEXT \n\n　　　　　 ♪ラクトガール　～ 少女密室
+HOLD
+
+; 全オブジェ移動完了まで待つ。
+OBJ wait
+
+BOSS start
+
+;ここまで来たら終了する。
+;; シナリオ修正について、基本的に原作になるべく近くなるように修正してるつもりですが
+;; かえっておかしくなってるかもしれないので、変な所はスレでフォローお願いします。

@@ -1,0 +1,94 @@
+
+;; (0) は 魔理沙 A(魔符)
+;; (1) は パチェ
+
+OBJ_LOAD tachie/marisa4.png,0
+OBJ_LOAD tachie/pache1.png,1
+
+; 初期位置へ登場し、移動完了まで待つ。
+OBJ xy,0,128,144
+OBJ xy,1,256,144
+OBJ wait
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,6
+;TEXT そろそろ、お腹が空いたな\nセーブポイントはこの辺か？
+TEXT セーブポイントはこの辺か？
+HOLD
+OBJ_LOAD tachie/pache2.png,1
+TEXT そろそろ、お腹が空いたな。
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,7
+OBJ_LOAD tachie/pache3.png,1
+;TEXT 私を食べてもおいしくないと思うな。
+;TEXT 私を食べても体に悪いと思うな。
+;TEXT ビタミンＥが少ないし。
+;TEXT トコフェロールが少ないし。
+;TEXT 私を食べてもおいしくないと思うな\nトコフェロールが少ないし。
+;TEXT 私を食べて病気になっても知らないよ\nビタミンＥも少ないし。
+;TEXT 私を食べて病気になっても知らないよ\nビタミンＥも足りないし。
+TEXT 私を食べてもおいしくないと思うな\n病気になっても知らないよ。
+HOLD
+OBJ_LOAD tachie/pache6.png,1
+TEXT ビタミンＡもＥも足りないし\nおまけに喘息よ。
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,6
+OBJ_LOAD tachie/pache2.png,1
+OBJ_LOAD tachie/marisa1.png,0
+TEXT だが断る！
+HOLD
+OBJ_LOAD tachie/pache5.png,1
+OBJ_LOAD tachie/marisa4.png,0
+;TEXT 美味そうだが食べてやらん\n武士は喰わねど高楊枝。
+TEXT 美味そうだが食べないぜ。\n武士は喰わねど高楊枝。
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,7
+;TEXT 料理長は大廊下ね。
+TEXT えっと、料理長は大廊下ね。
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,6
+TEXT メイド長じゃなかったか？
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,7
+OBJ_LOAD tachie/pache6.png,1
+TEXT そうとも言う。
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,6
+OBJ_LOAD tachie/marisa1.png,0
+TEXT ありがとう旅の人。
+HOLD
+OBJ_LOAD tachie/marisa4.png,0
+TEXT わたしはＢ２が補給できれば\n十分なんだが……。
+HOLD
+
+;; 通常退避位置[1]へ
+OBJ xy,0,-64,144
+OBJ xy,1,416,144
+
+; 全オブジェ移動完了まで待つ。
+OBJ wait
+
+BOSS result
+
+;ここまで来たら終了する。
+;; シナリオ修正について、基本的に原作になるべく近くなるように修正してるつもりですが
+;; かえっておかしくなってるかもしれないので、変な所はスレでフォローお願いします。

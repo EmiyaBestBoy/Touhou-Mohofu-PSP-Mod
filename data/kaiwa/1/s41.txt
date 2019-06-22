@@ -1,0 +1,125 @@
+
+;; (0) は 霊夢 B(夢符)
+;; (1) は 文
+
+OBJ_LOAD tachie/reimu2.png,0
+OBJ_LOAD tachie/aya2.png,1
+
+; 初期位置へ登場し、移動完了まで待つ。
+OBJ xy,0,128,144
+OBJ xy,1,256,144
+OBJ wait
+
+;; 4==文(キャラ)を読み込んで表示
+BOSS load,4
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,7
+;TEXT どこへ行くのですか？
+TEXT 今度はどこへ行くのですか？\n
+OBJ_LOAD tachie/aya1.png,1
+TEXT (わくわく)
+HOLD
+
+;説明文
+DRAW color,7
+TEXT 里に最も近い天狗\n
+;TEXT 伝統の幻想ブン屋\n
+TEXT 射命丸 文
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,2
+OBJ_LOAD tachie/reimu3.png,0
+;TEXT 少なくとも、\n
+;TEXT カラスのいないとこね。
+TEXT そんな事、分かる訳ないわ。
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,7
+OBJ_LOAD tachie/aya4.png,1
+TEXT 最近は、どこも豊作、豊作……。
+HOLD
+OBJ_LOAD tachie/aya1.png,1
+;TEXT 記事になる事件は\n
+TEXT 記事になる事件のネタは\n
+TEXT ありませんか？
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,2
+OBJ_LOAD tachie/reimu1.png,0
+;TEXT 豊作を記事にしたら\n
+;TEXT いいじゃない。
+TEXT 逆に考えて\n
+TEXT 凶作を記事にしたら？
+HOLD
+;(C)ジョジョ
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,7
+TEXT 「季節はずれの極彩颱風で大被害」\n
+;TEXT インパクトが弱いかな……。
+TEXT ベクレルが弱いかな……。
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,2
+OBJ_LOAD tachie/reimu5.png,0
+TEXT 良くない知らせなんて\n
+;TEXT 誰が喜ぶのかしら？
+TEXT 誰か喜ぶのかしら？
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,7
+;TEXT さあ、誰でしょう。
+TEXT 他人の不幸は蜜の味。
+HOLD
+OBJ_LOAD tachie/aya4.png,1
+OBJ_LOAD tachie/reimu6.png,0
+;TEXT でも誰かが喜ぶんですよ
+TEXT という説もあります。
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,2
+TEXT 蜜の味を知って役に立つのは、\n
+TEXT 蝶だけで沢山ね。
+HOLD
+; 蝶==幽々子
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,7
+TEXT 私は良くない事も良くない事も\n
+TEXT 公平に記事にするのです。
+HOLD
+
+;; 通常退避位置[1]へ
+OBJ xy,0,-64,144
+OBJ xy,1,416,144
+
+BGM ,14
+DRAW color,7
+;--------12345678901234567890123456789012345678
+TEXT \n\n　　　　　　　　　　　　　　♪風神少女
+HOLD
+
+; 全オブジェ移動完了まで待つ。
+OBJ wait
+
+BOSS start
+
+;ここまで来たら終了する。
+;; シナリオ修正について、基本的に原作になるべく近くなるように修正してるつもりですが
+;; かえっておかしくなってるかもしれないので、変な所はスレでフォローお願いします。

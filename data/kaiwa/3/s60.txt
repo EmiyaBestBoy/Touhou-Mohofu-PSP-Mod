@@ -1,0 +1,53 @@
+
+;; (0) は 魔理沙 B(恋符) ボム用の立ち絵
+;; (1) は 6面タイトル見出し文字
+
+OBJ_LOAD tachie/marisa1.png,0
+OBJ_LOAD fonts/title6.png,1
+
+; キー入力無効
+;TASK mask,3
+
+; 巫女退避
+OBJ xy,0,-128,0
+
+; 退避位置についたら描画on
+OBJ wait
+OBJ draw,0,1
+OBJ draw,1,1
+
+DRAW color,7
+TEXT STAGE 06 紅魔館 大廊下
+
+BGM ,6
+
+DRAW color,7
+;--------12345678901234567890123456789012345678
+TEXT \n\n　　　　　　　BGM メイドと血の懐中時計
+;HOLD
+
+; タイトルセット
+OBJ xy,1,256,144
+; 全オブジェ移動完了まで待つ。
+OBJ wait
+
+;HOLD
+
+; 3[秒]待つ。180[frame]==3[秒]x60[frame], 1[秒]==60[frame]
+DRAW wait,180
+
+; タイトル退避
+OBJ xy,1,512,144
+; 全オブジェ移動完了まで待つ。
+OBJ wait
+
+; 6面のステージデーター読みこみ。
+;(r36)現時点では無理。OBJ_TEXT kaiwa/s/stage6.txt
+
+;HOLD
+
+BOSS result
+
+;ここまで来たら終了する。
+;; シナリオ修正について、基本的に原作になるべく近くなるように修正してるつもりですが
+;; かえっておかしくなってるかもしれないので、変な所はスレでフォローお願いします。

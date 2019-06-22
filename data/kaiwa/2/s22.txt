@@ -1,0 +1,70 @@
+
+;; (0) は 魔理沙 A(魔符)
+;; (1) は 魅魔
+
+OBJ_LOAD tachie/marisa1.png,0
+OBJ_LOAD tachie/mima2.png,1
+
+; 初期位置へ登場し、移動完了まで待つ。
+OBJ xy,0,128,144
+OBJ xy,1,256,144
+OBJ wait
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,4
+TEXT なかなかね、でも……。
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,6
+OBJ_LOAD tachie/marisa3.png,0
+TEXT どこか悪いところがあったか？
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,4
+;OBJ_LOAD tachie/mima6.png,1
+TEXT 魅魔様に勝っちゃった。\nうふ、うふ、うふふふふ……。
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,6
+OBJ_LOAD tachie/marisa3.png,0
+TEXT 普通の黒魔術師なら、\n普通の黒歴史があるんだぜ。
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,4
+;OBJ_LOAD tachie/mima6.png,1
+;OBJ_LOAD tachie/mima3.png,1
+TEXT あ－ん、黒魔術師相手ぐらいじゃ\n暴れ足りないなぁ……。
+HOLD
+;話の流れに関係なく暴れ足りない(全シナリオ共通)
+
+;; 通常退避位置[1]へ
+OBJ xy,0,-64,144
+OBJ xy,1,416,144
+
+; 全オブジェ移動完了まで待つ。
+OBJ wait
+
+BOSS result
+
+;ここまで来たら終了する。
+;; シナリオ修正について、基本的に原作になるべく近くなるように修正してるつもりですが
+;; かえっておかしくなってるかもしれないので、変な所はスレでフォローお願いします。
+
+;二つ名：
+;　奇妙な魔法使い　　　　（東方紅魔郷）
+;　東洋の西洋魔術師　　　（東方紅魔郷 ゲーム本編）
+;　普通の黒魔術師　　　　（東方妖々夢 キャラ設定.txt）
+;　普通の魔法使い　　　　（東方妖々夢 マニュアル）
+;　普通の黒魔術少女　　　（東方妖々夢 ゲーム本編）
+;　普通の黒魔術師　　　　（東方永夜抄）
+;　普通の黒魔法少女　　　（東方永夜抄 ゲーム本編）
+;「奇妙な」は、つまりジョジョねた。

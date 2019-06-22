@@ -1,0 +1,86 @@
+
+;; (0) は 魔理沙 B(恋符)
+;; (1) は 輝夜
+
+OBJ_LOAD tachie/marisa1.png,0
+OBJ_LOAD tachie/kaguya2.png,1
+
+; 初期位置へ登場し、移動完了まで待つ。
+OBJ xy,0,128,144
+OBJ xy,1,256,144
+OBJ wait
+
+;; 3==輝夜(キャラ)を読み込んで表示
+BOSS load,3
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,3
+TEXT いらっしゃい
+HOLD
+
+;説明文
+DRAW color,7
+TEXT 永遠と須臾の罪人\n
+;TEXT 永遠のお姫様\n
+;TEXT 人間らしくないお姫様\n
+TEXT 蓬莱山 輝夜
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,6
+OBJ_LOAD tachie/marisa4.png,0
+TEXT よくわかったな。\n見てたのか？
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,3
+OBJ_LOAD tachie/kaguya4.png,1
+TEXT 兎達が教えてくれたのよ
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,6
+;TEXT なかなか賢いもんだな
+;TEXT 兎もなかなか賢いもんだな
+;TEXT 兎もなかなか賢いな
+TEXT なかなか兎も賢いね
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,3
+TEXT 今日も明日も\n永遠の十五夜。
+HOLD
+OBJ_LOAD tachie/kaguya6.png,1
+TEXT だから\nゆっくりしていってね
+HOLD
+; (C)ゆっくりしていってね
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,6
+TEXT 兎の奴一体何を教えたんだ？
+HOLD
+
+;; 通常退避位置[1]へ
+OBJ xy,0,-64,144
+OBJ xy,1,416,144
+
+BGM ,13
+DRAW color,7
+;--------12345678901234567890123456789012345678
+TEXT \n\n　　　 ♪竹取飛翔　～ Lunatic Princess
+HOLD
+
+; 全オブジェ移動完了まで待つ。
+OBJ wait
+
+BOSS start
+
+;ここまで来たら終了する。
+;; シナリオ修正について、基本的に原作になるべく近くなるように修正してるつもりですが
+;; かえっておかしくなってるかもしれないので、変な所はスレでフォローお願いします。

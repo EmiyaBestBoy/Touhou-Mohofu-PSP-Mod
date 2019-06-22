@@ -1,0 +1,177 @@
+
+;; (0) は 魔理沙 A(魔符)
+;; (1) は 咲夜
+
+OBJ_LOAD tachie/marisa1.png,0
+OBJ_LOAD tachie/sakuya1.png,1
+
+; 初期位置へ登場し、移動完了まで待つ。
+OBJ xy,0,128,144
+OBJ xy,1,256,144
+OBJ wait
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,5
+TEXT このままなら、\n
+TEXT ずっと月見ができるのに。
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,6
+OBJ_LOAD tachie/marisa4.png,0
+TEXT 団子とすすき、お酒があれば\n
+TEXT いつだって月見だぜ。
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,5
+OBJ_LOAD tachie/sakuya3.png,1
+TEXT あなたには、\n
+TEXT どの月も同じに見えるのかしら？
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,6
+OBJ_LOAD tachie/marisa1.png,0
+TEXT まさか。
+HOLD
+TEXT どの月も違うから、\n
+TEXT どの月も特別なんだ。
+HOLD
+TEXT と、言ってみるテスト。
+HOLD
+
+;; 全画面用退避位置[2]へ
+OBJ xy,0,-64,144
+OBJ xy,1,544,144
+
+; 全オブジェ移動完了まで待つ。
+OBJ wait
+
+BGM ,25
+DRAW skip,0
+DRAW panel,0
+DRAW text,0
+DRAW bg,1
+;BG_LOAD story/ending.jpg,0
+BG_LOAD story/ending.jpg,0
+BG_FADE
+DRAW text,1
+DRAW color,7
+DRAW speed,1
+TEXT 東方模倣風 ～ Imitation Style.
+HOLD
+BG_LOAD story/ending(marisa).jpg
+;BG_LOAD story/arasuzi(reimu).jpg
+DRAW speed,2
+TEXT 繰り返していた季節は元に戻り、\n
+;TEXT 幻想郷にも寒露を迎えていた。
+TEXT 幻想郷も寒露を迎えていた。
+HOLD
+
+DRAW color,7
+DRAW speed,0
+TEXT 魔梨沙：
+DRAW speed,2
+;TEXT なあ、靈夢。\nどこかに新種のきのこはないもんか。
+TEXT なあ、靈夢。\nどこかに珍種のきのこはないもんか。
+HOLD
+; ワシントン条約に引っかかる珍種のメイドというネタから。
+
+DRAW color,7
+DRAW speed,0
+TEXT 靈夢：
+DRAW speed,4
+;TEXT 見るたびに新種があったら\nありがたみがないでしょ。
+TEXT 見るたびに新種なら\nありがたみが無いわね。
+HOLD
+; 霊夢は知らないので素直に新種。
+
+DRAW color,6
+DRAW speed,0
+TEXT 魔梨沙：
+DRAW speed,3
+TEXT きのこじゃなくて、\n
+HOLD
+TEXT メイドなら見つけたんだが。
+HOLD
+
+DRAW color,5
+DRAW speed,0
+TEXT 咲夜：
+DRAW speed,2
+TEXT あなたも、早速きのこ狩り？
+HOLD
+
+DRAW color,2
+DRAW speed,0
+TEXT 靈夢：
+DRAW speed,2
+TEXT そういうあんたもきのこ狩りね。
+HOLD
+
+DRAW color,6
+DRAW speed,0
+TEXT 魔梨沙：
+DRAW speed,2
+;TEXT わたしも比較的きのこ狩りだぜ。
+TEXT 奇遇だな、わたしもきのこ狩りだ。
+HOLD
+
+DRAW color,2
+DRAW speed,0
+TEXT 靈夢：
+DRAW speed,2
+TEXT ……わざとらしい。
+HOLD
+
+DRAW color,5
+DRAW speed,0
+TEXT 咲夜：
+DRAW speed,3
+TEXT 松茸の香りは紅茶で\n生かせないかしら。
+HOLD
+
+DRAW color,6
+DRAW speed,0
+TEXT 魔梨沙：
+DRAW speed,2
+TEXT やってみたら\nいいじゃないか。
+HOLD
+
+DRAW color,5
+DRAW speed,0
+TEXT 咲夜：
+DRAW speed,5
+TEXT そうね。まず\nお嬢様に飲んでもらって……。
+HOLD
+
+DRAW color,7
+DRAW speed,3
+TEXT きのこを抱えて帰る二人。
+HOLD
+DRAW speed,2
+TEXT 松茸と酒の香りがただよう神社で、
+HOLD
+DRAW speed,3
+TEXT 魔梨沙は靈夢と夜通し
+DRAW speed,5
+TEXT 飲み明かそうかな、\n
+DRAW speed,3
+TEXT と思った。
+HOLD
+
+DRAW color,7
+DRAW speed,1
+TEXT \n　　　　　　　　 TO BE CONTINUED …… ?
+HOLD
+
+BOSS result
+
+;ここまで来たら終了する。
+;; シナリオ修正について、基本的に原作になるべく近くなるように修正してるつもりですが
+;; かえっておかしくなってるかもしれないので、変な所はスレでフォローお願いします。

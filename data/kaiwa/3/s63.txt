@@ -1,0 +1,118 @@
+
+;; (0) は 魔理沙 B(恋符)
+;; (1) は 咲夜
+
+OBJ_LOAD tachie/marisa1.png,0
+OBJ_LOAD tachie/sakuya5.png,1
+
+; 初期位置へ登場し、移動完了まで待つ。
+OBJ xy,0,128,144
+OBJ xy,1,256,144
+OBJ wait
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,5
+TEXT 人間って、あんたと\n
+TEXT もう一人しか居ないじゃない。
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,6
+OBJ_LOAD tachie/marisa4.png,0
+TEXT わたしは人間をやめるわ。咲夜。
+; (C)おれは人間をやめるぞ! ジョジョ────ッ!!
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,5
+OBJ_LOAD tachie/sakuya3.png,1
+TEXT できるわけがないわ。
+; (C)できるわけがないッ！
+HOLD
+
+;; 全画面用退避位置[2]へ
+OBJ xy,0,-64,144
+OBJ xy,1,544,144
+
+; 全オブジェ移動完了まで待つ。
+OBJ wait
+
+BGM ,26
+DRAW skip,0
+DRAW panel,0
+DRAW text,0
+DRAW bg,1
+;BG_LOAD story/ending.jpg
+BG_LOAD story/ending.jpg,0
+BG_FADE
+DRAW text,1
+DRAW color,7
+DRAW speed,1
+TEXT 東方模倣風 ～ Imitation Style.
+HOLD
+;BG_LOAD story/ending(reimu).jpg
+;BG_LOAD story/ending(reimu).jpg
+;BG_LOAD story/arasuzi(reimu).jpg
+BG_LOAD story/356_end01.jpg
+DRAW speed,2
+TEXT 季節は進まない。
+HOLD
+
+DRAW color,5
+DRAW speed,0
+TEXT 咲夜：
+DRAW speed,1
+TEXT 甘いわね、
+DRAW speed,2
+TEXT イージーでエンディングは見れないのですわ。
+HOLD
+
+DRAW color,2
+DRAW speed,0
+TEXT レミリア：
+DRAW speed,2
+TEXT そんなの
+DRAW speed,3
+TEXT けちけちしなくて\n
+TEXT 良いじゃない。
+HOLD
+
+DRAW color,5
+DRAW speed,0
+TEXT 咲夜：
+DRAW speed,2
+TEXT ……しょうがない、裏技ですわ\n
+TEXT ノーマルを選んでクリアすると
+HOLD
+TEXT エンディングが\n
+TEXT 見れるのですわ。
+HOLD
+
+DRAW color,2
+DRAW speed,0
+TEXT レミリア：
+DRAW speed,4
+TEXT ……意味わかんない
+HOLD
+
+DRAW color,7
+DRAW speed,2
+TEXT やはり対策済み
+HOLD
+TEXT イージーでエンディングは、\n
+TEXT 見れないのだった。
+HOLD
+
+DRAW speed,1
+TEXT BAD END\nノーマル以上って言ったよね？
+HOLD
+
+;; ボス戦闘終了後、次の面を始めないでゲーム終了
+BOSS term
+
+;ここまで来たら終了する。
+;; シナリオ修正について、基本的に原作になるべく近くなるように修正してるつもりですが
+;; かえっておかしくなってるかもしれないので、変な所はスレでフォローお願いします。

@@ -1,0 +1,68 @@
+
+;; (0) は 魔理沙 B(恋符)
+;; (1) は アリス
+
+OBJ_LOAD tachie/marisa1.png,0
+OBJ_LOAD tachie/alice1.png,1
+
+; 初期位置へ登場し、移動完了まで待つ。
+OBJ xy,0,128,144
+OBJ xy,1,256,144
+OBJ wait
+
+;; オブジェ0に注目
+OBJ look,0
+TEXT 期待外れだな。寝い弾幕で、\nさらに寝くなった。
+HOLD
+TEXT そろそろ帰って寝ようかな。
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+OBJ_LOAD tachie/alice6.png,1
+;TEXT もうちょっと目の覚めるような\n攻撃の方が良かったかしら？
+TEXT 寝た娘を起こす様な弾幕じゃ\n別の方面からクレームが来かねないわ
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+OBJ_LOAD tachie/marisa4.png,0
+TEXT 目覚まし時計みたいのは勘弁だぜ。\n熱中症で寝不足が余計酷くなる。
+HOLD
+; 病気の「熱中症」なのか、あるいは夜中にゲームの熱中し過ぎ(比喩/皮肉的な意味で「熱中症」)なのかは不明です。
+
+;; オブジェ1に注目
+OBJ look,1
+OBJ_LOAD tachie/alice2.png,1
+TEXT 変に寝る癖がついてるんじゃないの？
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+OBJ_LOAD tachie/marisa4.png,0
+TEXT つまり変な寝癖か？それなら、\nちゃんと髪はとかしてきたんだぜ。
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+OBJ_LOAD tachie/alice1.png,1
+TEXT あら、藁人形用意しといたのに、\n残念ね。
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+TEXT 何言ってんだ。\nこっちだって笑いの種の用意は出来てる。
+HOLD
+
+;; 通常退避位置[1]へ
+OBJ xy,0,-64,144
+OBJ xy,1,416,144
+
+; 全オブジェ移動完了まで待つ。
+OBJ wait
+
+BOSS result
+
+;ここまで来たら終了する。
+;; シナリオ修正について、基本的に原作になるべく近くなるように修正してるつもりですが
+;; かえっておかしくなってるかもしれないので、変な所はスレでフォローお願いします。

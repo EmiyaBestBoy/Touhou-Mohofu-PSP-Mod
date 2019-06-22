@@ -1,0 +1,89 @@
+
+;; (0) は 魔理沙 A(魔符)
+;; (1) は 魅魔
+
+OBJ_LOAD tachie/marisa1.png,0
+OBJ_LOAD tachie/mima2.png,1
+
+; 初期位置へ登場し、移動完了まで待つ。
+OBJ xy,0,128,144
+OBJ xy,1,256,144
+OBJ wait
+
+;; 2==魅魔(キャラ)を読み込んで表示
+BOSS load,2
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,4
+TEXT ふふっ、道にまよったん\n
+TEXT じゃないの？
+HOLD
+
+;説明文
+DRAW color,7
+;TEXT Revengeful Ghost悪霊\n
+TEXT 久遠の夢に運命を任せる精神\n
+;TEXT 博麗神社の祟り神\n
+;TEXT 忘れられた悪霊\n
+TEXT 魅魔
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,6
+OBJ_LOAD tachie/marisa4.png,0
+TEXT 道には迷ってないが、\n
+TEXT 月には酔った。
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,4
+OBJ_LOAD tachie/mima4.png,1
+TEXT まだまだ、修行不足のようね。
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,6
+TEXT 修行はともかく\n
+TEXT カルシウムは足りてるぜ。
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,4
+TEXT 月に関われば、どこか\n
+TEXT おかしくなるし……
+HOLD
+OBJ_LOAD tachie/mima6.png,1
+TEXT 全く関わらないならば\n
+TEXT 体調を崩す。
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,6
+;TEXT 絶妙な間合いが重要って事だな。
+TEXT つきあいづらいな。
+HOLD
+
+;; 通常退避位置[1]へ
+OBJ xy,0,-64,144
+OBJ xy,1,416,144
+
+BGM ,12
+DRAW color,7
+;--------12345678901234567890123456789012345678
+TEXT \n\n　　　　　　　　　 ♪Complete Darkness
+HOLD
+
+; 全オブジェ移動完了まで待つ。
+OBJ wait
+
+BOSS start
+
+;ここまで来たら終了する。
+;; シナリオ修正について、基本的に原作になるべく近くなるように修正してるつもりですが
+;; かえっておかしくなってるかもしれないので、変な所はスレでフォローお願いします。
