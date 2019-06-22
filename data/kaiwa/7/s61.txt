@@ -1,0 +1,90 @@
+
+;; (0) は ⑨
+;; (1) は 咲夜
+
+OBJ_LOAD tachie/sakuya1.png,1
+OBJ_LOAD tachie/cirno5.png,0
+
+; 初期位置へ登場し、移動完了まで待つ。
+OBJ xy,0,128,144
+OBJ xy,1,256,144
+OBJ wait
+
+;; 6==咲夜(キャラ)を読み込んで表示
+BOSS load,6
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,5
+TEXT なんだ、妖精か。
+HOLD
+
+;説明文
+DRAW color,7
+;TEXT 完全で瀟洒な従者\n
+TEXT 紅魔館のメイド\n
+;TEXT 完全で瀟洒なメイド\n
+;TEXT 危険な手品師\n
+TEXT 十六夜 咲夜
+HOLD
+
+BGM ,16
+DRAW color,7
+;--------12345678901234567890123456789012345678
+TEXT \n\n　　　　　 ♪月時計　～ ルナ・ダイアル
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,9
+TEXT 誰もいないじゃん。\nあいつ、だましたのかな。
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,5
+OBJ_LOAD tachie/sakuya3.png,1
+TEXT ここにいるでしょう？\nいったい何の用かしら。
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,9
+OBJ_LOAD tachie/cirno6.png,0
+TEXT ここにくればレティ達に会えるかもって\n言われたんだよ。
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,5
+OBJ_LOAD tachie/sakuya5.png,1
+TEXT そういうことなの。
+HOLD
+TEXT でも、この月はお嬢様の望み\n
+TEXT 貴方には悪いけど帰ってもらえるかしら。
+HOLD
+
+;; 通常退避位置[1]へ
+OBJ xy,0,-64,144
+OBJ xy,1,416,144
+
+; 全オブジェ移動完了まで待つ。
+OBJ wait
+
+BOSS start
+
+;ここまで来たら終了する。
+;; シナリオ修正について、基本的に原作になるべく近くなるように修正してるつもりですが
+;; かえっておかしくなってるかもしれないので、変な所はスレでフォローお願いします。
+
+;⑨氏版
+;咲夜：なんだ、妖精か
+;チルノ：あれ？　誰もいないじゃん。
+;	だまされたのかな。
+;咲夜：ここにいるでしょう？
+;	何の用かしら。
+;チルノ：ここにくればレティ達に会えるかもって。
+;	言われたんだよ。
+;咲夜：そういうことなの。
+;	でも、この月はお嬢様の望み。
+;咲夜：貴方には悪いけど帰ってもらえるかしら。

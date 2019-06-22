@@ -1,0 +1,153 @@
+
+;; (0) は ⑨
+;; (1) は 魅魔
+
+OBJ_LOAD tachie/cirno1.png,0
+OBJ_LOAD tachie/mima1.png,1
+
+; 初期位置へ登場し、移動完了まで待つ。
+OBJ xy,0,128,144
+OBJ xy,1,256,144
+OBJ wait
+
+;; 2==魅魔(キャラ)を読み込んで表示
+BOSS load,2
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,4
+;TEXT 久しぶりね。\n兎達なら裏で餅をついてるわ。
+TEXT 兎達なら裏で餅をついてたわよ。
+HOLD
+
+;説明文
+DRAW color,7
+;TEXT Revengeful Ghost悪霊\n
+;TEXT 久遠の夢に運命を任せる精神\n
+TEXT 博麗神社の祟り神\n
+;TEXT 忘れられた悪霊\n
+TEXT 魅魔
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,9
+OBJ_LOAD tachie/cirno2.png,0
+;TEXT あんた誰？\nそれより、あたいは何も言ってないよ。
+;TEXT あんた誰？何もあたいが言ってないのに。
+;TEXT あんた誰？何も言ってないのに。
+;TEXT あんた誰？\nあたい始めてみるよ？
+;OBJ_LOAD tachie/cirno3.png,0
+;TEXT なんでわかったの？
+;TEXT なんでわかったの！
+;TEXT なんでわかったんだい？
+;TEXT どうして、\nうさぎのこと知ってるの？
+TEXT 出ると思ったから怖くないや。\nあんた何のおばけ？
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,4
+;TEXT 顔に書いてあるわ。
+;OBJ_LOAD tachie/mima4.png,1
+;TEXT 兎はわたしの家来なのよ。
+TEXT わたしに聞かれても困るなぁ\n
+TEXT おばけじゃなかった気もするね。
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,9
+OBJ_LOAD tachie/cirno2.png,0
+;TEXT あたいの顔に？
+;TEXT あたいの顔に！
+;TEXT あたいの顔にかい？
+;231 ここも「あたいの顔に？」とチルノが言えるのは、余裕がある場合だけ。
+;TEXT 知らなかったよ！\n大発見！
+;TEXT うさぎの親分には\n耳が無い！
+TEXT そんなの気のせいよ。\n
+TEXT だって足無いよ！
+HOLD
+
+;OBJ_LOAD tachie/mima5.png,1
+
+;; オブジェ1に注目
+;OBJ look,1
+;DRAW color,4
+;TEXT これは頑張れば出せるのよ……
+;HOLD
+
+;; オブジェ0に注目
+;OBJ look,0
+;DRAW color,9
+;TEXT ブレザーの人は\n親分じゃなかったの？
+;TEXT うさぎは\n親分のペットだったんだ！
+;HOLD
+
+;; オブジェ1に注目
+;OBJ look,1
+;DRAW color,4
+;TEXT そう、あなたの顔に。
+;OBJ_LOAD tachie/mima3.png,1
+;TEXT だから、寒いとかわいそうだから\n程ほどにね。
+;TEXT だから、寒いとかわいそうだから\n程々にね。
+;TEXT だから、寒いとかわいそうだから\nほどほどにね。
+;TEXT 大体、おばけが\n何がんばる必要あるのよ。
+;HOLD
+
+;; オブジェ0に注目
+;OBJ look,0
+;DRAW color,9
+;OBJ_LOAD tachie/cirno4.png,0
+;TEXT ……ねえ、鏡持ってない？
+;TEXT ……ねえ、鏡とか持ってない？
+;TEXT ……鏡ない？
+;TEXT 親分、うさぎは寒いの苦手なの？
+;HOLD
+
+;; オブジェ1に注目
+;OBJ look,1
+;DRAW color,4
+;TEXT 貴方じゃ見てもわからないわよ。
+;TEXT 貴方じゃ見てもわからないわ。
+;OBJ_LOAD tachie/cirno6.png,0
+;OBJ_LOAD tachie/mima1.png,1
+;TEXT たぶんね。
+;HOLD
+
+;; 通常退避位置[1]へ
+OBJ xy,0,-64,144
+OBJ xy,1,416,144
+
+BGM ,24
+DRAW color,7
+;--------12345678901234567890123456789012345678
+;EXT \n\n　　　　　　　　　 ♪Complete Darkness
+TEXT \n\n　　　　　　　　　　　　　　♪妖魔夜行
+HOLD
+
+; 全オブジェ移動完了まで待つ。
+OBJ wait
+
+BOSS start
+
+;ここまで来たら終了する。
+;; シナリオ修正について、基本的に原作になるべく近くなるように修正してるつもりですが
+;; かえっておかしくなってるかもしれないので、変な所はスレでフォローお願いします。
+
+;⑨氏版
+;輝夜：久しぶりね
+;チルノ：？
+;輝夜：ふふ、その顔覚えてないって顔ね。
+;	あなた、兎達を探しに来たんでしょ？
+;	なら裏でもちをついてるわよ
+;チルノ：え！？
+;	あたいなんにも言ってないのになんでわかったの？
+;輝夜：顔に書いてあるのよ
+;チルノ：あたいの顔に？
+;輝夜：そう、あなたの顔に。
+;チルノ：……ねえ、鏡持ってない？
+;輝夜：貴方じゃ見てもわからないわよ
+
+;231 チルノが怖がるシナリオは駄目だと思う。
+;231 上の⑨氏版もチルノが怖がらないシナリオに修正されてると思う。

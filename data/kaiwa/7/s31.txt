@@ -1,0 +1,80 @@
+
+;; (0) は ⑨
+;; (1) は 輝夜
+
+OBJ_LOAD tachie/cirno6.png,0
+OBJ_LOAD tachie/kaguya1.png,1
+
+; 初期位置へ登場し、移動完了まで待つ。
+OBJ xy,0,128,144
+OBJ xy,1,256,144
+OBJ wait
+
+;; 3==輝夜(キャラ)を読み込んで表示
+BOSS load,3
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,9
+;TEXT 兎が相手してくれないんだけど……。
+;TEXT うさぎが相手してくれないんだけど……。
+;TEXT うさぎが遊んでくれないんだけど……。
+TEXT うさぎが遊んでくれないよぉ……。
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,3
+OBJ_LOAD tachie/kaguya3.png,1
+TEXT あらあら、それは困ったわね。
+HOLD
+TEXT さぞかし忙しいんでしょうね。
+HOLD
+
+;説明文
+DRAW color,7
+;TEXT 永遠と須臾の罪人\n
+;TEXT 永遠のお姫様\n
+TEXT 人間らしくないお姫様\n
+TEXT 蓬莱山 輝夜
+HOLD
+
+BGM ,13
+DRAW color,7
+;--------12345678901234567890123456789012345678
+TEXT \n\n　　　 ♪竹取飛翔　～ Lunatic Princess
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,9
+;TEXT おもち食べて、\nみんなで寝てた。
+;TEXT おもち食べて、\nみんなで寝てたよ。
+TEXT おもち食べて、\nみんな寝てたよ。
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,3
+TEXT 睡眠は重労働よ。
+HOLD
+TEXT お酒を飲んだくらいじゃ\n寝れないわ。
+HOLD
+
+;; 通常退避位置[1]へ
+OBJ xy,0,-64,144
+OBJ xy,1,416,144
+
+; 全オブジェ移動完了まで待つ。
+OBJ wait
+
+BOSS start
+
+;ここまで来たら終了する。
+;; シナリオ修正について、基本的に原作になるべく近くなるように修正してるつもりですが
+;; かえっておかしくなってるかもしれないので、変な所はスレでフォローお願いします。
+
+;⑨氏版
+;チルノ：兎が相手してくれないんだけど
+;輝夜：あらあら
+;	それは困ったわねｗ

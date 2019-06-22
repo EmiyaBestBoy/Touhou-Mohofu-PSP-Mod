@@ -1,0 +1,43 @@
+
+;; (0) は ⑨
+;; (1) は 文
+
+OBJ_LOAD tachie/cirno1.png,0
+OBJ_LOAD tachie/aya4.png,1
+
+; 初期位置へ登場し、移動完了まで待つ。
+OBJ xy,0,128,144
+OBJ xy,1,256,144
+OBJ wait
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,7
+;TEXT 遊び相手がほしいなら\n
+;TEXT 竹林に行ってみたらどうです？
+;TEXT あそこなら兎がいっぱい\nいますよ。
+TEXT 遊び相手が欲しいなら、\n
+TEXT 紅魔館に行ってみたらどうです？
+HOLD
+TEXT あそこなら必ず誰か\nいますよ。
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,9
+OBJ_LOAD tachie/cirno4.png,0
+TEXT うん、またね！
+HOLD
+
+;; 通常退避位置[1]へ
+OBJ xy,0,-64,144
+OBJ xy,1,416,144
+
+; 全オブジェ移動完了まで待つ。
+OBJ wait
+
+BOSS result
+
+;ここまで来たら終了する。
+;; シナリオ修正について、基本的に原作になるべく近くなるように修正してるつもりですが
+;; かえっておかしくなってるかもしれないので、変な所はスレでフォローお願いします。

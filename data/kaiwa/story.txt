@@ -1,0 +1,309 @@
+
+; 始めに画面の初期化
+DRAW panel,0
+DRAW text,0
+
+;---------------------------------
+; (r38)「HOLD」コマンドがゲーム中は OK なのに、何故かデモだけ巧くいってないみたいなので、
+; 機械的に直後に「DRAW wait,8」をいれておいた。
+; 「DRAW wait,8」のr38での仕様は、(8[frame]待ってから文字画面を消し、カーソルを位置を初期化する)
+;---------------------------------
+
+; (r35)の仕様上、obj動かすより先に画像が無いとまずいので、あらかじめ画像をロードしておく。
+
+; (r38)の仕様上、始めは描画off
+
+;; (0) は 霊夢
+;; (1) は 魔理沙
+
+OBJ_LOAD select/pl10.png,0
+OBJ_LOAD select/pl20.png,1
+
+;; 全画面用退避位置[2(256x256)]へ移動し、移動完了まで待つ。
+
+; 608==480+(256/2)==(画面幅)+(OBJ幅/2)
+;---------------------------------
+
+;; オブジェ0のみ、全画面用退避位置[2(256x256)]へ
+OBJ xy,0,-128,144
+
+;; オブジェ1のみ、画面上部の退避位置[B]へ
+OBJ xy,1,333,-128
+
+;---------------------------------
+
+; 退避位置についたら描画on
+OBJ wait
+OBJ draw,0,1
+OBJ draw,1,1
+
+;---------------------------------
+
+;DRAW bg,1
+BG_LOAD story/arasuzi.jpg,0
+BG_FADE
+
+BGM ,23
+
+;---------------------------------
+
+DRAW text,1
+;DRAW color,7
+DRAW speed,1
+TEXT 東方模倣風 ～ Toho Imitation Style.\n
+DRAW color,9
+TEXT あらすじ & キャラクタ紹介
+HOLD
+DRAW wait,8
+
+;---------------------------------
+
+;BG_LOAD story/arasuzi(reimu).jpg
+;BG_LOAD story/arasuzi(reimu).png
+BG_LOAD story/博麗神社(霞月).png,0
+BG_FADE
+
+;; オブジェ0のみ、初期位置へ登場。
+OBJ xy,0,128,144
+
+DRAW color,7
+;DRAW speed,1
+;TEXT 博麗霊夢 Reimu Hakurei\n
+TEXT 博麗霊夢 Hakurei Reimu\n
+DRAW color,8
+TEXT 特殊能力：喰らいボムの受付時間が長い
+;TEXT 特殊能力：被弾判定が極小
+HOLD
+DRAW wait,8
+DRAW color,7
+DRAW speed,2
+TEXT 十五夜の翌月、キリギリスが\n鳴き始める頃。
+HOLD
+DRAW wait,8
+TEXT 十三夜の宴会を開こうと\n思っていたのに……
+HOLD
+DRAW wait,8
+TEXT いつまで経っても月が欠けないので、\n外に出た。
+HOLD
+DRAW wait,8
+
+DRAW speed,1
+TEXT よくよく思い出したら、昨日も\n一昨日も満月だった気がする。
+HOLD
+DRAW wait,8
+DRAW speed,0
+TEXT このままじゃ、宴会が開けない！
+HOLD
+DRAW wait,8
+DRAW speed,2
+TEXT そう考えた巫女は、\n
+DRAW speed,1
+TEXT この長い初秋を終わらせに飛び出した。
+HOLD
+DRAW wait,8
+
+;; オブジェ0のみ、通常退避位置[1(256x256)]へ
+OBJ xy,0,-128,144
+
+;---------------------------------
+
+BGM ,19
+DRAW skip,0
+DRAW panel,0
+;BG_LOAD story/arasuzi(marisa).jpg
+BG_LOAD story/魔法の森(茸狩り2).jpg
+
+;OBJ_MO VE 0xffffff,1,-122,0
+
+; 魔理沙画面上部から登場
+;; オブジェ1のみ、初期位置へ登場し、移動完了まで待つ。
+OBJ xy,1,256,144
+OBJ wait
+
+;DRAW color,7
+;DRAW speed,1
+;TEXT 霧雨魔理沙 Marisa Kirisame\n
+TEXT 霧雨魔理沙 Kirisame Marisa\n
+;全員: 上部収集がいつでも可能、に仕様変更した。
+DRAW color,8
+;TEXT 特殊能力：アイテム上部収集がいつでも可能
+TEXT 特殊能力：ボム中にショットが撃てない
+HOLD
+DRAW wait,8
+DRAW color,7
+DRAW speed,2
+TEXT きのこ狩りに行こうと外に出たけれど、\n
+TEXT どのきのこもみんな身が薄い。
+HOLD
+DRAW wait,8
+TEXT 変だな、と思ったので妖精に聞いたら、\n
+TEXT 最近はずっと満月だったらしい。
+HOLD
+DRAW wait,8
+TEXT 新種のきのこより、\n面白そうなにおいがしたので、
+HOLD
+DRAW wait,8
+DRAW speed,1
+TEXT 魔理沙は関係なさそうなやつから、\nとっちめることにした。
+HOLD
+DRAW wait,8
+
+;---------------------------------
+;; オブジェ1のみ、レミリア用表示位置へ登場し、移動完了まで待つ。
+OBJ xy,1,336,136
+OBJ wait
+
+BGM ,21
+DRAW skip,0
+DRAW panel,0
+;BG_LOAD story/arasuzi(remilia).jpg
+;BG_LOAD bg/妹紅戦背景.jpg
+BG_LOAD story/紅魔館テラス(昼a).jpg
+
+OBJ_LOAD select/pl40.png,1
+
+DRAW color,2
+;DRAW speed,1
+TEXT レミリア・スカーレット Remilia Scarlet\n
+DRAW color,8
+;TEXT 特殊能力：抱え落ちすると必ずボムが出る
+TEXT 特殊能力：逆さに振ると鼻血が出る
+HOLD
+DRAW wait,8
+DRAW color,2
+TEXT 最近は館に篭もりがちだったけど、
+HOLD
+DRAW wait,8
+DRAW speed,2
+TEXT 博麗神社の宴会が近いはずだから、\n外に出てみると満月だった。
+HOLD
+DRAW wait,8
+DRAW speed,1
+TEXT 確か昨日も、先週も満月だった気がする。
+HOLD
+DRAW wait,8
+TEXT 何かおかしいと考えをめぐらせているうちに思い当たる節があったので、
+HOLD
+DRAW wait,8
+DRAW speed,2
+TEXT 今晩どうにかしようと思って寝床に入った。
+HOLD
+DRAW wait,8
+
+
+;---------------------------------
+
+BGM ,17
+DRAW skip,0
+DRAW panel,0
+;BG_LOAD bg/key_config.jpg
+;BG_LOAD story/arasuzi(cirno).jpg
+BG_LOAD story/海.jpg
+
+OBJ_LOAD select/pl60.png,1
+
+DRAW color,5
+DRAW speed,1
+TEXT チルノ Cirno\n
+; ⑨は東雲フォントに無いので作りました
+DRAW color,9
+;TEXT 特殊能力：⑨
+;TEXT 特殊能力：グレイズするとアイスが貯まる
+TEXT 特殊能力：へたれ強い
+HOLD
+DRAW wait,8
+DRAW color,5
+DRAW speed,2
+TEXT 十五夜の宴会が終わってから、\nしばらくたった頃。
+HOLD
+DRAW wait,8
+DRAW color,15
+TEXT 冬
+DRAW color,5
+TEXT になったらレティと遊ぶ約束をしていたが
+HOLD
+DRAW wait,8
+TEXT いまだ
+DRAW color,15
+TEXT 冬
+DRAW color,5
+TEXT がやってくる気配はなく、\n
+DRAW color,13
+;TEXT 蛙
+TEXT ■
+DRAW color,5
+TEXT も少なくなってきてしまっていた。
+HOLD
+DRAW wait,8
+DRAW speed,1
+TEXT このままじっとしているのは、\n性に合わないので、
+HOLD
+DRAW wait,8
+TEXT チルノは遊び相手を探しに出かけた。
+HOLD
+DRAW wait,8
+
+;---------------------------------
+
+BGM ,20
+DRAW skip,0
+DRAW panel,0
+;BG_LOAD story/arasuzi(yuyuko).jpg
+BG_LOAD story/白玉楼縁側.jpg
+
+OBJ_LOAD select/pl50.png,1
+
+DRAW color,3
+;DRAW speed,1
+;TEXT 西行寺幽々子 Yuyuko Saigyoji\n
+;TEXT 西行寺幽々子 Yuyuko Saigyouzi\n
+TEXT 西行寺幽々子 Saigyouzi Yuyuko\n
+;; 初出時の妖々夢では、Yuyuko Saigyouji
+;; 永夜抄では、Yuyuko Saigyouzi
+;; ですが、模倣風では'z'に統一します。
+DRAW color,8
+;TEXT 特殊能力：ステージクリア時にボムが増える
+TEXT 特殊能力：ボムに困った事など殆ど無い
+HOLD
+DRAW wait,8
+DRAW color,3
+DRAW speed,2
+TEXT 神社での十五夜の宴会も終わって、\nちょうど一月。
+HOLD
+DRAW wait,8
+TEXT ここ最近満月が続いていた影響なのか、\n
+TEXT 木々の葉も栗の実も色づいていなかった。
+HOLD
+DRAW wait,8
+DRAW speed,0
+TEXT あつまでも食べられないのは悔しい！
+HOLD
+DRAW wait,8
+DRAW speed,2
+TEXT そう思った幽冥楼閣の亡霊少女は、
+HOLD
+DRAW wait,8
+;TEXT おいしい秋の味覚を味わうために、\n
+;TEXT 妖夢をおいて白玉楼を飛び出した。
+TEXT 妖夢より先においしい秋の味覚を\n
+TEXT 味わうために、白玉楼を飛び出した。
+HOLD
+DRAW wait,8
+
+;---------------------------------
+;タイトル画面用に曲を戻す。
+BGM ,27
+
+;; 全画面用退避位置[2]へ
+;OBJ xy,0,-64,144
+OBJ xy,1,544,144
+
+; 全オブジェ移動完了まで待つ。
+OBJ wait
+
+;--仕様変更するけどとりあえず(r35)。
+BOSS result
+
+;ここまで来たら終了する。
+;; シナリオ修正について、基本的に原作になるべく近くなるように修正してるつもりですが
+;; かえっておかしくなってるかもしれないので、変な所はスレでフォローお願いします。
