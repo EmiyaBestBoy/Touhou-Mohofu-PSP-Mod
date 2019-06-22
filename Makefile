@@ -261,7 +261,7 @@ include ./$(SRC)/UTF8_title.mak
 #PSP_EBOOT_TITLE = kene_r34_debug
 #PSP_EBOOT_TITLE = kene$(RELESE_DATE)(r35)
 #PSP_EBOOT_TITLE = kene$(RELESE_DATE)(r34u0)
-PSP_EBOOT_TITLE = $(APP_UTF8_TITLE)$(RELESE_DATE)$(APP_UTF8_SYMEI_STR)$(VERSION_ALL)
+PSP_EBOOT_TITLE = Touhou Mohofu r40 Mod
 
 ifneq ($(USE_EBOOT_TITLE),1)
 	# 0 == リリース版(タイトルの文字無し)
@@ -292,8 +292,8 @@ PSPDEV = $(shell psp-config --pspdev-path)
 PSPSDK = $(shell psp-config --pspsdk-path)
 else
 # pspsdk-setup-0.11.1
-PSPDEV = /opt/pspsdk/
-PSPSDK = /opt/pspsdk/psp/sdk/
+PSPDEV = C:/pspsdk/
+PSPSDK = C:/pspsdk/psp/sdk/
 endif
 
 #------------------------------------------------------------------------------
