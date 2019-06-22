@@ -58,9 +58,9 @@ DRAW wait,8
 
 ;---------------------------------
 
-;BG_LOAD story/arasuzi(reimu).jpg
-;BG_LOAD story/arasuzi(reimu).png
-BG_LOAD story/博麗神社(霞月).png,0
+;BG_LOAD story/ending(reimu).jpg
+;BG_LOAD story/ending(reimu).png
+BG_LOAD story/Hakurei Shrine.png,0
 BG_FADE
 
 ;; オブジェ0のみ、初期位置へ登場。
@@ -110,8 +110,8 @@ OBJ xy,0,-128,144
 BGM ,19
 DRAW skip,0
 DRAW panel,0
-;BG_LOAD story/arasuzi(marisa).jpg
-BG_LOAD story/魔法の森(茸狩り2).jpg
+;BG_LOAD story/ending(marisa).jpg
+BG_LOAD story/Forest.jpg
 
 ;OBJ_MO VE 0xffffff,1,-122,0
 
@@ -156,9 +156,9 @@ OBJ wait
 BGM ,21
 DRAW skip,0
 DRAW panel,0
-;BG_LOAD story/arasuzi(remilia).jpg
-;BG_LOAD bg/妹紅戦背景.jpg
-BG_LOAD story/紅魔館テラス(昼a).jpg
+;BG_LOAD story/ending(remilia).jpg
+;BG_LOAD bg/Scarlet.jpg
+BG_LOAD story/Terrace.jpg
 
 OBJ_LOAD select/pl40.png,1
 
@@ -197,8 +197,8 @@ BGM ,17
 DRAW skip,0
 DRAW panel,0
 ;BG_LOAD bg/key_config.jpg
-;BG_LOAD story/arasuzi(cirno).jpg
-BG_LOAD story/海.jpg
+;BG_LOAD story/ending(cirno).jpg
+BG_LOAD story/Water.jpg
 
 OBJ_LOAD select/pl60.png,1
 
@@ -248,8 +248,8 @@ DRAW wait,8
 BGM ,20
 DRAW skip,0
 DRAW panel,0
-;BG_LOAD story/arasuzi(yuyuko).jpg
-BG_LOAD story/白玉楼縁側.jpg
+;BG_LOAD story/ending(yuyuko).jpg
+BG_LOAD story/YuyukoShrine.jpg
 
 OBJ_LOAD select/pl50.png,1
 
