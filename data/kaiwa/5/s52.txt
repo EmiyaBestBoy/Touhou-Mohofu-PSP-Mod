@@ -1,0 +1,50 @@
+
+;; (0) は 幽々子
+;; (1) は パチェ
+
+OBJ_LOAD tachie/yuyuko5.png,0
+OBJ_LOAD tachie/pache1.png,1
+
+; 初期位置へ登場し、移動完了まで待つ。
+OBJ xy,0,128,144
+OBJ xy,1,256,144
+OBJ wait
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,3
+TEXT 十五夜が繰り返しているのは\n
+TEXT 貴方のせいじゃなくって？\n
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,7
+TEXT 私じゃないよ。
+HOLD
+TEXT 犯人は体力のある奴。
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,3
+OBJ_LOAD tachie/yuyuko1.png,0
+;TEXT ということは、\n
+;TEXT その判事が怪しいわね……
+TEXT ということは、\n
+TEXT 撃ち殺された判事が怪しいわね……
+HOLD
+; (C)アガサ・クリスティー 「そして誰もいなくなった」
+
+;; 通常退避位置[1]へ
+OBJ xy,0,-64,144
+OBJ xy,1,416,144
+
+; 全オブジェ移動完了まで待つ。
+OBJ wait
+
+BOSS result
+
+;ここまで来たら終了する。
+;; シナリオ修正について、基本的に原作になるべく近くなるように修正してるつもりですが
+;; かえっておかしくなってるかもしれないので、変な所はスレでフォローお願いします。

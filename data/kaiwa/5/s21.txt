@@ -1,0 +1,125 @@
+
+;; (0) は 幽々子
+;; (1) は 魅魔
+
+OBJ_LOAD tachie/yuyuko1.png,0
+OBJ_LOAD tachie/mima1.png,1
+
+; 初期位置へ登場し、移動完了まで待つ。
+OBJ xy,0,128,144
+OBJ xy,1,256,144
+OBJ wait
+
+;; 2==魅魔(キャラ)を読み込んで表示
+BOSS load,2
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,3
+;TEXT 月が出てきたわね。
+;TEXT 今宵の月が出てきたわね。
+TEXT 今宵の月が顔を出したわね。
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,4
+;TEXT ええ、今夜も満月よ\n
+;TEXT にしても、お団子はまだかしら。
+;TEXT このところ、ずっと満月なんだもの
+;TEXT このところ、ずっと満月だもの。
+;TEXT 今夜も満月よ。
+;TEXT 今夜も満月。お団子はまだかしら。
+;TEXT 今夜も満月だし、\n
+;TEXT お団子の用意もあるわよ。
+TEXT この処ずっと満月だから、\n
+TEXT お団子の用意ができてるわよ。
+HOLD
+
+;説明文
+DRAW color,7
+;TEXT Revengeful Ghost悪霊\n
+TEXT 久遠の夢に運命を任せる精神\n
+;TEXT 博麗神社の祟り神\n
+;TEXT 忘れられた悪霊\n
+TEXT 魅魔
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,3
+OBJ_LOAD tachie/yuyuko4.png,0
+;TEXT 月見でもするつもりなの？
+TEXT 月見でもするつもり？
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,4
+OBJ_LOAD tachie/mima4.png,1
+;--- 0123456789012345678901234567980123456789
+;TEXT このところ、ずっと満月なんだもの\n
+;TEXT いっしょに食べましょうよ。
+;TEXT そのとおりよ。\n
+;TEXT いっしょに\n食べましょうよ。
+TEXT そのつもり。\n
+TEXT ひとつ一緒に喰べないかい？
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,3
+OBJ_LOAD tachie/yuyuko1.png,0
+TEXT いただこうかしら\n
+TEXT 貴方が作ったの？
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,4
+OBJ_LOAD tachie/mima3.png,1
+;TEXT いいえ。\nいつも兎達に作らせているのよ
+;TEXT 兎達に\n作らせているのよ。
+;TEXT 兎達に\n作らせたのよ。
+;TEXT 兎達が作るのよ。
+;TEXT お団子は兎達が作るのよ。
+; 作ろうとか考えた節すらない。
+TEXT いいえ、兎達が作ったのよ。
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,3
+OBJ_LOAD tachie/yuyuko5.png,0
+TEXT 一度でいいから自分で作ってみなさい。
+HOLD
+OBJ_LOAD tachie/yuyuko3.png,0
+;TEXT 一粒で一万倍おいしいのよ。
+; (C)一粒万倍日
+;TEXT 一度で二度おいしいわ。
+;TEXT 一回で二度おいしいわよ。
+;TEXT 一粒で二度おいしいわ。
+;TEXT 一粒で二度おいしいわよ。
+TEXT 一粒で二度おいしいのよ。
+HOLD
+; (C)グリコ
+
+;; 通常退避位置[1]へ
+OBJ xy,0,-64,144
+OBJ xy,1,416,144
+
+BGM ,24
+DRAW color,7
+;--------12345678901234567890123456789012345678
+;EXT \n\n　　　　　　　　　 ♪Complete Darkness
+TEXT \n\n　　　　　　　　　　　　　　♪妖魔夜行
+HOLD
+
+; 全オブジェ移動完了まで待つ。
+OBJ wait
+
+BOSS start
+
+;ここまで来たら終了する。
+;; シナリオ修正について、基本的に原作になるべく近くなるように修正してるつもりですが
+;; かえっておかしくなってるかもしれないので、変な所はスレでフォローお願いします。

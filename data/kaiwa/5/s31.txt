@@ -1,0 +1,140 @@
+
+;; (0) は 幽々子
+;; (1) は 輝夜
+
+OBJ_LOAD tachie/yuyuko1.png,0
+OBJ_LOAD tachie/kaguya1.png,1
+
+; 初期位置へ登場し、移動完了まで待つ。
+OBJ xy,0,128,144
+OBJ xy,1,256,144
+OBJ wait
+
+;; 3==輝夜(キャラ)を読み込んで表示
+BOSS load,3
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,2
+TEXT 月が出てきたわね。
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,3
+OBJ_LOAD tachie/yuyuko1.png,0
+OBJ_LOAD tachie/kaguya2.png,1
+TEXT そういえば\n
+TEXT 何で貴方はここにいるの？
+HOLD
+
+;説明文
+DRAW color,7
+;TEXT 永遠と須臾の罪人\n
+TEXT 永遠のお姫様\n
+;TEXT 人間らしくないお姫様\n
+TEXT 蓬莱山 輝夜
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,3
+OBJ_LOAD tachie/yuyuko2.png,0
+TEXT 龍料理！\n……じゃなくて、
+OBJ_LOAD tachie/yuyuko6.png,0
+;幽々子「いけない、台本忘れる処だったわ」
+
+;TEXT 栗ご飯が食べたくて。
+TEXT 栗御飯が食べたくて。
+HOLD
+;; ひらがなが途中で入る単語については、本家では使っていない。
+;; これは見た目のバランスが悪いからだと思われる。
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,2
+OBJ_LOAD tachie/kaguya3.png,1
+;TEXT ここには無いわよ。
+TEXT ここには両方無いわよ。
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,3
+OBJ_LOAD tachie/yuyuko3.png,0
+TEXT 家にも無いのよ。\n
+;TEXT みんな、まだ実が青いわ。
+;TEXT みんな、まだ実が青いの。
+TEXT みんな、まだ栗の実が青いの。
+HOLD
+
+BGM ,13
+
+OBJ_LOAD tachie/yuyuko4.png,0
+;TEXT 十五夜が繰り返しているから\n
+;; スレ16_596氏 修正「十五夜が繰り返される」から
+;TEXT 十五夜が繰り返されるから\n
+TEXT 十五夜が繰り返されているから\n
+TEXT かしらね。
+HOLD
+;; 幽々子は割と傍観者的立場なのでこのような表現の方が良い。
+;; 霊夢のように異変解決に躍起になっている訳ではない。
+
+DRAW color,7
+;--------12345678901234567890123456789012345678
+TEXT \n\n　　　 ♪竹取飛翔　～ Lunatic Princess
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,2
+;TEXT 私も栗ご飯が\n
+;TEXT 食べたくなってきたわ。
+;--- 0123456789012345678901234567980123456789
+TEXT 私も栗御飯が食べたくなってきたわ。\n
+TEXT お団子はもういいわね。
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,3
+OBJ_LOAD tachie/yuyuko5.png,0
+;TEXT 食べ物を粗末にするのはいけないわよ。
+;TEXT 食べ物を粗末にしたらいけないわよ。
+TEXT 食べ物を粗末にしたら\n
+TEXT いけないわ。
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,2
+TEXT もったいないお化けが\n
+TEXT 出てくるものね。
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,3
+OBJ_LOAD tachie/yuyuko3.png,0
+;TEXT 最近はおばあさんに若返ったのよ。
+;TEXT あら、最近は若返って\n
+;TEXT おばあさんになったのよ。
+;TEXT おばあさんになったって聞いたわよ。
+TEXT あら、最近は反魂の術で若返って\n
+TEXT おばあさんになったって聞いたけど。
+HOLD
+; (C)真珠まりこ
+;(文から聞いた。)
+
+;; 通常退避位置[1]へ
+OBJ xy,0,-64,144
+OBJ xy,1,416,144
+
+; 全オブジェ移動完了まで待つ。
+OBJ wait
+
+BOSS start
+
+;ここまで来たら終了する。
+;; シナリオ修正について、基本的に原作になるべく近くなるように修正してるつもりですが
+;; かえっておかしくなってるかもしれないので、変な所はスレでフォローお願いします。

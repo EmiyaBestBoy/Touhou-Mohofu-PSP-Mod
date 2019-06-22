@@ -1,0 +1,246 @@
+
+;; (0) は チルノ
+;; (1) は 輝夜
+
+OBJ_LOAD tachie/cirno1.png,0
+OBJ_LOAD tachie/kaguya1.png,1
+
+; 初期位置へ登場し、移動完了まで待つ。
+OBJ xy,0,128,144
+OBJ xy,1,256,144
+OBJ wait
+
+;; 3==輝夜(キャラ)を読み込んで表示
+BOSS load,3
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,3
+TEXT 久しぶりね。\n兎達なら裏で餅をついてるわ。
+HOLD
+
+;説明文
+DRAW color,7
+;TEXT 永遠と須臾の罪人\n
+;TEXT 永遠のお姫様\n
+TEXT 人間らしくないお姫様\n
+TEXT 蓬莱山 輝夜
+HOLD
+
+BGM ,13
+DRAW color,7
+;--------12345678901234567890123456789012345678
+TEXT \n\n　　　 ♪竹取飛翔　～ Lunatic Princess
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,9
+OBJ_LOAD tachie/cirno2.png,0
+;TEXT あんた誰？\nそれより、あたいは何も言ってないよ。
+;TEXT あんた誰？何もあたいが言ってないのに。
+;TEXT あんた誰？何も言ってないのに。
+;TEXT あんた誰？\nあたい始めてみるよ？
+TEXT あんた誰さ？\nあたいは始めて見るね。
+HOLD
+; 断言
+
+OBJ_LOAD tachie/cirno3.png,0
+;TEXT なんでわかったの？
+;TEXT なんでわかったの！
+;TEXT なんでわかったんだい？
+;601 少し姉御口調過ぎる気がします。
+;TEXT なんでわかったんだ？
+;TEXT どうして、\nうさぎのこと知ってるの？
+;TEXT どうして、\nうさぎの事、知ってるのさ？
+TEXT うさぎのこと\nどうして知ってるのよ？
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,3
+;TEXT 顔に書いてあるわ。
+OBJ_LOAD tachie/kaguya4.png,1
+TEXT 兎はわたしの家来なのよ。
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,9
+OBJ_LOAD tachie/cirno2.png,0
+;TEXT あたいの顔に？
+;TEXT あたいの顔に！
+;TEXT あたいの顔にかい？
+;TEXT あたいの顔にか！？
+;231 ここも「あたいの顔に？」とチルノが言えるのは、余裕がある場合だけ。
+;TEXT 知らなかったよ！\n大発見！
+TEXT 大発見だ！\n知らなかったよ！
+HOLD
+TEXT うさぎの親分には\n耳が無い！
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,3
+OBJ_LOAD tachie/kaguya5.png,1
+TEXT ……。
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,9
+;TEXT ブレザーの人は\n親分じゃなかったの？
+;TEXT ブレザーの人は\n親分じゃないのか。
+;TEXT うさぎは\n親分のペットだったんだ！
+;TEXT ブレザーの人が\n親分かと思ってたよ。
+TEXT ブレザーの人が\n黒幕かと思ってたよ。
+HOLD
+;(C)レティ
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,3
+;TEXT そう、あなたの顔に。
+OBJ_LOAD tachie/kaguya3.png,1
+TEXT だから、寒いとかわいそうだから\n
+;TEXT 程ほどにね。
+;TEXT 程々にね。
+TEXT ほどほどにね。
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,9
+OBJ_LOAD tachie/cirno4.png,0
+;TEXT ……ねえ、鏡持ってない？
+;TEXT ……ねえ、鏡とか持ってない？
+;TEXT ……鏡ない？
+;231 ここも。余裕がありません。
+TEXT 親分、うさぎは寒いの苦手なの？
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,3
+;TEXT 貴方じゃ見てもわからないわよ。
+;TEXT 貴方じゃ見てもわからないわ。
+OBJ_LOAD tachie/cirno6.png,0
+OBJ_LOAD tachie/kaguya1.png,1
+TEXT たぶんね。
+HOLD
+
+OBJ_LOAD tachie/cirno1.png,0
+OBJ_LOAD tachie/kaguya2.png,1
+;TEXT そういえば、\nお話するのは始めてかしら？
+TEXT いつものお友達が\nまだ起きてこないんでしょう。
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,9
+OBJ_LOAD tachie/cirno5.png,0
+;TEXT なんで知ってるのよ。
+;TEXT なんで知ってるのさ。
+TEXT なんで知ってんのよ。
+HOLD
+
+OBJ_LOAD tachie/cirno4.png,0
+;TEXT ところで、兎と遊んでいっても良い？
+TEXT ところで、うさぎと遊んでいっても良い？
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,3
+TEXT いいわよ。
+HOLD
+
+;; オブジェ0のみ、通常退避位置[1]へ
+OBJ xy,0,-64,144
+
+OBJ_LOAD tachie/kaguya3.png,1
+TEXT くれぐれも邪魔しないようにね。
+HOLD
+
+;; オブジェ0のみ、初期位置へ登場し、移動完了まで待つ。
+OBJ xy,0,128,144
+OBJ wait
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,9
+OBJ_LOAD tachie/cirno6.png,0
+OBJ_LOAD tachie/kaguya1.png
+
+;TEXT 兎が相手してくれないんだけど……。
+;TEXT うさぎが相手してくれないんだけど……。
+;TEXT うさぎが遊んでくれないんだけど……。
+TEXT うさぎが遊んでくれないよぉ……。
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,3
+OBJ_LOAD tachie/kaguya3.png,1
+TEXT あらあら、それは困ったわね。
+HOLD
+TEXT さぞかし忙しいんでしょうね。
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,9
+;TEXT おもち食べて、\nみんなで寝てた。
+;TEXT おもち食べて、\nみんなで寝てたよ。
+TEXT おもち食べて、\nみんな寝てたよ。
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,3
+TEXT 睡眠は重労働よ。
+HOLD
+TEXT お酒を飲んだくらいじゃ\n寝れないわ。
+HOLD
+
+;; 通常退避位置[1]へ
+OBJ xy,0,-64,144
+OBJ xy,1,416,144
+
+; 全オブジェ移動完了まで待つ。
+OBJ wait
+
+BOSS start
+
+;ここまで来たら終了する。
+;; シナリオ修正について、基本的に原作になるべく近くなるように修正してるつもりですが
+;; かえっておかしくなってるかもしれないので、変な所はスレでフォローお願いします。
+
+;⑨氏版
+;輝夜：久しぶりね
+;チルノ：？
+;輝夜：ふふ、その顔覚えてないって顔ね。
+;	あなた、兎達を探しに来たんでしょ？
+;	なら裏でもちをついてるわよ
+;チルノ：え！？
+;	あたいなんにも言ってないのになんでわかったの？
+;輝夜：顔に書いてあるのよ
+;チルノ：あたいの顔に？
+;輝夜：そう、あなたの顔に。
+;チルノ：……ねえ、鏡持ってない？
+;輝夜：貴方じゃ見てもわからないわよ
+
+;⑨氏版
+;輝夜：それにしてもここに来るなんて、初めてね。
+;	いつものお友達がまだ起きてこないんでしょう。
+;チルノ：兎と遊んでいっても良い？
+;輝夜：いいわよ。
+;	くれぐれも邪魔しなければね。
+
+;⑨氏版
+;チルノ：兎が相手してくれないんだけど
+;輝夜：あらあら
+;	それは困ったわねｗ
+
+;231 チルノが怖がるシナリオは駄目だと思う。
+;231 上の⑨氏版もチルノが怖がらないシナリオに修正されてると思う。

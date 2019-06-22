@@ -1,0 +1,57 @@
+
+;; (0) は 幽々子
+;; (1) は 文
+
+OBJ_LOAD tachie/yuyuko1.png,0
+OBJ_LOAD tachie/aya1.png,1
+
+; 初期位置へ登場し、移動完了まで待つ。
+OBJ xy,0,128,144
+OBJ xy,1,256,144
+OBJ wait
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,3
+;TEXT 冬がきたら、ここはどうなるのかしら？
+TEXT 冬が来たら、此処はどうなるのかしら？
+HOLD
+;「此処」は妖々夢で一度しか出てこないので、「模倣風」でも一度だけしか出さない。
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,7
+TEXT 機嫌の悪い秋神が\n
+TEXT このあたりを紅葉させてますよ。
+HOLD
+TEXT ちなみに豊穣の神は\n
+TEXT 薩摩芋を育てています。
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,3
+;OBJ_LOAD tachie/yuyuko3.png,0
+;TEXT あらあら、\n本当に神様なのかしらね。
+; ちょっと待って？幽々子、そうは言わないんじゃ？たぶん。
+OBJ_LOAD tachie/yuyuko2.png,0
+TEXT 神々の愛した薩摩芋……
+HOLD
+
+OBJ_LOAD tachie/yuyuko4.png,0
+TEXT 俄然、興味がわいてきたわね。
+HOLD
+; まあ、これも良くわかんないけど...
+
+;; 通常退避位置[1]へ
+OBJ xy,0,-64,144
+OBJ xy,1,416,144
+
+; 全オブジェ移動完了まで待つ。
+OBJ wait
+
+BOSS result
+
+;ここまで来たら終了する。
+;; シナリオ修正について、基本的に原作になるべく近くなるように修正してるつもりですが
+;; かえっておかしくなってるかもしれないので、変な所はスレでフォローお願いします。

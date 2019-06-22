@@ -1,0 +1,121 @@
+
+;; (0) は 幽々子
+;; (1) は アリス
+
+OBJ_LOAD tachie/yuyuko6.png,0
+OBJ_LOAD tachie/alice1.png,1
+
+; 初期位置へ登場し、移動完了まで待つ。
+OBJ xy,0,128,144
+OBJ xy,1,256,144
+OBJ wait
+
+;; 1==アリス(キャラ)を読み込んで表示
+BOSS load,1
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,3
+;TEXT ああ、おなかが減ったわ。
+TEXT あーあ、おなかが減ったわ。
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,5
+;TEXT 幽霊でもおなかが減るのね。
+;TEXT 幽霊もおなかが減るのね。
+;TEXT 幽霊はおなかが減るのね？
+; 幽霊「も」「でも」とは発言しないと思う。アリス自身「は」おなかが減らないので。
+;TEXT 幽霊になっても、おなかが減るの？
+TEXT 私は減らないから気持ちは分からないけど……
+HOLD
+OBJ_LOAD tachie/alice2.png,1
+;TEXT 妖怪になるとおなかが減らないのに、\n
+;TEXT 幽霊になるとおなかが減るの？
+TEXT 妖怪になるとおなかが減らないのに、\n
+TEXT 幽霊になるとおなかが減るのは
+HOLD
+TEXT どこか変じゃなくて？
+HOLD
+
+;説明文
+DRAW color,7
+;TEXT 死の少女\n
+;TEXT 魔法の国のアリス\n
+;TEXT 七色の人形使い\n
+;TEXT 七色の人形遣い\n
+TEXT 見た目だけ賑やかな妖怪\n
+TEXT アリス・マーガトロイド
+HOLD
+
+DRAW color,5
+TEXT 妖怪の幽霊はどうなるのかしら？
+HOLD
+;アリスは幽霊でないので、純粋な興味で。
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,3
+;TEXT 減るものは減るのよ
+;TEXT 減るものは減るのよのね
+;; スレ16_596氏 修正「のよのね」→「のよね」
+;TEXT 減るものは減るのよね。
+;TEXT だからー、減るものは減るのよー。
+OBJ_LOAD tachie/yuyuko1.png,0
+TEXT 妖怪の事は正確には分からないわ。
+HOLD
+OBJ_LOAD tachie/yuyuko5.png,0
+TEXT でも幽霊や半妖なら、ちゃんと減ります。\n
+TEXT 覚えておきなさい。
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,5
+OBJ_LOAD tachie/alice3.png,1
+;TEXT それなら幽霊は餓死するのかしら？
+TEXT それなら幽霊は餓死すると思う？
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,3
+OBJ_LOAD tachie/yuyuko4.png,0
+;TEXT どうかしら。
+TEXT するかもよ？
+HOLD
+; 「どうかしら」→「するかもよ？」。同意よりはむしろ積極的に否定しない。
+;TEXT でも、もっと食べたくなるもの
+;TEXT でも、もっと食べたくなるから
+;TEXT でも、断食するつもりはないわ
+;TEXT もっと食べたくなるもの。
+;TEXT 断食するつもりはないわよ！
+;TEXT 断食するつもりはないわ。
+;TEXT 断食はしないわ。
+TEXT もし断食したら、\n
+TEXT 確実にもっと食べたくなるわ。
+HOLD
+OBJ_LOAD tachie/yuyuko3.png,0
+OBJ_LOAD tachie/alice6.png,1
+TEXT した事ないけど……。
+HOLD
+
+;; 通常退避位置[1]へ
+OBJ xy,0,-64,144
+OBJ xy,1,416,144
+
+BGM ,11
+DRAW color,7
+;--------12345678901234567890123456789012345678
+TEXT \n\n　　　 ♪人形裁判　～ 人の形弄びし少女
+HOLD
+
+; 全オブジェ移動完了まで待つ。
+OBJ wait
+
+BOSS start
+
+;ここまで来たら終了する。
+;; シナリオ修正について、基本的に原作になるべく近くなるように修正してるつもりですが
+;; かえっておかしくなってるかもしれないので、変な所はスレでフォローお願いします。

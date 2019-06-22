@@ -1,0 +1,59 @@
+
+;; (0) は レミリア
+;; (1) は 輝夜
+
+OBJ_LOAD tachie/remilia1.png,0
+OBJ_LOAD tachie/kaguya2.png,1
+
+; 初期位置へ登場し、移動完了まで待つ。
+OBJ xy,0,128,144
+OBJ xy,1,256,144
+OBJ wait
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,3
+TEXT あら、割と本気だったのね。
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,2
+TEXT やっと居場所が分かったわ。
+HOLD
+;TEXT それにしても、まぶたが重いわ。
+TEXT それにしても、まぶたが重いわね。
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,3
+OBJ_LOAD tachie/kaguya4.png,1
+TEXT ちょっとぐらい、いいじゃない\n
+TEXT もっと楽しんでいきなさいな。
+HOLD
+TEXT 兎達も歓迎しているわ。
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,2
+;TEXT いまさら、歓迎されてもねぇ。
+TEXT 今更、歓迎されても
+HOLD
+TEXT 兎はあっさりして好きだけど……
+HOLD
+; 兎を食べるのが好き。
+
+;; 通常退避位置[1]へ
+OBJ xy,0,-64,144
+OBJ xy,1,416,144
+
+; 全オブジェ移動完了まで待つ。
+OBJ wait
+
+BOSS result
+
+;ここまで来たら終了する。
+;; シナリオ修正について、基本的に原作になるべく近くなるように修正してるつもりですが
+;; かえっておかしくなってるかもしれないので、変な所はスレでフォローお願いします。

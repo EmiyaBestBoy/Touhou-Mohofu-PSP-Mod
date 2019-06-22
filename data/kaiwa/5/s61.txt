@@ -1,0 +1,115 @@
+
+;; (0) は 幽々子
+;; (1) は 咲夜
+
+OBJ_LOAD tachie/yuyuko4.png,0
+OBJ_LOAD tachie/sakuya5.png,1
+
+; 初期位置へ登場し、移動完了まで待つ。
+OBJ xy,0,128,144
+OBJ xy,1,256,144
+OBJ wait
+
+;; 6==咲夜(キャラ)を読み込んで表示
+BOSS load,6
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,3
+;TEXT やっぱり\n貴方だったのね。
+TEXT 貴方が龍料理ね。
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,5
+OBJ_LOAD tachie/sakuya1.png,1
+;TEXT やっぱり、\nとは？
+TEXT 龍料理？\n……ですか。
+HOLD
+
+;説明文
+DRAW color,7
+;TEXT 完全で瀟洒な従者\n
+TEXT 紅魔館のメイド\n
+;TEXT 完全で瀟洒なメイド\n
+;TEXT 危険な手品師\n
+TEXT 十六夜 咲夜
+HOLD
+
+BGM ,16
+DRAW color,7
+;--------12345678901234567890123456789012345678
+TEXT \n\n　　　　　 ♪月時計　～ ルナ・ダイアル
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,3
+OBJ_LOAD tachie/yuyuko2.png,0
+TEXT 龍は鱗が多そうね。
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,5
+OBJ_LOAD tachie/sakuya3.png,1
+TEXT ナイフなんですけど……。
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,3
+OBJ_LOAD tachie/yuyuko6.png,0
+;TEXT 同じ日を繰り返すなんてことするのは\n貴方ぐらいなもの。
+TEXT 同じ日を繰り返すなんて事をするのは\n貴方ぐらいなもの。
+HOLD
+;TEXT 食後に眠くなるぐらい確実よ。
+;231 元ネタが若干判り難いので修正。
+;TEXT コーラを飲んだら\nゲップが出るっていうくらい確実ね。
+;TEXT 食事を食べたら\n眠くなるっていうくらい確実ね。
+OBJ_LOAD tachie/yuyuko1.png,0
+TEXT コーラを飲んだら\n眠くなるっていうくらい確実ね。
+HOLD
+;; せっかく幽々子に言わせるのだから。
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,5
+OBJ_LOAD tachie/sakuya6.png,1
+TEXT そういうことでしたか\nではこれで。
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,3
+OBJ_LOAD tachie/yuyuko3.png,0
+;TEXT ちょっと待って～
+TEXT ちょ、ちょっと待って～！
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,5
+OBJ_LOAD tachie/sakuya5.png,1
+;TEXT 時を一巡させて同じ日にする。
+;TEXT 正直、余裕がないのです。
+TEXT 幻想郷は十五夜のすべてを体験して、\nこの世界は一巡した……。
+HOLD
+TEXT 私がいなくなれば、\n世界の時間は変わってしまうのです。
+HOLD
+;601 覚悟こそ幸福、ということを思い出してくれ！
+;601 例の神父の台詞はどうか削らないでください。
+
+;; 通常退避位置[1]へ
+OBJ xy,0,-64,144
+OBJ xy,1,416,144
+
+; 全オブジェ移動完了まで待つ。
+OBJ wait
+
+BOSS start
+
+;ここまで来たら終了する。
+;; シナリオ修正について、基本的に原作になるべく近くなるように修正してるつもりですが
+;; かえっておかしくなってるかもしれないので、変な所はスレでフォローお願いします。

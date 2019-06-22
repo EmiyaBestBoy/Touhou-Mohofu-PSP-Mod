@@ -1,0 +1,52 @@
+
+;; (0) は チルノ
+;; (1) は パチェ
+
+;;チルノ(0)/パチェ(1)読み込み
+OBJ_LOAD tachie/cirno5.png,0
+OBJ_LOAD tachie/pache5.png,1
+
+; 初期位置へ登場し、移動完了まで待つ。
+OBJ xy,0,128,144
+OBJ xy,1,256,144
+OBJ wait
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,3
+OBJ_LOAD tachie/pache1.png,1
+;TEXT 太陽と北風とか\n知らないのかしら？
+;TEXT あいにく\nレティはここにはいないわね。
+TEXT 来客があるとしたら\n大廊下の方かな。
+HOLD
+TEXT さっき物音がしてたわ。
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,9
+OBJ_LOAD tachie/cirno4.png,0
+TEXT 最初からそう言ってよ！
+HOLD
+
+;; オブジェ0のみ、通常退避位置[1]へ
+OBJ xy,0,-64,144
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,3
+OBJ_LOAD tachie/pache6.png,1
+TEXT 最初から２番目位に\n言わなかったかしら？
+HOLD
+
+;; オブジェ1のみ、通常退避位置[1]へ
+OBJ xy,1,416,144
+
+; 全オブジェ移動完了まで待つ。
+OBJ wait
+
+BOSS result
+
+;ここまで来たら終了する。
+;; シナリオ修正について、基本的に原作になるべく近くなるように修正してるつもりですが
+;; かえっておかしくなってるかもしれないので、変な所はスレでフォローお願いします。

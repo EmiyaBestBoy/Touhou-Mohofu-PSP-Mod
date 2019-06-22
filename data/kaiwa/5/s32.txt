@@ -1,0 +1,102 @@
+
+;; (0) は 幽々子
+;; (1) は 輝夜
+
+OBJ_LOAD tachie/yuyuko1.png,0
+OBJ_LOAD tachie/kaguya4.png,1
+
+; 初期位置へ登場し、移動完了まで待つ。
+OBJ xy,0,128,144
+OBJ xy,1,256,144
+OBJ wait
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,2
+TEXT そろそろできたかしら？\n
+TEXT ちょっと失礼。
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,3
+;OBJ_LOAD tachie/yuyuko3.png,0
+OBJ_LOAD tachie/yuyuko4.png,0
+OBJ_LOAD tachie/kaguya3.png,1
+;TEXT お団子は伸びないわ
+;TEXT あせることはないのよ。
+;TEXT お団子は伸びないし、\n
+;TEXT あせる必要はないわ。
+TEXT あせる必要はないの。\n
+TEXT お団子は伸びないし……。
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,2
+OBJ_LOAD tachie/kaguya1.png,1
+TEXT 永遠にね。
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,3
+OBJ_LOAD tachie/yuyuko2.png,0
+TEXT あらあら、そんな処にまで\n
+TEXT 永遠の術を使う気？
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,2
+OBJ_LOAD tachie/kaguya4.png,1
+;--- 0123456789012345678901234567980123456789
+;TEXT さすがにそんな処では使わないわ
+TEXT さすがに使わないわ。
+HOLD
+;TEXT 永遠の術って\n
+;TEXT あれで結構大変なのよ。
+TEXT 永遠の術って\n
+TEXT あれで結構大変なんだから。
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,3
+OBJ_LOAD tachie/yuyuko5.png,0
+OBJ_LOAD tachie/kaguya1.png,1
+TEXT 十五夜が繰り返しているのは\n
+TEXT 貴方のせいじゃなくって？
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,2
+TEXT 私じゃないわ。
+HOLD
+TEXT こんなに面倒くさいことは\n
+TEXT しないもの。
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,3
+OBJ_LOAD tachie/yuyuko1.png,0
+TEXT それもそうね。
+HOLD
+;--- 0123456789012345678901234567980123456789
+TEXT あと、こんなことが\nできそうなのは……
+HOLD
+
+;; 通常退避位置[1]へ
+OBJ xy,0,-64,144
+OBJ xy,1,416,144
+
+; 全オブジェ移動完了まで待つ。
+OBJ wait
+
+BOSS result
+
+;ここまで来たら終了する。
+;; シナリオ修正について、基本的に原作になるべく近くなるように修正してるつもりですが
+;; かえっておかしくなってるかもしれないので、変な所はスレでフォローお願いします。

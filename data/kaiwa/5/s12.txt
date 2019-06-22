@@ -1,0 +1,62 @@
+
+;; (0) は 幽々子
+;; (1) は アリス
+
+OBJ_LOAD tachie/yuyuko1.png,0
+OBJ_LOAD tachie/alice2.png,1
+
+; 初期位置へ登場し、移動完了まで待つ。
+OBJ xy,0,128,144
+OBJ xy,1,256,144
+OBJ wait
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,5
+;TEXT 食べたものはどこへ\n行くのかしら？
+TEXT それで食べたものは\n
+TEXT どこへ行くの？
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,3
+;TEXT おなかに行った後は栄養になるのよ。
+;TEXT おなかに行った後は\n栄養になるの。
+TEXT おなかに行った後は\n
+TEXT 栄養になるわね。
+HOLD
+;断定。
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,5
+OBJ_LOAD tachie/alice3.png,1
+;TEXT 幽霊も成長するのかしらね。
+;TEXT 幽霊は成長するのかしらね。
+; 幽霊「も」とは発言しないと思う。アリス自身「は」成長しないので。
+;TEXT 幽霊は本当に成長するのかしら？
+TEXT 幽霊が成長できるのかしら……。
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,3
+OBJ_LOAD tachie/yuyuko5.png,0
+OBJ_LOAD tachie/alice6.png,1
+TEXT やって出来ない事なんて、\n
+TEXT ありそうで無いのよ。
+HOLD
+
+;; 通常退避位置[1]へ
+OBJ xy,0,-64,144
+OBJ xy,1,416,144
+
+; 全オブジェ移動完了まで待つ。
+OBJ wait
+
+BOSS result
+
+;ここまで来たら終了する。
+;; シナリオ修正について、基本的に原作になるべく近くなるように修正してるつもりですが
+;; かえっておかしくなってるかもしれないので、変な所はスレでフォローお願いします。

@@ -1,0 +1,87 @@
+
+;; (0) は レミリア
+;; (1) は パチェ
+
+OBJ_LOAD tachie/remilia5.png,0
+OBJ_LOAD tachie/pache2.png,1
+
+; 初期位置へ登場し、移動完了まで待つ。
+OBJ xy,0,128,144
+OBJ xy,1,256,144
+OBJ wait
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,2
+TEXT もう全部探したけど。\n
+TEXT 咲夜は見つからなかった。
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,7
+OBJ_LOAD tachie/remilia6.png,0
+OBJ_LOAD tachie/pache6.png,1
+TEXT あきらめが肝心ね。
+HOLD
+;(C)動画でパズルだ。プップクプー
+
+;; 全画面用退避位置[2]へ
+OBJ xy,0,-64,144
+OBJ xy,1,544,144
+
+; 全オブジェ移動完了まで待つ。
+OBJ wait
+
+BGM ,26
+DRAW skip,0
+DRAW panel,0
+DRAW text,0
+DRAW bg,1
+;BG_LOAD story/ending.jpg
+BG_LOAD story/ending.jpg,0
+BG_FADE
+DRAW text,1
+DRAW color,7
+DRAW speed,1
+TEXT 東方模倣風 ～ Imitation Style.
+HOLD
+;BG_LOAD story/arasuzi(reimu).jpg
+BG_LOAD story/ending(reimu).jpg
+;BG_LOAD story/356_end01.jpg
+DRAW speed,2
+TEXT 季節は変わらず、博麗神社では\n
+TEXT 平和な日々が続いていた。
+HOLD
+
+DRAW color,7
+DRAW speed,0
+TEXT 靈夢：
+DRAW speed,2
+TEXT 平和ね？
+HOLD
+
+DRAW color,2
+DRAW speed,0
+TEXT レミリア：
+DRAW speed,1
+TEXT 平和ね
+HOLD
+
+DRAW color,7
+DRAW speed,2
+TEXT 平和とは\n役の一種なのに役立たず？
+HOLD
+TEXT なんとなく輝夜の術中に落ちてる気が\nしないでもする。
+HOLD
+
+DRAW speed,1
+TEXT BAD END\nノーマル以上でクリアしよう
+HOLD
+
+;; ボス戦闘終了後、次の面を始めないでゲーム終了
+BOSS term
+
+;ここまで来たら終了する。
+;; シナリオ修正について、基本的に原作になるべく近くなるように修正してるつもりですが
+;; かえっておかしくなってるかもしれないので、変な所はスレでフォローお願いします。

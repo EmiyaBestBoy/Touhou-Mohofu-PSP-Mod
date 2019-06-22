@@ -1,0 +1,114 @@
+
+;; (0) は 幽々子
+;; (1) は 文
+
+OBJ_LOAD tachie/yuyuko1.png,0
+OBJ_LOAD tachie/aya1.png,1
+
+;; オブジェ1を予め、全画面用退避位置[2b]に移動しておく。
+OBJ xy,1,544,0
+
+;; オブジェ0のみ、初期位置へ登場し、移動完了まで待つ。
+OBJ xy,0,128,144
+
+OBJ wait
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,3
+;TEXT ここは色づいているのね。
+TEXT ここは色づいているのね。
+HOLD
+
+;; 4==文(キャラ)を読み込んで表示
+BOSS load,4
+
+;; オブジェ1のみ、初期位置へ登場し、移動完了まで待つ。
+OBJ xy,1,256,144
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,7
+OBJ_LOAD tachie/aya2.png,1
+TEXT 何か、\nありましたか？
+HOLD
+
+;説明文
+DRAW color,7
+;TEXT 里に最も近い天狗\n
+TEXT 伝統の幻想ブン屋\n
+TEXT 射命丸 文
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,3
+OBJ_LOAD tachie/yuyuko5.png,0
+TEXT 天狗じゃない。
+HOLD
+TEXT ここは色付いているのね。
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,7
+TEXT 年中、色付いていますよ。
+HOLD
+OBJ_LOAD tachie/aya4.png,1
+;TEXT 近くに紅葉の神がすんでいるのです。
+TEXT 近くに紅葉の神がすんでおられるのです。
+HOLD
+;文は根が真面目なので変に省略しないで、ちゃんとした敬語使う気がする。
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,3
+OBJ_LOAD tachie/yuyuko2.png,0
+TEXT それは、よろしくないわ。
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,7
+OBJ_LOAD tachie/aya1.png,1
+;TEXT そうでしょうか。\n
+;TEXT ずっと美しいものが\n
+;TEXT 楽しめるのですよ？
+TEXT そうでしょうか。美しいものが\n
+TEXT ずっと、楽しめるのですよ？
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,3
+OBJ_LOAD tachie/yuyuko6.png,0
+;TEXT いつまでも秋だったなら、
+;TEXT 桜が咲かないじゃあないの。
+;TEXT あなたは春の美しさを知らないの？
+;TEXT あなたは春の美しさを忘れたの？
+TEXT あなたは春の美しさを\n忘れているわ。
+HOLD
+OBJ_LOAD tachie/yuyuko1.png,0
+TEXT それにいつまでも秋ならば、\n
+;TEXT うちの桜の開花が心配だわ。
+TEXT うちの桜の開花が心配よ。
+HOLD
+
+;; 通常退避位置[1]へ
+OBJ xy,0,-64,144
+OBJ xy,1,416,144
+
+BGM ,14
+DRAW color,7
+;--------12345678901234567890123456789012345678
+TEXT \n\n　　　　　　　　　　　　　　♪風神少女
+HOLD
+
+; 全オブジェ移動完了まで待つ。
+OBJ wait
+
+BOSS start
+
+;ここまで来たら終了する。
+;; シナリオ修正について、基本的に原作になるべく近くなるように修正してるつもりですが
+;; かえっておかしくなってるかもしれないので、変な所はスレでフォローお願いします。

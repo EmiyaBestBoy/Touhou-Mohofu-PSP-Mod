@@ -1,0 +1,47 @@
+
+;; (0) は レミリア
+;; (1) は アリス
+
+OBJ_LOAD tachie/remilia4.png,0
+OBJ_LOAD tachie/alice1.png,1
+
+; 初期位置へ登場し、移動完了まで待つ。
+OBJ xy,0,128,144
+OBJ xy,1,256,144
+OBJ wait
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,2
+TEXT さて、どこから探そうかしら。
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,5
+OBJ_LOAD tachie/alice2.png,1
+TEXT 私は知らないわよ。
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,2
+OBJ_LOAD tachie/remilia5.png,0
+;TEXT 引きこもりの魔法使いなんて、\n
+;TEXT 最初から当てにしてないの
+TEXT 同じスタンド使いなんだから、\n
+TEXT 少しは役に立ってよぉ。
+HOLD
+
+;; 通常退避位置[1]へ
+OBJ xy,0,-64,144
+OBJ xy,1,416,144
+
+; 全オブジェ移動完了まで待つ。
+OBJ wait
+
+BOSS result
+
+;ここまで来たら終了する。
+;; シナリオ修正について、基本的に原作になるべく近くなるように修正してるつもりですが
+;; かえっておかしくなってるかもしれないので、変な所はスレでフォローお願いします。

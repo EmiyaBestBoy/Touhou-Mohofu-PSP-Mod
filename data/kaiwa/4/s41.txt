@@ -1,0 +1,119 @@
+
+;; (0) は レミリア
+;; (1) は 文
+
+OBJ_LOAD tachie/remilia4.png,0
+OBJ_LOAD tachie/aya1.png,1
+
+; 初期位置へ登場し、移動完了まで待つ。
+OBJ xy,0,128,144
+OBJ xy,1,256,144
+OBJ wait
+
+;; 4==文(キャラ)を読み込んで表示
+BOSS load,4
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,2
+TEXT ちょうどいいところに天狗が
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,7
+OBJ_LOAD tachie/aya2.png,1
+TEXT あやややや
+HOLD
+
+;説明文
+DRAW color,7
+;TEXT 里に最も近い天狗\n
+TEXT 伝統の幻想ブン屋\n
+TEXT 射命丸 文
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,2
+OBJ_LOAD tachie/remilia5.png,0
+TEXT あなた、咲夜を知らない？\n
+TEXT 神隠しにでもあったのかしら
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,7
+OBJ_LOAD tachie/aya1.png,1
+TEXT そういえば神隠しに遭うと、\n
+TEXT 名前を盗られるって聞きました。
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,2
+OBJ_LOAD tachie/remilia2.png,0
+TEXT その点なら、咲夜は大丈夫ね。\n
+TEXT もう一つ、名前があるもの
+HOLD
+;; 咲夜は設定上、元(外の世界)の名前がある。
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,7
+OBJ_LOAD tachie/aya4.png,1
+TEXT もう一つの名前とは、\n
+TEXT もしかして……？
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,2
+OBJ_LOAD tachie/remilia3.png,0
+TEXT 良く調べてるわね、\n
+TEXT さすが記者だわ。
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,7
+OBJ_LOAD tachie/aya1.png,1
+TEXT ところで、\n
+TEXT このところずっと満月ですが
+;TEXT 何か知ってます？
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,2
+OBJ_LOAD tachie/remilia6.png,0
+TEXT 知ってるわ！
+HOLD
+;TEXT 知ってるから\n
+;TEXT 咲夜を探してるの！
+TEXT 知ってるから、\n
+TEXT 咲夜を探しているの！
+HOLD
+
+;; 通常退避位置[1]へ
+OBJ xy,0,-64,144
+OBJ xy,1,416,144
+
+BGM ,14
+DRAW color,7
+;--------12345678901234567890123456789012345678
+TEXT \n\n　　　　　　　　　　　　　　♪風神少女
+HOLD
+
+; 全オブジェ移動完了まで待つ。
+OBJ wait
+
+BOSS start
+
+;ここまで来たら終了する。
+;; シナリオ修正について、基本的に原作になるべく近くなるように修正してるつもりですが
+;; かえっておかしくなってるかもしれないので、変な所はスレでフォローお願いします。
+
+;設定メモ:
+;レミリアは「流れ水」が苦手なんですが、「流れ水」とはここではつまり「滝」の事です。
+;苦手な物のそばでは、誰でも「いらいら」しますよね？(601氏の徹夜明けでいらいらしているという設定もあります。)

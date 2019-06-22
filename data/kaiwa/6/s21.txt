@@ -1,0 +1,109 @@
+
+;; (0) は チルノ
+;; (1) は 魅魔
+
+OBJ_LOAD tachie/cirno1.png,0
+OBJ_LOAD tachie/mima1.png,1
+
+; 初期位置へ登場し、移動完了まで待つ。
+OBJ xy,0,128,144
+OBJ xy,1,256,144
+OBJ wait
+
+;; 2==魅魔(キャラ)を読み込んで表示
+BOSS load,2
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,4
+TEXT ふふっ、道にまよったん\nじゃないの？
+HOLD
+
+;説明文
+DRAW color,7
+;TEXT Revengeful Ghost悪霊\n
+TEXT 久遠の夢に運命を任せる精神\n
+;TEXT 博麗神社の祟り神\n
+;TEXT 忘れられた悪霊\n
+TEXT 魅魔
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,9
+OBJ_LOAD tachie/cirno4.png,0
+TEXT 何で、あたいの考えてる事が解かるんだ？
+HOLD
+;TEXT 心が読めるのか？
+;TEXT 心を先読みしたのか？
+TEXT まさかあたいの心を先読みしたのか？
+HOLD
+; 一般的に「考え」を先読みであって、
+;「心」を先読みはそもそも概念自体が異質。
+; 先読み==コンピューター用語。
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,4
+OBJ_LOAD tachie/mima5.png,1
+TEXT ふふっ。あまり有名じゃないからね。
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,9
+OBJ_LOAD tachie/cirno2.png,0
+TEXT 日ペンの巫女？
+HOLD
+; (C)日本ペン習字研究会 がくぶん総合教育センター 日ペンの美子ちゃん
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,4
+OBJ_LOAD tachie/mima6.png,1
+TEXT ……。\nどこからそうなるのよ。
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,9
+OBJ_LOAD tachie/cirno1.png,0
+TEXT ……いや何となく。
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,4
+OBJ_LOAD tachie/mima4.png,1
+TEXT ふふっ。それなら案外\n
+;TEXT わたしがラスボスだったりして。
+TEXT わたしが最後だったりして。
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,9
+OBJ_LOAD tachie/cirno3.png,0
+TEXT それは困る！\n
+;TEXT まだ三妖精、倒してないよっ！
+TEXT まだ三妖精に仇返ししてないっ！
+HOLD
+
+;; 通常退避位置[1]へ
+OBJ xy,0,-64,144
+OBJ xy,1,416,144
+
+BGM ,12
+DRAW color,7
+;--------12345678901234567890123456789012345678
+TEXT \n\n　　　　　　　　　 ♪Complete Darkness
+HOLD
+
+; 全オブジェ移動完了まで待つ。
+OBJ wait
+
+BOSS start
+
+;ここまで来たら終了する。
+;; シナリオ修正について、基本的に原作になるべく近くなるように修正してるつもりですが
+;; かえっておかしくなってるかもしれないので、変な所はスレでフォローお願いします。

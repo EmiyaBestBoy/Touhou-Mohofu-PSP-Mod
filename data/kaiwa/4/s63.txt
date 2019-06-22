@@ -1,0 +1,161 @@
+
+;; (0) は レミリア
+;; (1) は 咲夜
+
+OBJ_LOAD tachie/remilia1.png,0
+OBJ_LOAD tachie/sakuya1.png,1
+
+; 初期位置へ登場し、移動完了まで待つ。
+OBJ xy,0,128,144
+OBJ xy,1,256,144
+OBJ wait
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,2
+;TEXT さぁ、帰るわよ。
+TEXT さぁ、戻すわよ。
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,5
+TEXT お嬢様は名月をご覧になりたかったのでは？
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,2
+TEXT ええ、そうよ。\nでも、もういいわ。
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,5
+OBJ_LOAD tachie/sakuya6.png,1
+TEXT そうですか、失礼いたしました。
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,2
+;TEXT それと、
+TEXT それと、
+HOLD
+TEXT 永遠の満月の復元も、\nいざ実現してみると脆いものね。
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,5
+;TEXT ……？\n
+TEXT 確かに。
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,2
+;TEXT あなたは\n風情を知るべきね
+TEXT それから、あなたは\n風情を知る必要があるわ。
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,5
+OBJ_LOAD tachie/sakuya2.png,1
+;TEXT 風情、ですか。それは勉強しろと？
+TEXT 風情？ですか。それは勉強しろと……。
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,2
+TEXT いいえ。
+HOLD
+;TEXT 動いている世界を\nもっとよく見ればいいのよ。
+TEXT 動いている世界を\nもっとよく見ればいいの。
+HOLD
+;; 本当はレミリアは半分感謝してもいるので。
+
+;; 全画面用退避位置[2]へ
+OBJ xy,0,-64,144
+OBJ xy,1,544,144
+
+; 全オブジェ移動完了まで待つ。
+OBJ wait
+
+BGM ,26
+DRAW skip,0
+DRAW panel,0
+DRAW text,0
+DRAW bg,1
+;BG_LOAD story/ending.jpg,0
+BG_LOAD story/ending.jpg,0
+BG_FADE
+DRAW text,1
+DRAW color,7
+DRAW speed,1
+TEXT 東方模倣風 ～ Imitation Style.
+HOLD
+;BG_LOAD story/ending(reimu).jpg
+;BG_LOAD story/arasuzi(reimu).jpg
+BG_LOAD story/356_end01.jpg
+DRAW speed,2
+TEXT 季節は進まない。
+HOLD
+
+DRAW color,5
+DRAW speed,0
+TEXT 咲夜：
+DRAW speed,1
+TEXT 甘いわね、
+DRAW speed,2
+TEXT イージーでエンディングは見れないのですわ。
+HOLD
+
+DRAW color,2
+DRAW speed,0
+TEXT レミリア：
+DRAW speed,2
+TEXT そんなの
+DRAW speed,3
+TEXT けちけちしなくて\n
+TEXT 良いじゃない。
+HOLD
+
+DRAW color,5
+DRAW speed,0
+TEXT 咲夜：
+DRAW speed,2
+TEXT ……しょうがない、裏技ですわ\n
+TEXT ノーマルを選んでクリアすると
+HOLD
+TEXT エンディングが\n
+TEXT 見れるのですわ。
+HOLD
+
+DRAW color,2
+DRAW speed,0
+TEXT レミリア：
+DRAW speed,4
+TEXT やだやだイージーのエンディングが\n見たい！
+HOLD
+
+DRAW color,7
+DRAW speed,2
+TEXT やはり対策済み
+HOLD
+TEXT レミリアでもエンディングは、\n
+TEXT 見れないのだった。
+HOLD
+
+DRAW speed,1
+TEXT BAD END\nエンディングはノーマル以上です。
+HOLD
+
+;; ボス戦闘終了後、次の面を始めないでゲーム終了
+BOSS term
+
+;ここまで来たら終了する。
+;; シナリオ修正について、基本的に原作になるべく近くなるように修正してるつもりですが
+;; かえっておかしくなってるかもしれないので、変な所はスレでフォローお願いします。

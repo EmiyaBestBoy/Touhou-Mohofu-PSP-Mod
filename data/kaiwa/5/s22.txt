@@ -1,0 +1,88 @@
+
+;; (0) は 幽々子
+;; (1) は 魅魔
+
+OBJ_LOAD tachie/yuyuko1.png,0
+OBJ_LOAD tachie/mima4.png,1
+
+; 初期位置へ登場し、移動完了まで待つ。
+OBJ xy,0,128,144
+OBJ xy,1,256,144
+OBJ wait
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,4
+;TEXT そろそろできたかしら？\n
+;TEXT ちょっと失礼。
+TEXT そろそろ丁度の頃合いかな？
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,3
+;OBJ_LOAD tachie/yuyuko3.png,0
+OBJ_LOAD tachie/yuyuko4.png,0
+;OBJ_LOAD tachie/mima3.png,1
+;TEXT お団子は伸びないわ
+;TEXT あせることはないのよ。
+;TEXT お団子は伸びないし、\n
+;TEXT あせる必要はないわ。
+TEXT あせる必要はないの。\n
+TEXT お団子は伸びないし……。
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,4
+OBJ_LOAD tachie/mima1.png,1
+;TEXT 永遠にね。
+TEXT ふふふ。今が喰べ頃かな？\n
+TEXT と思ってね。
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,3
+;OBJ_LOAD tachie/yuyuko2.png,0
+;TEXT あらあら、そんな処にまで\n
+;TEXT 永遠の術を使う気？
+OBJ_LOAD tachie/yuyuko4.png,0
+TEXT お互い、毒入りでも死なないから、\n
+TEXT 多少の事は大丈夫ね。
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,4
+OBJ_LOAD tachie/mima4.png,1
+;TEXT さすがにそんな処では\n使わないわ
+;TEXT さすがに使わないわ。
+;TEXT 永遠の術って\nあれで結構大変なのよ。
+;OBJ_LOAD tachie/mima3.png,1
+;TEXT あ－ん、自縛霊相手ぐらいじゃ暴れ足りないなぁ……。
+TEXT 自縛霊相手ぐらいじゃ\n
+TEXT 暴れ足りないなぁ……。
+HOLD
+;話の流れに関係なく暴れ足りない(全シナリオ共通)
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,3
+OBJ_LOAD tachie/yuyuko5.png,0
+;TEXT 何ですって？\n
+TEXT ちょっと、別室まで来なさい。
+HOLD
+
+;; 通常退避位置[1]へ
+OBJ xy,0,-64,144
+OBJ xy,1,416,144
+
+; 全オブジェ移動完了まで待つ。
+OBJ wait
+
+BOSS result
+
+;ここまで来たら終了する。
+;; シナリオ修正について、基本的に原作になるべく近くなるように修正してるつもりですが
+;; かえっておかしくなってるかもしれないので、変な所はスレでフォローお願いします。

@@ -1,0 +1,270 @@
+
+;; (0) は チルノ
+;; (1) は 咲夜
+
+OBJ_LOAD tachie/cirno6.png,0
+OBJ_LOAD tachie/sakuya1.png,1
+
+; 初期位置へ登場し、移動完了まで待つ。
+OBJ xy,0,128,144
+OBJ xy,1,256,144
+OBJ wait
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,9
+;TEXT どうすればレティと会えるの？
+;TEXT どうしたらレティに会えるのさ？
+TEXT どうしたらレティに会えるのよ？
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,5
+;TEXT お嬢様も満足したでしょうし。\nそろそろ潮時かしら。
+;TEXT そろそろ潮時かしら\nお嬢様も満足したでしょうし。
+TEXT そろそろ潮時かな。\nお嬢様が満足した気もするし。
+HOLD
+;「でしょう」→「気もする」主観で動いてる。
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,9
+OBJ_LOAD tachie/cirno5.png,0
+;TEXT 聞いてるの？
+;TEXT あたいの話、聞いてるの？
+TEXT あたいの話、聞いてんの？
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,5
+;TEXT 聞いてるわ\nすぐに時を直すから。
+;TEXT じき、会える様になるわよ。
+TEXT 耳は二つ付いてたりします。
+HOLD
+TEXT すぐに時を直すから、\nじき会えるわよ。
+HOLD
+
+;; 全画面用退避位置[2]へ
+OBJ xy,0,-64,144
+OBJ xy,1,544,144
+
+; 全オブジェ移動完了まで待つ。
+OBJ wait
+
+BGM ,26
+DRAW skip,0
+DRAW panel,0
+DRAW text,0
+DRAW bg,1
+;BG_LOAD story/ending.jpg
+BG_LOAD story/ending.jpg,0
+BG_FADE
+DRAW text,1
+DRAW color,7
+DRAW speed,1
+TEXT 東方模倣風 ～ Imitation Style.
+HOLD
+BG_LOAD story/ending(cirno).jpg
+;BG_LOAD story/arasuzi(reimu).jpg
+DRAW speed,2
+;TEXT 時を修復した咲夜は紅魔館に帰り、\n
+TEXT 時を修復した咲夜は、\n
+TEXT レミリアにたっぷりお叱りを受けた。
+HOLD
+
+DRAW color,5
+DRAW speed,0
+TEXT 咲夜：
+DRAW speed,2
+;TEXT 慣れないことは\nするもんじゃないわね。
+TEXT 慣れないことは\nするもんじゃないなあ。
+HOLD
+
+DRAW color,5
+DRAW speed,0
+TEXT 咲夜：
+DRAW speed,4
+;TEXT 疲れちゃったわ。
+TEXT ほんと疲れたわ。
+HOLD
+
+DRAW color,9
+DRAW speed,0
+TEXT チルノ：
+DRAW speed,2
+;TEXT そんなとこで何やってるの？\n
+TEXT そんなとこで何やってるのさ？\n
+DRAW speed,3
+;TEXT 風引くよ。
+;TEXT 風邪引くよ。
+TEXT 風邪ひくよ。
+HOLD
+
+DRAW color,5
+DRAW speed,0
+TEXT 咲夜：
+DRAW speed,2
+;TEXT 寒気の原因が言う台詞じゃあ\nないわね。
+TEXT 寒気の原因が言う台詞じゃ\nないわね。
+HOLD
+
+DRAW color,9
+DRAW speed,0
+TEXT チルノ：
+DRAW speed,3
+TEXT ブタフルかかると\n一週間お休みだって。
+HOLD
+
+DRAW color,5
+DRAW speed,0
+TEXT 咲夜：
+DRAW speed,2
+;TEXT 酷い話ね。ところで\n一体どこでそんな情報を……。
+TEXT 酷い話ね。ところで\nどこでそんな情報を……。
+HOLD
+
+DRAW color,9
+DRAW speed,0
+TEXT チルノ：
+DRAW speed,2
+;TEXT あたいと戦った後に\n何をしたの？
+TEXT あたいと戦った後に\n何かしたの？
+HOLD
+
+DRAW color,5
+DRAW speed,0
+TEXT 咲夜：
+DRAW speed,1
+;TEXT 時の流れを元に戻したのよ。
+TEXT 時の流れを戻したわ。
+HOLD
+
+DRAW color,9
+DRAW speed,0
+TEXT チルノ：
+DRAW speed,3
+;TEXT どういうこと？
+;TEXT どういう事？
+TEXT えー？どういう事？
+HOLD
+
+DRAW color,5
+DRAW speed,0
+TEXT 咲夜：
+DRAW speed,1
+;TEXT 一度言ったことを\n二度言わなきゃいけないってことは
+;TEXT 相手の頭が悪いって事なのよ。
+TEXT 一度言った事を\n二度も言わなきゃいけないって事は……。
+HOLD
+
+DRAW color,9
+DRAW speed,0
+TEXT チルノ：
+DRAW speed,2
+TEXT 事は？\n(わくわく)
+HOLD
+
+DRAW color,5
+DRAW speed,0
+TEXT 咲夜：
+DRAW speed,1
+TEXT 相手の頭が悪いって事。
+HOLD
+
+DRAW color,9
+DRAW speed,0
+TEXT チルノ：
+DRAW speed,3
+TEXT ？？？
+HOLD
+
+DRAW color,5
+DRAW speed,0
+TEXT 咲夜：
+DRAW speed,2
+;TEXT 三度目は言わせないでね？
+;TEXT 三度目も言わせるつもり？
+TEXT 仏の顔も三度までよ。
+HOLD
+
+DRAW color,9
+DRAW speed,0
+TEXT チルノ：
+DRAW speed,3
+;TEXT ？？？？？？
+TEXT それって良く判らないけど……
+HOLD
+
+DRAW color,9
+DRAW speed,0
+TEXT チルノ：
+DRAW speed,3
+TEXT つまり、あたい最強って事？
+HOLD
+
+DRAW color,5
+DRAW speed,0
+TEXT 咲夜：
+DRAW speed,2
+TEXT たぶん違うわね。
+HOLD
+
+DRAW color,9
+DRAW speed,0
+TEXT チルノ：
+DRAW speed,3
+TEXT そっか！最強は違うのかー。\n
+TEXT やっぱ、最強は違うなー。
+HOLD
+
+DRAW color,7
+DRAW speed,3
+;TEXT 逃げ帰った妖精を遠目に見つつ、
+;TEXT 咲夜はたまにはアイスティーもいいかな、\n
+TEXT 咲夜は逃げ帰った氷精を遠目に見つつ、
+HOLD
+DRAW speed,4
+TEXT たまにはアイスティーもいいかな、\n
+DRAW speed,2
+TEXT と思った。
+HOLD
+
+DRAW speed,1
+TEXT \n　　　　　　　　 TO BE CONTINUED …… ?
+HOLD
+
+BOSS result
+
+;ここまで来たら終了する。
+;; シナリオ修正について、基本的に原作になるべく近くなるように修正してるつもりですが
+;; かえっておかしくなってるかもしれないので、変な所はスレでフォローお願いします。
+
+;⑨氏版
+;チルノ：どうすればレティと会えるの？
+;咲夜：お嬢様も満足したでしょうし。
+;咲夜：そろそろ潮時ね。
+;チルノ：聞いてるの？
+;咲夜：聞いてるわ。
+;大丈夫、すぐにお友達に会えるようになるわよ。
+
+;⑨氏版
+;時を修復した咲夜は紅魔館に帰り、
+;レミリアにたっぷりお叱りを受けた。
+;咲夜：慣れないことはするもんじゃないわね。
+;咲夜：疲れちゃったわ。
+;チルノ：そんなとこで何やってるの？
+;	風邪引くよ。
+;咲夜：寒気の原因が言う台詞じゃあないわね。
+;チルノ：ねえ。
+;咲夜：？
+;チルノ：あたいと戦った後に何をしたの？
+;咲夜：時の流れを元に戻したのよ。
+;チルノ：どういうこと？
+;咲夜：一度言ったこと二度言わなきゃいけないってことは、
+;咲夜：相手の頭が悪いって事なのよ。
+;咲夜：三度目は言わせないでね？
+;逃げ帰った妖精を遠目に見つつ、
+;咲夜はたまにはアイスティーもいいかな、と思った。
+

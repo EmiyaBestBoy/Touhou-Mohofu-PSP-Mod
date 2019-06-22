@@ -1,0 +1,54 @@
+
+;; (0) は レミリア
+;; (1) は 文
+
+OBJ_LOAD tachie/remilia2.png,0
+OBJ_LOAD tachie/aya4.png,1
+
+; 初期位置へ登場し、移動完了まで待つ。
+OBJ xy,0,128,144
+OBJ xy,1,256,144
+OBJ wait
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,2
+TEXT ああ、もう！
+HOLD
+
+OBJ_LOAD tachie/remilia5.png,0
+TEXT なんだか\n
+TEXT イライラしてきたわ！
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,7
+OBJ_LOAD tachie/aya2.png,1
+;TEXT で、なぜ十五夜が繰り返しているのですか？
+TEXT では、なぜ\n十五夜が繰り返しているのですか？
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,2
+OBJ_LOAD tachie/remilia1.png,0
+TEXT あの子の勘違いよ！
+HOLD
+TEXT 私は満月が見たいとは\n
+TEXT 言ってないもの！
+HOLD
+;イライラしているのですべてのせりふに「！」が付く。
+
+;; 通常退避位置[1]へ
+OBJ xy,0,-64,144
+OBJ xy,1,416,144
+
+; 全オブジェ移動完了まで待つ。
+OBJ wait
+
+BOSS result
+
+;ここまで来たら終了する。
+;; シナリオ修正について、基本的に原作になるべく近くなるように修正してるつもりですが
+;; かえっておかしくなってるかもしれないので、変な所はスレでフォローお願いします。

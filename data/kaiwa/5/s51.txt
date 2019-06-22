@@ -1,0 +1,109 @@
+
+;; (0) は 幽々子
+;; (1) は パチェ
+
+OBJ_LOAD tachie/yuyuko1.png,0
+OBJ_LOAD tachie/pache2.png,1
+
+; 初期位置へ登場し、移動完了まで待つ。
+OBJ xy,0,128,144
+OBJ xy,1,256,144
+OBJ wait
+
+;; 5==パチェ(キャラ)を読み込んで表示
+BOSS load,5
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,7
+OBJ_LOAD tachie/pache4.png,1
+TEXT うわっ？お化け！
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,3
+OBJ_LOAD tachie/yuyuko6.png,0
+TEXT 失礼ね。違うわ、\n
+TEXT 本物の幽霊よ。
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,7
+OBJ_LOAD tachie/pache5.png,1
+TEXT 出た本物！
+HOLD
+OBJ_LOAD tachie/pache6.png,1
+;TEXT 脅かさないで！私怖いの得意じゃないの。
+TEXT 脅かさないでよ。私怖いの得意じゃないの。
+;--- 0123456789012345678901234567980123456789
+HOLD
+
+;説明文
+DRAW color,7
+TEXT 知識と日陰の少女\n
+;TEXT 得体の知れない魔法の元\n
+TEXT パチュリー・ノーレッジ
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,3
+OBJ_LOAD tachie/yuyuko4.png,0
+TEXT 幽霊が出る音、\n出すとか？
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,7
+OBJ_LOAD tachie/pache3.png,1
+TEXT うーん。あまり芝居がかってるのも\n
+TEXT 得意じゃない。
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,3
+OBJ_LOAD tachie/yuyuko1.png,0
+TEXT それじゃあ\n
+TEXT 得意分野は何なの？
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,7
+TEXT 得意分野は、\n
+TEXT まず調べ物よね。
+HOLD
+OBJ_LOAD tachie/pache1.png,1
+TEXT それから\n
+TEXT 午後の休息も得意分野ね。
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,3
+OBJ_LOAD tachie/yuyuko4.png,0
+TEXT それなら\n
+TEXT 簡単に負ける気がしないわ。
+HOLD
+
+;; 通常退避位置[1]へ
+OBJ xy,0,-64,144
+OBJ xy,1,416,144
+
+BGM ,15
+DRAW color,7
+;--------12345678901234567890123456789012345678
+TEXT \n\n　　　　　 ♪ラクトガール　～ 少女密室
+HOLD
+
+; 全オブジェ移動完了まで待つ。
+OBJ wait
+
+BOSS start
+
+;ここまで来たら終了する。
+;; シナリオ修正について、基本的に原作になるべく近くなるように修正してるつもりですが
+;; かえっておかしくなってるかもしれないので、変な所はスレでフォローお願いします。

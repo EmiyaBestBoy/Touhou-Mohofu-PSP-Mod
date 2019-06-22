@@ -1,0 +1,112 @@
+
+;; (0) は チルノ
+;; (1) は チルノ？
+
+OBJ_LOAD tachie/cirno3.png,0
+OBJ_LOAD tachie/cirno1.png,1
+
+;; オブジェ1を予め、全画面用退避位置[2b]に移動しておく。
+OBJ xy,1,544,0
+
+; オブジェ(0)のみ、初期位置へ登場し、移動完了まで待つ。
+OBJ xy,0,128,144
+OBJ wait
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,9
+TEXT この湖こんなに広かったかなぁ？
+HOLD
+
+OBJ_LOAD tachie/cirno6.png,0
+TEXT 霧で見通しが悪くて困ったよ。
+HOLD
+
+OBJ_LOAD tachie/cirno4.png,0
+TEXT もしかして、あたいって方向音痴？
+HOLD
+
+BGM ,17
+
+;; 0==チルノ(キャラ)を読み込んで表示
+BOSS load,0
+
+; オブジェ(1)のみ、初期位置へ登場し、移動完了まで待つ。
+OBJ xy,1,256,144
+OBJ wait
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,9
+TEXT 道に迷うは、妖精の所為なの。
+HOLD
+
+;説明文
+DRAW color,7
+TEXT 湖上の氷精\nチルノ
+HOLD
+
+DRAW color,7
+;--------12345678901234567890123456789012345678
+TEXT \n\n　　　　　　　　　　　　♪おてんば恋娘
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,9
+OBJ_LOAD tachie/cirno2.png,0
+TEXT おねいちゃん！\nここらで合うのはひさびさね！
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+OBJ_LOAD tachie/cirno4.png,1
+TEXT あら、チルノ？おおきくなったわね。
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+OBJ_LOAD tachie/cirno6.png,0
+TEXT おないどしだけど……。
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+OBJ_LOAD tachie/cirno4.png,1
+TEXT 愛があれば年の差なんて\n関係ないわ。
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+TEXT 愛は何処から来たの？。
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+TEXT ずいぶん哲学的な質問ね。
+HOLD
+TEXT ところでチルノが別人って\nなんでみんな気が付かないのかしらね。
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+TEXT みんなバカだから。
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+TEXT 氷精の名前は全員チルノだからね！
+HOLD
+
+;; 通常退避位置[1]へ
+OBJ xy,0,-64,144
+OBJ xy,1,416,144
+
+; 全オブジェ移動完了まで待つ。
+OBJ wait
+
+BOSS start
+
+;ここまで来たら終了する。
+;; シナリオ修正について、基本的に原作になるべく近くなるように修正してるつもりですが
+;; かえっておかしくなってるかもしれないので、変な所はスレでフォローお願いします。

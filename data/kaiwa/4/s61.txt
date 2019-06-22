@@ -1,0 +1,111 @@
+
+;; (0) は レミリア
+;; (1) は 咲夜
+
+OBJ_LOAD tachie/remilia5.png,0
+OBJ_LOAD tachie/sakuya2.png,1
+
+; 初期位置へ登場し、移動完了まで待つ。
+OBJ xy,0,128,144
+OBJ xy,1,256,144
+OBJ wait
+
+;; 6==咲夜(キャラ)を読み込んで表示
+BOSS load,6
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,2
+;TEXT やっと見つけた。
+;TEXT こんな所にいたのね。
+TEXT さっきそこでメイド妖精がっ！
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,5
+OBJ_LOAD tachie/sakuya1.png,1
+;TEXT お嬢様！？
+TEXT はい？
+HOLD
+
+;説明文
+DRAW color,7
+;TEXT 完全で瀟洒な従者\n
+TEXT 紅魔館のメイド\n
+;TEXT 完全で瀟洒なメイド\n
+;TEXT 危険な手品師\n
+TEXT 十六夜 咲夜
+HOLD
+
+BGM ,21
+DRAW color,7
+;--------12345678901234567890123456789012345678
+TEXT \n\n　　　　　　♪亡き王女の為のセプテット
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,2
+OBJ_LOAD tachie/remilia3.png,0
+OBJ_LOAD tachie/sakuya3.png,1
+;TEXT もう、何やってるのよ。
+;TEXT 早く館に帰るわよ。
+TEXT 攻撃してきたのよ。どういう教育しているの！
+HOLD
+TEXT 主人を攻撃するなんてー。
+HOLD
+DRAW speed,1
+;TEXT あ、　り、　え、　な、　いっ！！！
+TEXT アリアリアリアリアリ、アリエナイッ！！！
+HOLD
+;...強引ですが、仕方がないのでこの辺に投入
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,5
+DRAW speed,0
+OBJ_LOAD tachie/sakuya6.png,1
+;TEXT いいえ、\n
+;TEXT お嬢様があきらめることはありません。
+;TEXT 今夜こそ、最高の満月を\n
+;TEXT ご覧に入れて差し上げますわ。
+TEXT 申し訳ありません、お嬢様。
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,2
+OBJ_LOAD tachie/remilia5.png,0
+OBJ_LOAD tachie/sakuya3.png,1
+;TEXT 咲夜、あなたは思い出さないといけないのよ。
+;TEXT 時を操るあなたの力は、\n
+;TEXT むやみに使うべきではないことを。
+;TEXT それは、まさに世界を支配する能力なのだから。
+TEXT 咲夜！ちょっとたるんでるわね弾幕練習よ！
+HOLD
+TEXT 本気で相手してあげるから、\n
+;TEXT かかってきなさい！
+;TEXT 遠慮する必要はないわ！
+;TEXT 遠慮しないでいいわ！
+TEXT 遠慮しなくていいわ！
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,5
+TEXT ……はぁ。
+HOLD
+
+;; 通常退避位置[1]へ
+OBJ xy,0,-64,144
+OBJ xy,1,416,144
+
+; 全オブジェ移動完了まで待つ。
+OBJ wait
+
+BOSS start
+
+;ここまで来たら終了する。
+;; シナリオ修正について、基本的に原作になるべく近くなるように修正してるつもりですが
+;; かえっておかしくなってるかもしれないので、変な所はスレでフォローお願いします。

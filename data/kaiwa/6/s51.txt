@@ -1,0 +1,81 @@
+
+;; (0) は チルノ
+;; (1) は パチェ
+
+;;チルノ(0)/パチェ(1)読み込み
+OBJ_LOAD tachie/cirno4.png,0
+OBJ_LOAD tachie/pache1.png,1
+
+; 初期位置へ登場し、移動完了まで待つ。
+OBJ xy,0,128,144
+OBJ xy,1,256,144
+OBJ wait
+
+;; 5==パチェ(キャラ)を読み込んで表示
+BOSS load,5
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,9
+TEXT ここは気持ちのいい温度の部屋だね。レティは何処？
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,3
+OBJ_LOAD tachie/cirno5.png,0
+TEXT ここは応接室じゃないのよ。\n
+TEXT 子供は外で遊んだら？。
+HOLD
+
+;説明文
+DRAW color,7
+;TEXT 知識と日陰の少女\n
+TEXT 得体の知れない魔法の元\n
+TEXT パチュリー・ノーレッジ
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,9
+TEXT あたいに何か隠し事してないかい？\n
+TEXT ただの子供だと思ったらやけどするよ！
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,3
+OBJ_LOAD tachie/pache6.png,1
+TEXT 外じゃないのかしら？\n
+TEXT 知らないって言ってるのに……。
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,9
+TEXT あたいをバカにする奴は\n
+TEXT 誰だって凍らせてやる。
+HOLD
+TEXT あんたなんて、異常型プリオンと一緒に\n
+TEXT 冷凍保存してやるわ！！
+HOLD
+;(C)狂牛病
+
+;; 通常退避位置[1]へ
+OBJ xy,0,-64,144
+OBJ xy,1,416,144
+
+BGM ,15
+DRAW color,7
+;--------12345678901234567890123456789012345678
+TEXT \n\n　　　　　 ♪ラクトガール　～ 少女密室
+HOLD
+
+; 全オブジェ移動完了まで待つ。
+OBJ wait
+
+BOSS start
+
+;ここまで来たら終了する。
+;; シナリオ修正について、基本的に原作になるべく近くなるように修正してるつもりですが
+;; かえっておかしくなってるかもしれないので、変な所はスレでフォローお願いします。

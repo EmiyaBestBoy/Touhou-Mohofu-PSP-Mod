@@ -1,0 +1,227 @@
+
+;; (0) は 幽々子
+;; (1) は 咲夜
+
+OBJ_LOAD tachie/yuyuko6.png,0
+OBJ_LOAD tachie/sakuya1.png,1
+
+; 初期位置へ登場し、移動完了まで待つ。
+OBJ xy,0,128,144
+OBJ xy,1,256,144
+OBJ wait
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,3
+;TEXT さ、\n早くもとに戻して。
+TEXT さぁ、早くもとに戻しなさい。
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,5
+TEXT お嬢様が\n
+TEXT 望んでいられるのです。
+HOLD
+TEXT 私の一存では……。
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,3
+OBJ_LOAD tachie/yuyuko5.png,0
+TEXT なら一度、\n
+TEXT 本人に聞いてみなさい。
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,5
+OBJ_LOAD tachie/sakuya3.png,1
+TEXT はぁ……。
+HOLD
+
+;; 全画面用退避位置[2]へ
+OBJ xy,0,-64,144
+OBJ xy,1,544,144
+
+; 全オブジェ移動完了まで待つ。
+OBJ wait
+
+BGM ,25
+DRAW skip,0
+DRAW panel,0
+DRAW text,0
+DRAW bg,1
+;BG_LOAD story/ending.jpg
+BG_LOAD story/ending.jpg,0
+BG_FADE
+DRAW text,1
+DRAW color,7
+DRAW speed,1
+TEXT 東方模倣風 ～ Imitation Style.
+HOLD
+BG_LOAD story/ending(yuyuko).jpg
+;BG_LOAD story/arasuzi(reimu).jpg
+DRAW speed,2
+;TEXT 屋敷に戻って\n
+;TEXT 勘違いだったことが分かった咲夜は
+;TEXT レミリアに連れられて謝りに回った。
+TEXT この事をもう一度レミリアに聞いたら\n
+TEXT 勘違いだったと分かった。
+HOLD
+TEXT そこで咲夜はレミリアに連れられて\n
+TEXT 謝りに回る事となった。
+HOLD
+
+DRAW color,2
+DRAW speed,0
+TEXT レミリア：
+DRAW speed,2
+TEXT 幽々子はいる？
+HOLD
+
+DRAW color,4
+DRAW speed,0
+TEXT 妖夢：
+DRAW speed,3
+TEXT はい、しばらくお待ちください。
+HOLD
+
+DRAW color,2
+DRAW speed,0
+TEXT レミリア：
+DRAW speed,5
+TEXT ……咲夜、\n
+DRAW speed,3
+TEXT 私が何を見たかったのか分かる？
+HOLD
+
+DRAW color,5
+DRAW speed,0
+TEXT 咲夜：
+DRAW speed,5
+TEXT 満月、
+DRAW speed,3
+TEXT ではないですよね。
+HOLD
+
+DRAW color,3
+DRAW speed,0
+TEXT 幽々子：
+DRAW speed,4
+TEXT 教えてしまったら\n
+TEXT 面白くないじゃない。
+HOLD
+
+DRAW color,2
+DRAW speed,0
+TEXT レミリア：
+DRAW speed,2
+TEXT あら。
+HOLD
+
+DRAW color,2
+DRAW speed,0
+TEXT レミリア：
+DRAW speed,1
+TEXT 咲夜、お茶を出して！
+HOLD
+
+DRAW color,5
+DRAW speed,0
+TEXT 咲夜：
+DRAW speed,2
+TEXT このたびはご迷惑をおかけしました。
+HOLD
+
+DRAW color,3
+DRAW speed,0
+TEXT 幽々子：
+DRAW speed,2
+TEXT いいわ。楽しかったもの。
+HOLD
+
+DRAW color,3
+DRAW speed,0
+TEXT 幽々子：
+DRAW speed,2
+TEXT でも、もうちょっと\n
+TEXT 世界を見たほうがいいわよ？
+HOLD
+
+DRAW color,2
+DRAW speed,0
+TEXT レミリア：
+DRAW speed,2
+TEXT そうね。\n
+TEXT 咲夜には風情って物を知ってもらわないと。
+HOLD
+
+DRAW color,5
+DRAW speed,0
+TEXT 咲夜：
+DRAW speed,2
+TEXT 私も学びましたわ。
+HOLD
+
+DRAW color,3
+DRAW speed,0
+TEXT 幽々子：
+DRAW speed,3
+TEXT それがこの紅茶なのね。
+HOLD
+DRAW speed,4
+TEXT 何が入ってるのかしら？\n
+TEXT (わくわく)
+HOLD
+
+BG_LOAD story/356_end01.jpg
+
+DRAW color,5
+DRAW speed,0
+TEXT 咲夜：
+DRAW speed,2
+TEXT 焼き栗ですわ。
+HOLD
+TEXT 砂糖の変わりに\n
+TEXT なるかと思って。
+HOLD
+
+DRAW color,3
+DRAW speed,0
+TEXT 幽々子：
+DRAW speed,2
+TEXT ……。
+HOLD
+TEXT 広い目で見すぎ\n
+TEXT なのかしらね。
+HOLD
+
+DRAW color,7
+DRAW speed,3
+;TEXT レミリア達が帰ってからは\n
+;TEXT 特にすることもなかったので
+;TEXT 小半時ほど幽々子は妖夢とお茶をすすり、
+;TEXT 今晩は栗ご飯にするように\n
+;TEXT いいつけた。
+TEXT レミリア達が帰った後、妖夢と\n
+TEXT 小半時ほど茶を嗜んだ幽々子は
+HOLD
+TEXT 晩は栗御飯にするよう\n
+TEXT いいつけた。
+HOLD
+
+; 脚注: 「お茶(茶道)」で「一時(ひととき)」は「２時間(120分)」の事なので、
+; 半時は「１時間(60分)」。小半時なのでつまり「４５分くらい」です。
+; 客(妖夢)が一人しか居ないので、それぐらいの稽古時間が妥当でしょう。
+
+DRAW speed,1
+TEXT \n　　　　　　　　 TO BE CONTINUED …… ?
+HOLD
+
+BOSS result
+
+;ここまで来たら終了する。
+;; シナリオ修正について、基本的に原作になるべく近くなるように修正してるつもりですが
+;; かえっておかしくなってるかもしれないので、変な所はスレでフォローお願いします。

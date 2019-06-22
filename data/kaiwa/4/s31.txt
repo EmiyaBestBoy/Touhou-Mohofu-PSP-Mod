@@ -1,0 +1,169 @@
+
+;; (0) は レミリア
+;; (1) は 輝夜
+
+OBJ_LOAD tachie/remilia1.png,0
+OBJ_LOAD tachie/kaguya6.png,1
+
+; 初期位置へ登場し、移動完了まで待つ。
+OBJ xy,0,128,144
+OBJ xy,1,256,144
+OBJ wait
+
+;; 3==輝夜(キャラ)を読み込んで表示
+BOSS load,3
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,3
+TEXT ようこそ、永遠亭へ。
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,2
+TEXT ずいぶんと寛いでるのね。
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,3
+OBJ_LOAD tachie/kaguya4.png,1
+TEXT 毎日が十五夜なんて面白いじゃない。
+TEXT 最初は永琳が心配してたけどね。
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,2
+TEXT そういえば、聞きたいことがあるのよ。
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,3
+OBJ_LOAD tachie/kaguya4.png,1
+TEXT 急ぐことはないわ、
+HOLD
+;TEXT お団子は美味しいもの。
+TEXT お団子は美味しいし。
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,2
+;TEXT もう夜も長くない。\n
+;TEXT そろそろ眠いわ。
+TEXT もう夜も長くない上に、\n
+TEXT そろそろ眠いわね。
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,3
+OBJ_LOAD tachie/kaguya4.png,1
+;TEXT 朝は吸血鬼の天敵よ。
+TEXT 朝は吸血鬼の天敵ね。\n
+TEXT 健康にも悪そうだし。
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,2
+TEXT あまり時間がかけられないの。\n
+TEXT 美人薄命だから。
+HOLD
+
+BGM ,13
+DRAW color,7
+;--------12345678901234567890123456789012345678
+TEXT \n\n　　　 ♪竹取飛翔　～ Lunatic Princess
+HOLD
+
+;説明文
+DRAW color,7
+;TEXT 永遠と須臾の罪人\n
+TEXT 永遠のお姫様\n
+;TEXT 人間らしくないお姫様\n
+TEXT 蓬莱山 輝夜
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,3。
+TEXT 時や場所が限定される美意識\n
+TEXT なんて、高が知れているわ。
+HOLD
+;TEXT それに、\n
+TEXT 例えば、\n
+TEXT あなたは満月が見たいのでしょう。
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,2
+TEXT 満月が見たいんじゃないわ。\n
+TEXT 風情を楽しみたかっただけ。
+HOLD
+TEXT 咲夜が勘違いしてるのよ。
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,3
+OBJ_LOAD tachie/kaguya1.png,1
+;TEXT あの娘も半分永遠の中に生きている\n
+TEXT あの娘は半分永遠の中に生きている\n
+TEXT ようなもの。
+HOLD
+;TEXT 感覚がずれるのは当然のことよ。
+TEXT 感覚がずれるのは当然の事ね。
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,2
+TEXT ずれたものは戻す。\n
+TEXT そうしないと、崩れてしまうのよ。
+HOLD
+TEXT 壊れても動き続ける時計ほど、\n
+TEXT 哀れなものはないわ。
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,3
+TEXT 壊れた時計は戻ってくる気もするわね。
+HOLD
+; (C)ジョジョ「それにもう２度とあの時計はもどらないような気がする　こわれるまでッ！」巻1-p63
+
+
+;; 通常退避位置[1]へ
+OBJ xy,0,-64,144
+OBJ xy,1,416,144
+
+; 全オブジェ移動完了まで待つ。
+OBJ wait
+
+BOSS start
+
+;ここまで来たら終了する。
+;; シナリオ修正について、基本的に原作になるべく近くなるように修正してるつもりですが
+;; かえっておかしくなってるかもしれないので、変な所はスレでフォローお願いします。
+
+;TEXT よく飽きないものね。
+;TEXT すすきは見飽きたわ。
+;TEXT 私の時間は有り余っているわ。
+
+;TEXT でも、\n
+
+;TEXT 十字架と銀の銃弾もね。
+; レミリアが十字架は苦手でない事を輝夜は知っているので言わないと思う。
+;TEXT 銀の銃弾もね。
+;; レミリアを銀の銃弾で打ち抜いてもあまり意味は無い(頭以外は死なないし...)。銀の銃弾は弱点ではない。(銀自体に効果なし)
+;; レミリアはそういう設定の吸血鬼ではない。レミリアのベースはあくまで悪魔。
+;; ちなみに咲夜のナイフは銀製で料理にも使う。もしレミリアに銀が有害という設定なら、咲夜はそんな危険なことはしない。
+;TEXT 鰯の頭と流れ水もね。
+;TEXT 待ちなさい！
+;TEXT 逃げ切れると思ったのかしら？
+;TEXT 逃げてないわ。
