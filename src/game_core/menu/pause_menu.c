@@ -113,17 +113,17 @@ static const MENU_RESOURCE my_menu_resource[/*8*/MENU_RESOURCES_99_MAX/*10*/] =
 //	{	310,				(113) +((5)*21),	"6",						},	// stage6 */
 //	{	275,				(113) +((6)*21),	"ENDING",					},	// ending */
 //	{	0,0,NULL,	},//----------------
-	{	GAME_X_OFFSET+(96), (115) +((0)*21),	"一時停止解除", 			},
-	{	GAME_X_OFFSET+(96), (115) +((1)*21),	"始めからやり直す", 		},
-	{	GAME_X_OFFSET+(96), (115) +((2)*21),	"タイトルへ戻る",			},
+	{	GAME_X_OFFSET+(96), (115) +((0)*21),	"Unpause", 			},
+	{	GAME_X_OFFSET+(96), (115) +((1)*21),	"Start Over", 		},
+	{	GAME_X_OFFSET+(96), (115) +((2)*21),	"Quit Game",			},
 	{	0,0,NULL,	},//----------------
-	{	GAME_X_OFFSET+(144), (138) +((0)*21),	"はい", 					},
-	{	GAME_X_OFFSET+(136), (138) +((1)*21),	"いいえ",					},
+	{	GAME_X_OFFSET+(144), (138) +((0)*21),	"Yes", 					},
+	{	GAME_X_OFFSET+(146), (138) +((1)*21),	"No",					},
 	{	0,0,NULL,	},//---------------- --------012345
-	{	GAME_X_OFFSET+(32), (16),				"あと 0回コンティニューできます",	},
-	{	GAME_X_OFFSET+(32), (48),				"コンティニューした場合、", 		},
-	{	GAME_X_OFFSET+(32), (48+18),			"スコアランキングされません",		},
-	{	GAME_X_OFFSET+(32), (120),				"コンティニューしますか？", 		},
+	{	GAME_X_OFFSET+(32), (16),				"       tries left",	},
+	{	GAME_X_OFFSET+(32), (48),				"If you continue,", 		},
+	{	GAME_X_OFFSET+(32), (48+18),			"your score won't count",		},
+	{	GAME_X_OFFSET+(32), (120),				"Do you want to continue?", 		},
 	{	0,0,NULL,	},//----------------
 };
 /*---------------------------------------------------------
