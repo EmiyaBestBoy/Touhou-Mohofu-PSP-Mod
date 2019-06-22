@@ -1,0 +1,115 @@
+
+;; (0) は 霊夢 A(霊符)
+;; (1) は 咲夜
+
+OBJ_LOAD tachie/reimu1.png,0
+OBJ_LOAD tachie/sakuya2.png,1
+
+; 退避位置についたら描画on
+OBJ wait
+OBJ draw,0,1
+OBJ draw,1,1
+
+; 初期位置へ登場し、移動完了まで待つ。
+OBJ xy,0,128,144
+OBJ xy,1,256,144
+OBJ wait
+
+;; 6==咲夜(キャラ)を読み込んで表示
+BOSS load,6
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,5
+TEXT 久しぶりね。
+HOLD
+
+BGM ,16
+
+OBJ_LOAD tachie/sakuya5.png,1
+TEXT またお掃除の邪魔をしに来たの？
+HOLD
+;しは一応掛け言葉
+
+;説明文
+DRAW color,7
+TEXT 完全で瀟洒な従者\n
+;TEXT 紅魔館のメイド\n
+;TEXT 完全で瀟洒なメイド\n
+;TEXT 危険な手品師\n
+TEXT 十六夜 咲夜
+HOLD
+
+DRAW color,7
+;--------12345678901234567890123456789012345678
+TEXT \n\n　　　　　 ♪月時計　～ ルナ・ダイアル
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,2
+OBJ_LOAD tachie/reimu3.png,0
+;TEXT ほんとにね。\nそろそろ中秋を楽しみたいのだけど
+TEXT それより。
+HOLD
+;TEXT そろそろ中秋を\n楽しみたいのだけど
+; 皮肉としても霊夢の性格から弱い気がする。
+TEXT そろそろ中秋を\n楽しみたいわね。
+HOLD
+; あくまで断定調で、自分の意見をはっきり言う。
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,5
+OBJ_LOAD tachie/sakuya6.png,1
+;TEXT いいじゃない。
+;TEXT いつまでも十五夜が\n楽しめるわ
+; 皮肉を受け流す感じで。
+TEXT いつまでも十五夜があると、\n愉しいじゃない。
+HOLD
+; (何が不満なのかしら？)
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,2
+OBJ_LOAD tachie/reimu4.png,0
+TEXT あんたのところの悪魔が\n命令したんじゃないの？
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,5
+;TEXT お嬢様は\n名月を望んだ。
+TEXT お嬢様は\n名月を望んだわ。
+HOLD
+OBJ_LOAD tachie/sakuya5.png,1
+;TEXT だから\n永遠の十五夜よ
+TEXT だから\n永遠の十五夜なのよ。
+HOLD
+; (愉しいでしょ？)
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,2
+OBJ_LOAD tachie/reimu5.png,0
+;TEXT 少しは風情を知りなさい。
+;TEXT 名月は満月とは限らないのよ！
+;TEXT 少しは風情を\n知りなさい！
+;TEXT 名月は\n満月とは限らないわ
+TEXT 少しは風情も\n知りなさいよ！
+HOLD
+TEXT 名月は\n満月とは限らないわ
+HOLD
+
+;; 通常退避位置[1]へ
+OBJ xy,0,-64,144
+OBJ xy,1,416,144
+
+; 全オブジェ移動完了まで待つ。
+OBJ wait
+
+BOSS start
+
+;ここまで来たら終了する。
+;; シナリオ修正について、基本的に原作になるべく近くなるように修正してるつもりですが
+;; かえっておかしくなってるかもしれないので、変な所はスレでフォローお願いします。

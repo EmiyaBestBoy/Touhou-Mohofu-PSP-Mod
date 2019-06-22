@@ -1,0 +1,74 @@
+
+;; (0) は 霊夢 A(霊符)
+;; (1) は 輝夜
+
+OBJ_LOAD tachie/reimu1.png,0
+OBJ_LOAD tachie/kaguya1.png,1
+
+; 退避位置についたら描画on
+OBJ wait
+OBJ draw,0,1
+OBJ draw,1,1
+
+; 初期位置へ登場し、移動完了まで待つ。
+OBJ xy,0,128,144
+OBJ xy,1,256,144
+OBJ wait
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,2
+OBJ_LOAD tachie/reimu2.png,0
+TEXT ところで、燕雀いずくんぞ何？
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,3
+OBJ_LOAD tachie/kaguya3.png,1
+TEXT 難しい事は永琳が担当よ。\n
+TEXT わたしは管轄外。
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,2
+OBJ_LOAD tachie/reimu6.png,0
+TEXT 判って言ってたんじゃないの？
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,3
+OBJ_LOAD tachie/kaguya2.png,1
+TEXT 聞いたわよ、\n
+TEXT 燕育ててるんですって？
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,2
+OBJ_LOAD tachie/reimu3.png,0
+TEXT 育ててるんじゃないわ。\n
+TEXT 勝手に居付いただけ。
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,3
+OBJ_LOAD tachie/kaguya4.png,1
+TEXT どんな居候に育つか楽しみね。
+HOLD
+
+;; 通常退避位置[1]へ
+OBJ xy,0,-64,144
+OBJ xy,1,416,144
+
+; 全オブジェ移動完了まで待つ。
+OBJ wait
+
+BOSS result
+
+;ここまで来たら終了する。
+;; シナリオ修正について、基本的に原作になるべく近くなるように修正してるつもりですが
+;; かえっておかしくなってるかもしれないので、変な所はスレでフォローお願いします。

@@ -1,0 +1,85 @@
+
+;; (0) は 霊夢 A(霊符)
+;; (1) は 文
+
+OBJ_LOAD tachie/reimu4.png,0
+OBJ_LOAD tachie/aya1.png,1
+
+; 退避位置についたら描画on
+OBJ wait
+OBJ draw,0,1
+OBJ draw,1,1
+
+; 初期位置へ登場し、移動完了まで待つ。
+OBJ xy,0,128,144
+OBJ xy,1,256,144
+OBJ wait
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,2
+;TEXT 良いこと考えたわ。
+TEXT 良いことを考えたわ。
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,7
+TEXT ……？
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,2
+OBJ_LOAD tachie/reimu1.png,0
+;TEXT 今のを記事にしなさい。
+TEXT 今の、記事にしなさい。
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,7
+OBJ_LOAD tachie/aya2.png,1
+;TEXT いまの、とは何のことです？
+TEXT 何のことです？
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,2
+OBJ_LOAD tachie/aya3.png,1
+OBJ_LOAD tachie/reimu4.png,0
+TEXT あんたが負けたことよ。
+HOLD
+
+;TEXT ほら、良くない事みつけた
+;TEXT 良くない知らせも\n程よく混ぜないと受けが悪いわ。
+TEXT 良い知らせだけでは\n受けないのです。
+HOLD
+TEXT 程よく、良くない知らせを\n混ぜないと。
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,7
+OBJ_LOAD tachie/aya2.png,1
+OBJ_LOAD tachie/reimu6.png,0
+TEXT 会話ずれてません？
+HOLD
+
+;; 通常退避位置[1]へ
+OBJ xy,0,-64,144
+OBJ xy,1,416,144
+
+; 全オブジェ移動完了まで待つ。
+OBJ wait
+
+BOSS result
+
+;ここまで来たら終了する。
+;; シナリオ修正について、基本的に原作になるべく近くなるように修正してるつもりですが、
+;; かえっておかしくなってるかもしれないので、変な所はスレでフォローお願いします。
+
+;601 会話のずれを指摘させるのは藪蛇かもしれません。
+;601 ツッコミを入れないほうがすんなり終わる気がします。
+;231 もちろん薮蛇で(会話的にも)「蛇足」ですが、文の性格からツッコまないほうが不自然な気がします。(文は藪蛇多いです)

@@ -1,0 +1,218 @@
+
+;; (0) は 霊夢 A(霊符)
+;; (1) は 咲夜
+
+OBJ_LOAD tachie/reimu6.png,0
+OBJ_LOAD tachie/sakuya1.png,1
+
+; 退避位置についたら描画on
+OBJ wait
+OBJ draw,0,1
+OBJ draw,1,1
+
+; 初期位置へ登場し、移動完了まで待つ。
+OBJ xy,0,128,144
+OBJ xy,1,256,144
+OBJ wait
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,2
+;;「あなた」の場合(旧作～紅魔郷)
+;TEXT このことを、\n
+;TEXT あなたの主人は知ってるのかしら
+;TEXT あなたの主人は知っているの？
+;TEXT あなたの主人は知ってるのかしら？
+
+;;「あんた」の場合(妖々夢～)
+;TEXT このことを、あんたの主人は\n
+;TEXT 知ってるのかしら？
+;TEXT 知らないんじゃないのかしら？
+;TEXT 知らないんじゃないの？
+TEXT あんたの主人は、この事\n
+TEXT 知らないんじゃないの？
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,5
+;TEXT お嬢様は知らない。
+TEXT お嬢様は知らないわ。
+;TEXT 私の独断。
+TEXT 私の独断よ。
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,2
+OBJ_LOAD tachie/reimu4.png,0
+TEXT やっぱり。
+HOLD
+OBJ_LOAD tachie/reimu3.png,0
+TEXT 言わないでおいてあげるから。\n
+TEXT 早く元に戻しなさい。
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,5
+OBJ_LOAD tachie/sakuya3.png,1
+TEXT しょうがないわね……。
+HOLD
+
+;; 全画面用退避位置[2]へ
+OBJ xy,0,-64,144
+OBJ xy,1,544,144
+
+; 全オブジェ移動完了まで待つ。
+OBJ wait
+
+BGM ,25
+DRAW skip,0
+DRAW panel,0
+DRAW text,0
+DRAW bg,1
+;BG_LOAD story/ending.jpg,0
+BG_LOAD story/ending.jpg,0
+BG_FADE
+DRAW text,1
+DRAW color,7
+DRAW speed,1
+TEXT 東方模倣風 ～ Imitation Style.
+HOLD
+;BG_LOAD story/ending(reimu).jpg
+;BG_LOAD story/arasuzi(reimu).jpg
+BG_LOAD story/356_end01.jpg
+DRAW speed,2
+TEXT 季節は進み始め、博麗神社では十三夜。\n
+TEXT 名残月の宴会が開かれていた。
+HOLD
+
+DRAW color,7
+DRAW speed,0
+TEXT 靈夢：
+DRAW speed,2
+TEXT あら、レミリア\n
+TEXT 今夜は満月じゃないのよ？
+HOLD
+
+DRAW color,2
+DRAW speed,0
+TEXT レミリア：
+DRAW speed,1
+TEXT 私は名月を見に来たの。\n
+TEXT 満月を見に来たわけじゃないわ
+HOLD
+
+DRAW color,7
+DRAW speed,0
+TEXT 靈夢：
+DRAW speed,5
+TEXT ……だってさ、咲夜。
+HOLD
+
+DRAW color,5
+DRAW speed,0
+TEXT 咲夜：
+DRAW speed,1
+TEXT 申し訳ありません、
+DRAW speed,4
+TEXT お嬢様。\n
+DRAW speed,2
+TEXT 勉強しますわ。
+HOLD
+
+DRAW color,2
+DRAW speed,0
+;--- 0123456789012345678901234567980123456789
+TEXT レミリア：
+DRAW speed,2
+;--- 012345678901234567980123456789--
+TEXT こんなの
+DRAW speed,1
+;--- 8901234567980123456789-- <<改行入れられない>>
+TEXT 勉強する事じゃないわ。
+DRAW speed,3
+TEXT そのうち分かってくるものよ。
+HOLD
+
+DRAW color,7
+DRAW speed,0
+TEXT 靈夢：
+DRAW speed,2
+TEXT まず、この紅茶を何とかしないとね\n
+HOLD
+
+DRAW color,2
+DRAW speed,0
+TEXT レミリア：
+DRAW speed,2
+TEXT これは、何を混ぜたのかしら。
+HOLD
+
+DRAW color,5
+DRAW speed,0
+TEXT 咲夜：
+DRAW speed,3
+TEXT 伊勢芋ですわ。
+DRAW speed,5
+TEXT 粘り気
+DRAW speed,3
+TEXT があった方が\n
+DRAW speed,4
+TEXT 人間の
+DRAW color,10
+DRAW speed,6
+TEXT 血
+DRAW color,5
+DRAW speed,5
+TEXT に近いかと。
+HOLD
+
+DRAW color,2
+DRAW speed,0
+TEXT レミリア：
+DRAW speed,3
+TEXT 人間の
+DRAW color,10
+DRAW speed,5
+TEXT 血
+DRAW color,2
+DRAW speed,3
+TEXT からは\n
+;TEXT 正反対の方向に走ってるわね
+TEXT 正反対の方向に走ってるわ
+HOLD
+
+DRAW color,7
+DRAW speed,0
+TEXT 靈夢：
+DRAW speed,3
+TEXT 伊勢芋があわないなら、\n
+TEXT 松茸でも入れてみたら？
+HOLD
+
+DRAW color,2
+DRAW speed,0
+TEXT レミリア：
+DRAW speed,4
+TEXT ……
+HOLD
+
+DRAW color,7
+DRAW speed,2
+TEXT 咲夜からあまった伊勢芋をもらった靈夢は、
+HOLD
+TEXT 明日の朝餉は早速とろろ飯にしよう、\n
+TEXT と決めた。
+HOLD
+
+DRAW speed,1
+TEXT \n　　　　　　　　 TO BE CONTINUED …… ?
+HOLD
+
+BOSS result
+
+;ここまで来たら終了する。
+;; シナリオ修正について、基本的に原作になるべく近くなるように修正してるつもりですが
+;; かえっておかしくなってるかもしれないので、変な所はスレでフォローお願いします。

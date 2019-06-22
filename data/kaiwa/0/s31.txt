@@ -1,0 +1,185 @@
+
+;; (0) は 霊夢 A(霊符)
+;; (1) は 輝夜
+
+OBJ_LOAD tachie/reimu1.png,0
+OBJ_LOAD tachie/kaguya2.png,1
+
+; 退避位置についたら描画on
+OBJ wait
+OBJ draw,0,1
+OBJ draw,1,1
+
+; 初期位置へ登場し、移動完了まで待つ。
+OBJ xy,0,128,144
+OBJ xy,1,256,144
+OBJ wait
+
+;; 3==輝夜(キャラ)を読み込んで表示
+BOSS load,3
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,3
+TEXT あら、いつぞやの巫女じゃない？
+HOLD
+
+;説明文
+DRAW color,7
+TEXT 永遠と須臾の罪人\n
+;TEXT 永遠のお姫様\n
+;TEXT 人間らしくないお姫様\n
+TEXT 蓬莱山 輝夜
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,2
+OBJ_LOAD tachie/reimu4.png,0
+TEXT ええ、いつぞやの巫女よ。
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,3
+OBJ_LOAD tachie/kaguya4.png,1
+;TEXT 今夜は十五夜。月見でも\n
+TEXT 今夜は十五夜。舟遊びでも\n
+TEXT 一緒にどうかしら？
+HOLD
+; 輝夜の生い立ちから、舟遊びを誘ってくる気がします。(姫ですから)
+; 舟遊びの中に月見や歌詠みは当然として含まれます。(あと珍品自慢も)
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,2
+OBJ_LOAD tachie/reimu5.png,0
+;TEXT 満月は見飽きたわ。\n
+;TEXT 私は名残月が見たいのよ。
+TEXT 名満月は見飽きたわ。\n
+TEXT 私は名残月が見たいの。
+HOLD
+
+;TEXT まだ何か？
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,3
+OBJ_LOAD tachie/kaguya6.png,1
+TEXT 満ち欠けなんて、まやかし。\n
+;TEXT 満ち欠けなんて、あやかし。\n
+; まやかし==惑わす事。あやかし==妖怪の類。
+;TEXT 月は永遠、いつもおなじよ。
+;TEXT 月は永遠、いつもおなじ。
+TEXT 月は永遠。いつもおなじ月。
+HOLD
+OBJ_LOAD tachie/kaguya1.png,1
+TEXT 永遠の十五夜。\n
+;TEXT それも面白いじゃない？
+TEXT それも面白いんじゃない？
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,2
+OBJ_LOAD tachie/reimu6.png,0
+;TEXT ええ、月はおなじね。\n
+;TEXT ええ、月はいつもおなじね。\n
+TEXT ええ、月はいつも同じね。\n
+;TEXT でも、夜空はそうじゃないの。
+;TEXT でも、夜空はそうじゃない！
+TEXT でも、夜空は違うわ
+HOLD
+OBJ_LOAD tachie/reimu4.png,0
+;TEXT 満月は自己主張が強すぎるわ。
+TEXT 満月は自己主張が強すぎる。\n
+;TEXT 欠けたぐらいがちょうどいいの。
+TEXT 欠けたぐらいが、ちょうどお似合いね。
+HOLD
+
+BGM ,13
+
+OBJ_LOAD tachie/reimu2.png,0
+;TEXT 一つ、\n
+TEXT ひとつ、\n
+;TEXT 確かめたいことが。
+;TEXT 確かめたいことが……。
+TEXT 確かめたい事があるわ。
+HOLD
+
+DRAW color,7
+;--------12345678901234567890123456789012345678
+TEXT \n\n　　　 ♪竹取飛翔　～ Lunatic Princess
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,3
+OBJ_LOAD tachie/kaguya2.png,1
+TEXT いいわ。\n
+TEXT いくつでも聞いてあげる。
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,2
+OBJ_LOAD tachie/reimu5.png,0
+TEXT で、これは誰がやったの？
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,3
+OBJ_LOAD tachie/kaguya4.png,1
+;TEXT 答えてしまったらつまらない。
+TEXT 答えがすぐにあるのも、つまらない。
+HOLD
+OBJ_LOAD tachie/kaguya6.png,1
+TEXT 待ってあげるから、\n
+;TEXT 考えて見なさい。
+TEXT 考えてみて？
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,2
+OBJ_LOAD tachie/reimu3.png,0
+;TEXT 考えてる時間が\nおしいのよ。
+TEXT 考えるなんて\n無駄な気がする。
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,3
+OBJ_LOAD tachie/kaguya5.png,1
+;TEXT 急いでも、\nいいことはないのよ？
+;TEXT 急いても、\nいいことはないのよ？
+;TEXT 急いても、\n好い事はないわよ？
+TEXT 急いては、事をし損じる。
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,2
+OBJ_LOAD tachie/reimu1.png,0
+TEXT 先んずれば人を制す。
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,3
+TEXT 燕雀安んぞ鴻鵠の志を知らんや。
+HOLD
+
+;; 通常退避位置[1]へ
+OBJ xy,0,-64,144
+OBJ xy,1,416,144
+
+; 全オブジェ移動完了まで待つ。
+OBJ wait
+
+BOSS start
+
+;ここまで来たら終了する。
+;; シナリオ修正について、基本的に原作になるべく近くなるように修正してるつもりですが
+;; かえっておかしくなってるかもしれないので、変な所はスレでフォローお願いします。

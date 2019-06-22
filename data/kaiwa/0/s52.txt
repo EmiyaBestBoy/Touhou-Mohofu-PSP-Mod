@@ -1,0 +1,78 @@
+
+;; (0) は 霊夢 A(霊符)
+;; (1) は パチェ
+
+OBJ_LOAD tachie/reimu5.png,0
+OBJ_LOAD tachie/pache2.png,1
+
+; 退避位置についたら描画on
+OBJ wait
+OBJ draw,0,1
+OBJ draw,1,1
+
+; 初期位置へ登場し、移動完了まで待つ。
+OBJ xy,0,128,144
+OBJ xy,1,256,144
+OBJ wait
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,2
+;TEXT んもう！春度がちっとも\n集まらないじゃない！
+TEXT 集めても集めても\nかけらがたまらないわ！
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,7
+OBJ_LOAD tachie/pache1.png,1
+;TEXT もう十分集まった様に\n見えるけど……。
+;TEXT あなたの頭の中に……。
+TEXT たまらないわね。
+;TEXT たりないわね。
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,2
+OBJ_LOAD tachie/pache3.png,1
+OBJ_LOAD tachie/reimu4.png,0
+;TEXT 中だけじゃ不満だわ\n外も集めたいの。
+TEXT 欠片集めても\n
+TEXT ガッツ増えないし。
+HOLD
+
+;; オブジェ1に注目
+OBJ look,1
+DRAW color,7
+OBJ_LOAD tachie/pache2.png,1
+OBJ_LOAD tachie/reimu6.png,0
+TEXT それは良いけど、\n
+TEXT ここには本しか無いわね。
+HOLD
+
+;; オブジェ0に注目
+OBJ look,0
+DRAW color,2
+OBJ_LOAD tachie/pache6.png,1
+OBJ_LOAD tachie/reimu5.png,0
+;TEXT 良くないわ。\n
+;TEXT 誰の頭の中に春がいっぱいだって？
+TEXT 良くないわ。誰のかけらが\n
+TEXT たまらないんだって？
+;TEXT 良くないわ。誰の頭が\n
+;TEXT たりないって？
+HOLD
+
+;; 通常退避位置[1]へ
+OBJ xy,0,-64,144
+OBJ xy,1,416,144
+
+; 全オブジェ移動完了まで待つ。
+OBJ wait
+
+BOSS result
+
+;ここまで来たら終了する。
+;; シナリオ修正について、基本的に原作になるべく近くなるように修正してるつもりですが
+;; かえっておかしくなってるかもしれないので、変な所はスレでフォローお願いします。
