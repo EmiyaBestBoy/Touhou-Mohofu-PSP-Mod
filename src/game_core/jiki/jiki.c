@@ -289,14 +289,14 @@ static void player_keycontrol(OBJ *s1)
 						static const aaa_RESOURCE my_aaa_resource[(PLAYERS8*2)] =
 						{
 //	 "feeddccbbaa99887766554433221100",'\0' 	 "feeddccbbaa99887766554433221100",'\0' ワーク文字列バッファ長をこれだけしか用意しない予定なので、あふれたら字が出ない。 */
-	{"霊符「夢想封印」" 				"\n"},	{"祓符「夢想境界」" 				"\n"},//霊符「夢想結界・円」
-	{"夢符「夢想結界」" 				"\n"},	{"降符「夢想調伏」" 				"\n"},//夢符「夢想結界・斬」
-	{"魔符「スターダストレヴァリエ」"	"\n"},	{"閃符「未作成攻撃」"				"\n"},
-	{"恋符「マスタースパーク」" 		"\n"},	{"虹符「未作成攻撃」"				"\n"},
-	{"紅符「不夜城ブレッド」"			"\n"},	{"民盟「アクマクロス」" 			"\n"},
-	{"死符「ギャストリドリーム」"		"\n"},	{"翁技「うつつ桜」" 				"\n"},// うつつ、「現」、「打棄つ」。「現」実の。打ち「捨てる」。 /* dream cast. ghastly dream(妖々夢). ghastly dream(霊夢). */
-	{"霰符「アイシクルストライク」" 	"\n"},	{"氷符「オンザロック」" 			"\n"},	/* 霰(あられ): 雨が凍ったり、溶けかけた雪が再び凍って降る。 */
-	{"最強「アタイの拳」"				"\n"},	{"最雹「九文キック」"				"\n"},	/* 霙符 霜踏 霙(みぞれ): 雨と雪が混ざって降る。 */
+	{"Fantasy Seal" 				"\n"},	{"Homing Amulet" 				"\n"},//霊符「夢想結界・円」
+	{"Persuation Needle" 				"\n"},	{"Evil Sealing Circle" 				"\n"},//夢符「夢想結界・斬」
+	{"Stardust Reverie"	"\n"},	{"Magic Missile"				"\n"},
+	{"Illusion Laser" 		"\n"},	{"Master Spark"				"\n"},
+	{"Night Dance"			"\n"},	{"Bombard Night" 			"\n"},
+	{"Spirit Sign"		"\n"},	{"Ageless Dream" 				"\n"},// うつつ、「現」、「打棄つ」。「現」実の。打ち「捨てる」。 /* dream cast. ghastly dream(妖々夢). ghastly dream(霊夢). */
+	{"Ice Sign" 	"\n"},	{"Icicle Fall" 			"\n"},	/* 霰(あられ): 雨が凍ったり、溶けかけた雪が再び凍って降る。 */
+	{"★Ice Sign"				"\n"},	{"Frozen Sword+99999"				"\n"},	/* 霙符 霜踏 霙(みぞれ): 雨と雪が混ざって降る。 */
 						};
 						strcpy(my_font_text, my_aaa_resource[index_aaa].spell_str_name);
 						kanji_color((7)|STR_CODE_NO_ENTER);
