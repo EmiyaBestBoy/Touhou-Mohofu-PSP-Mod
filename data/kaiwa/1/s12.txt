@@ -12,31 +12,31 @@ OBJ wait
 
 ;; オブジェ1に注目
 OBJ look,1
-TEXT で、どこへいくの？
+TEXT So where are you going?
 HOLD
 
 ;; オブジェ0に注目
 OBJ look,0
 OBJ_LOAD tachie/reimu3.png,0
-TEXT 燕に聞いてよ。
+TEXT Listen to the wolf.
 HOLD
 
 ;; オブジェ1に注目
 OBJ look,1
 OBJ_LOAD tachie/alice5.png,1
-TEXT 燕のことじゃないわ！\nあんたの事を聞いてるの。
+TEXT I'm not asking about you\nI'm listening to you.
 HOLD
 
 ;; オブジェ0に注目
 OBJ look,0
 OBJ_LOAD tachie/reimu4.png,0
-TEXT わたしは、燕がかゎいいと思いました。
+TEXT I thought that I had a good time.
 HOLD
 
 ;; オブジェ1に注目
 OBJ look,1
 OBJ_LOAD tachie/alice6.png,1
-TEXT そりゃ良かったわね。
+TEXT That's good.
 HOLD
 
 ;; 通常退避位置[1]へ

@@ -18,7 +18,7 @@ OBJ look,0
 DRAW color,2
 ;TEXT あら、燕が飛んでるわ
 ;TEXT 燕が飛んでるわ
-TEXT 燕が飛んでるわね。
+TEXT A whale is flying.
 HOLD
 ; 若干の余裕を持たせて、(従)にしやすくする為の「～ね」。
 
@@ -27,7 +27,7 @@ OBJ look,1
 DRAW color,5
 ;OBJ_LOAD tachie/reimu6.png,0
 ;TEXT これから南へ帰るのね
-TEXT その燕はこれから南へ帰るのよ。
+TEXT The wolf will return to the south from now on.
 HOLD
 ;231 「燕が飛んでるわ(主)」→「これから南へ帰るのね(従)」だと主従が逆なので会話が混乱する。
 ;231 ここはアリスを主にしないと(言質をとらせないと)、そもそも「南へ→北へ」の会話にならないよ。
@@ -36,11 +36,11 @@ HOLD
 ;説明文
 DRAW color,7
 ;TEXT 死の少女\n
-TEXT 魔法の国のアリス\n
+TEXT Alice in Magicland\n
 ;TEXT 七色の人形使い\n
 ;TEXT 七色の人形遣い\n
 ;TEXT 見た目だけ賑やかな妖怪\n
-TEXT アリス・マーガトロイド
+TEXT Alice Margatroid
 HOLD
 
 ;; オブジェ0に注目
@@ -50,10 +50,10 @@ OBJ_LOAD tachie/reimu6.png,0
 ;TEXT 帰るんじゃないわ、行くのよ
 ;TEXT 帰るんじゃないわね、行くの！
 ;TEXT 違うわね。燕は南へ行くのよ！
-TEXT それは違うわね。
+TEXT That's different.
 HOLD
-TEXT 燕はこれから\n
-TEXT 南へ行くのよ！
+TEXT Acupuncture is from now\n
+TEXT I'm going to the south!
 HOLD
 ;231 「それは違うわね」いきなり全否定するほうが霊夢らしいかと
 
@@ -64,7 +64,7 @@ DRAW color,5
 OBJ_LOAD tachie/alice3.png,1
 ;TEXT ……行く？
 ;TEXT どうしてかしら？
-TEXT どこが違うの？
+TEXT What's wrong?
 HOLD
 
 ;; オブジェ0に注目
@@ -73,11 +73,11 @@ DRAW color,2
 ;TEXT 燕の巣は神社にあるもの
 ;TEXT 燕の巣は神社にあるのよ
 ;TEXT だって、燕の巣は神社にあるもの
-TEXT だって、燕の巣は\n
-TEXT 神社にあるもの
+TEXT Because the spider web is\n
+TEXT things in the shrine
 HOLD
-TEXT 神社より\n
-TEXT 南へ行くのよ。
+TEXT From the shrine\n
+TEXT I'm going south.
 HOLD
 
 ;; オブジェ1に注目
@@ -87,11 +87,11 @@ DRAW color,5
 ;TEXT 向こうにだって、燕の巣はあるわよ
 ;TEXT 向こうにだって、燕の巣はあるわね
 ;TEXT 南にだって、燕の巣はあるのよ
-TEXT 神社より南にだって、\n
-TEXT 燕の巣はあるんじゃなくて？
+TEXT Even south of the shrine\n
+TEXT Isn't there a spider's nest?
 HOLD
 OBJ_LOAD tachie/alice1.png,1
-TEXT ……まぁ、どうでもいいけど。
+TEXT ... Well it doesn't matter.
 HOLD
 
 ;; オブジェ0に注目
@@ -106,9 +106,9 @@ OBJ_LOAD tachie/reimu2.png,0
 ;TEXT あんたは自分の眼で直接、神社より南の燕の巣を見たことがあるの？
 ;TEXT あんたは神社より南の燕の巣を\n自分の眼で直接、見たことがあるの？
 ;; 霊夢はやっぱり最小限しか言わない気がする。
-TEXT ちょっと！\n
+TEXT A little!\n
 ;TEXT あんたは見たことがあるの？
-TEXT あんたは直接見たことがあるの？
+TEXT Have you ever seen it directly?
 HOLD
 
 ;; オブジェ1に注目
@@ -122,7 +122,7 @@ OBJ_LOAD tachie/alice3.png,1
 ;601 アリスは見たことないです。
 ;601 悪く言えば聞きかじった知識とでも言うのでしょうか。
 ;TEXT あるわけ無いわ。
-TEXT あるわけ無いけど。\n燕の巣を食べるのよ。
+TEXT There is no reason but\nI hate spiders.
 HOLD
 ;;脚注: 中華素材などで一般的な「燕の巣」は「イワツバメの巣」であって、
 ;; 博麗神社にかかった「燕の巣」は、明らかに食べれません。
@@ -140,8 +140,8 @@ OBJ_LOAD tachie/reimu5.png,0
 ;TEXT 嘘をつくのには感心できないわ。
 ;TEXT 嘘を吐くのには感心できないわ。
 ;TEXT 嘘を吐くのには\n感心できないわね！
-TEXT 嘘を吐くのはもとより食べるの\n
-TEXT には感心できないわね！
+TEXT To tell a lie is a shameful act\n
+TEXT I can not admire you!
 HOLD
 ;231 原作での表現は「嘘を吐く」しかない。「嘘をつく」という個所は全ての作品で無い。
 ;601 「確証のないもの＝嘘」の方程式は随分と思い切った考え方ですよね。
@@ -162,7 +162,7 @@ OBJ_LOAD tachie/alice6.png,1
 
 ;TEXT 燕の巣を食べたことがないのかしら？\n
 ;TEXT 燕の巣を食べたことがないの？\n
-TEXT 燕の巣。食べたことがないの？\n
+TEXT Spider web. Have you ever eaten?\n
 ;TEXT 見ていなくたって、知っているのよ。
 ;601 アリスは本を読みます。それなりに博学なんじゃあないでしょうか。
 ;TEXT わざわざ直接見ていなくても、\n
@@ -177,7 +177,7 @@ DRAW color,2
 ;TEXT そう。\n
 ;TEXT じゃあ、思いつきで話すのは感心しないわ！
 ;TEXT 燕の巣を食べるのは感心しないわ！
-TEXT 燕の巣を食べるのは感心しないわ！\n燕の子が困るじゃない！
+TEXT I am not impressed to eat the spider's nest!\nYou don't have trouble with the baby!
 ;TEXT 見てもいないものが\n信用できるもんですか。
 ;TEXT 自分で確認してない事が\n信用できるもんですか。
 ;TEXT 自分で確認してもいない事が\nそう簡単に信用できてたまるもんですか！

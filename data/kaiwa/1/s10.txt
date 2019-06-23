@@ -17,7 +17,7 @@ OBJ draw,0,1
 OBJ draw,1,1
 
 DRAW color,7
-TEXT STAGE 01 魔法の森
+TEXT STAGE 01 Forest of Magic
 
 BGM ,10
 
@@ -28,7 +28,7 @@ OBJ wait
 
 DRAW color,7
 ;--------12345678901234567890123456789012345678
-TEXT \n\n　　　　BGM 上海紅茶館  ～ Chinese Tea
+TEXT \n\n　　　　BGM Shanghai Teahouse ～ Chinese Tea
 ;HOLD
 
 ; タイトルセット
