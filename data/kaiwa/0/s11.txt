@@ -23,7 +23,7 @@ OBJ look,0
 DRAW color,2
 ;TEXT あら、燕が飛んでるわ
 ;TEXT 燕が飛んでるわ
-TEXT 燕が飛んでるわね。
+TEXT A whale is flying
 HOLD
 ; 若干の余裕を持たせて、(従)にしやすくする為の「～ね」。
 
@@ -32,7 +32,7 @@ OBJ look,1
 DRAW color,5
 ;OBJ_LOAD tachie/reimu6.png,0
 ;TEXT これから南へ帰るのね
-TEXT その燕はこれから南へ帰るのよ。
+TEXT The wolf will return to the south from now on.
 HOLD
 ;231 「燕が飛んでるわ(主)」→「これから南へ帰るのね(従)」だと主従が逆なので会話が混乱する。
 ;231 ここはアリスを主にしないと(言質をとらせないと)、そもそも「南へ→北へ」の会話にならないよ。
@@ -43,9 +43,9 @@ DRAW color,7
 ;TEXT 死の少女\n
 ;TEXT 魔法の国のアリス\n
 ;TEXT 七色の人形使い\n
-TEXT 七色の人形遣い\n
+TEXT Seven-Colored Puppeteer\n
 ;TEXT 見た目だけ賑やかな妖怪\n
-TEXT アリス・マーガトロイド
+TEXT Alice Margatroid
 HOLD
 
 ;; オブジェ0に注目
@@ -55,10 +55,10 @@ OBJ_LOAD tachie/reimu6.png,0
 ;TEXT 帰るんじゃないわ、行くのよ
 ;TEXT 帰るんじゃないわね、行くの！
 ;TEXT 違うわね。燕は南へ行くのよ！
-TEXT それは違うわね。
+TEXT That's different.
 HOLD
-TEXT 燕はこれから\n
-TEXT 南へ行くのよ！
+TEXT Acupuncture is from now\n
+TEXT I'm going to the south!
 HOLD
 ;231 「それは違うわね」いきなり全否定するほうが霊夢らしいかと
 
@@ -68,7 +68,7 @@ DRAW color,5
 OBJ_LOAD tachie/alice2.png,1
 ;TEXT ……行く？
 ;TEXT どうしてかしら？
-TEXT どこが違うの？
+TEXT What's wrong?
 HOLD
 
 ;; オブジェ0に注目
@@ -77,11 +77,11 @@ DRAW color,2
 ;TEXT 燕の巣は神社にあるもの
 ;TEXT 燕の巣は神社にあるのよ
 ;TEXT だって、燕の巣は神社にあるもの
-TEXT だって、燕の巣は\n
-TEXT 神社にあるもの
+TEXT Because the spider web is\n
+TEXT Things in the shrine
 HOLD
-TEXT 神社より\n
-TEXT 南へ行くのよ。
+TEXT From the shrine\n
+TEXT I'm going south.
 HOLD
 
 ;; オブジェ1に注目
@@ -91,11 +91,11 @@ DRAW color,5
 ;TEXT 向こうにだって、燕の巣はあるわよ
 ;TEXT 向こうにだって、燕の巣はあるわね
 ;TEXT 南にだって、燕の巣はあるのよ
-TEXT 神社より南にだって、\n
-TEXT 燕の巣はあるんじゃなくて？
+TEXT Even south of the shrine,\n
+TEXT Isn't there a spider's nest?
 HOLD
 OBJ_LOAD tachie/alice1.png,1
-TEXT ……まぁ、どうでもいいけど。
+TEXT ...Well it doesn't matter.
 HOLD
 
 ;; オブジェ0に注目
@@ -110,9 +110,9 @@ OBJ_LOAD tachie/reimu2.png,0
 ;TEXT あんたは自分の眼で直接、神社より南の燕の巣を見たことがあるの？
 ;TEXT あんたは神社より南の燕の巣を\n自分の眼で直接、見たことがあるの？
 ;; 霊夢はやっぱり最小限しか言わない気がする。
-TEXT ちょっと！\n
+TEXT A little!\n
 ;TEXT あんたは見たことがあるの？
-TEXT あんたは直接見たことがあるの？
+TEXT Have you ever seen it directly?
 HOLD
 
 ;; オブジェ1に注目
@@ -125,7 +125,7 @@ DRAW color,5
 ;601 アリスは見たことないです。
 ;601 悪く言えば聞きかじった知識とでも言うのでしょうか。
 OBJ_LOAD tachie/alice5.png,1
-TEXT あるわけ無いわ。
+TEXT There is no reason.
 HOLD
 
 ;; オブジェ0に注目
@@ -140,8 +140,8 @@ OBJ_LOAD tachie/reimu5.png,0
 ;; 霊夢は神社の燕の巣を直接自分で確認しているので、嘘と断定。
 ;TEXT 嘘をつくのには感心できないわ。
 ;TEXT 嘘を吐くのには感心できないわ。
-TEXT 嘘を吐くのには\n
-TEXT 感心できないわね！
+TEXT To tell a lie\n
+TEXT I can not admire you!
 HOLD
 ;231 原作での表現は「嘘を吐く」しかない。「嘘をつく」という個所は全ての作品で無い。
 ;601 「確証のないもの＝嘘」の方程式は随分と思い切った考え方ですよね。
@@ -157,7 +157,7 @@ OBJ_LOAD tachie/alice3.png,1
 ;; アリスは思いつきで物を言わない気がする。
 ;; 逆に霊夢は思いつき(や根拠のない直感で)で物を言う。
 ;TEXT 燕の巣を食べるのね。
-TEXT 嘘じゃないわよ！
+TEXT It's not a lie!
 HOLD
 
 ;TEXT 燕の巣を食べたことがないのかしら？\n
@@ -165,8 +165,8 @@ HOLD
 ;TEXT 見ていなくたって、知っているのよ。
 ;601 アリスは本を読みます。それなりに博学なんじゃあないでしょうか。
 ;TEXT ちゃんと知っている事もあるのよ。
-TEXT わざわざ直接見ていなくても、\n
-TEXT ちゃんと知ってる事もあるのよ。
+TEXT Even if you don't look directly at it,\n
+TEXT there are also things I know right.
 HOLD
 
 ;; オブジェ0に注目
@@ -178,8 +178,8 @@ DRAW color,2
 ;TEXT 見てもいないものが\n
 ;TEXT 自分で確認してない事が\n
 ;TEXT 信用できるもんですか。
-TEXT 自分で確認してもいない事が\n
-TEXT そう簡単に信用できてたまるもんですか！
+TEXT I have not checked it myself\n
+TEXT Is it wise to trust so easily?
 HOLD
 ;601 見てないものは信用しません。
 ;601 これって霊夢なりの処世術なんでしょうか。
@@ -193,7 +193,7 @@ OBJ xy,1,416,144
 BGM ,11
 DRAW color,7
 ;--------12345678901234567890123456789012345678
-TEXT \n\n　　　 ♪人形裁判　～ 人の形弄びし少女
+TEXT \n\n　　　 ♪Doll Judgement ~ the Girl Who Played with People's Shapes
 HOLD
 
 ; 全オブジェ移動完了まで待つ。

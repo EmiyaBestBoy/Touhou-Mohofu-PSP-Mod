@@ -18,7 +18,7 @@ OBJ wait
 ;; オブジェ1に注目
 OBJ look,1
 DRAW color,5
-TEXT で、どこへいくの？
+TEXT So where are you going?
 HOLD
 
 ;; オブジェ0に注目
@@ -26,21 +26,21 @@ OBJ look,0
 DRAW color,2
 OBJ_LOAD tachie/reimu4.png,0
 ;TEXT 南に行くに決まってるじゃない。
-TEXT 南へ行くに\n決まってるじゃない。
+TEXT It is not decided\nto go south.
 HOLD
 
 ;; オブジェ1に注目
 OBJ look,1
 DRAW color,5
 OBJ_LOAD tachie/alice6.png,1
-TEXT 燕のことじゃないわ！
+TEXT It's not a problem!
 HOLD
 
 ;; オブジェ0に注目
 OBJ look,0
 OBJ_LOAD tachie/reimu5.png,0
 DRAW color,2
-TEXT そんなこと聞いて、\nどうするのかしら。
+TEXT Listen to that\nI wonder what to do.
 HOLD
 
 ;; 通常退避位置[1]へ

@@ -17,7 +17,7 @@ OBJ draw,0,1
 OBJ draw,1,1
 
 DRAW color,7
-TEXT STAGE 01 魔法の森
+TEXT STAGE 01 Forest of Magic
 
 BGM ,33
 
@@ -28,8 +28,8 @@ OBJ wait
 
 DRAW color,7
 ;--------12345678901234567890123456789012345678
-;EXT \n\n　　　　　　　　　　　　　BGM 春の湊に
-TEXT \n\n　　　　　　BGM ブクレシュティの人形師
+;EXT \n\n　　　　　　　　　　　　　BGM At the End of Spring
+TEXT \n\n　　　　　　BGM The Doll Maker of Bucuresti
 ;HOLD
 
 ; タイトルセット
