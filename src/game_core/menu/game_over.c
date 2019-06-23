@@ -236,13 +236,13 @@ typedef struct
 static GMENU_TEST result_my_obj[8] =
 {	//																			"00000000001"
 //																				"01234567890"
-	{	32+(64),	( 32),	"あなたの腕前", 		((15)|STR_CODE_NO_ENTER),	"", 			((7)|STR_CODE_NO_ENTER) },//"PLAYER DATA"/*"GAME OVER"*/
-	{	32+(48),	( 60),	"最終得点          ",	((6)|STR_CODE_NO_ENTER),	"0000000000.",	((7)|STR_CODE_NO_ENTER) },
-	{	32+(48),	( 80),	"ミス回数          ",	((5)|STR_CODE_NO_ENTER),	"         0.",	((7)|STR_CODE_NO_ENTER) },	/* 集計システム(player_data)総ミス回数 */
-	{	32+(48),	(100),	"ボム使用回数      ",	((4)|STR_CODE_NO_ENTER),	"         0.",	((7)|STR_CODE_NO_ENTER) },	/* 集計システム(player_data)総ボム使用回数 */
-	{	32+(48),	(120),	"喰らいボム成功回数",	((3)|STR_CODE_NO_ENTER),	"         0.",	((7)|STR_CODE_NO_ENTER) },	/* 集計システム(player_data)総喰らいボム成功回数 */
-	{	32+(48),	(140),	"コンティニュー回数",	((2)|STR_CODE_NO_ENTER),	"         0.",	((7)|STR_CODE_NO_ENTER) },	/* 集計システム(player_data)総コンティニュー回数 */
-	{	32+(48),	(160),	"難易度            ",	((1)|STR_CODE_NO_ENTER),	"   Lunatic.",	((7)|STR_CODE_NO_ENTER) },
+	{	32+(64),	( 32),	"Your skill", 		((15)|STR_CODE_NO_ENTER),	"", 			((7)|STR_CODE_NO_ENTER) },//"PLAYER DATA"/*"GAME OVER"*/
+	{	32+(48),	( 60),	"Final score          ",	((6)|STR_CODE_NO_ENTER),	"0000000000.",	((7)|STR_CODE_NO_ENTER) },
+	{	32+(48),	( 80),	"Number of mistakes          ",	((5)|STR_CODE_NO_ENTER),	"         0.",	((7)|STR_CODE_NO_ENTER) },	/* 集計システム(player_data)総ミス回数 */
+	{	32+(48),	(100),	"Bomb usage count      ",	((4)|STR_CODE_NO_ENTER),	"         0.",	((7)|STR_CODE_NO_ENTER) },	/* 集計システム(player_data)総ボム使用回数 */
+	{	32+(48),	(120),	"Number of successful bombs",	((3)|STR_CODE_NO_ENTER),	"         0.",	((7)|STR_CODE_NO_ENTER) },	/* 集計システム(player_data)総喰らいボム成功回数 */
+	{	32+(48),	(140),	"Number of continuations",	((2)|STR_CODE_NO_ENTER),	"         0.",	((7)|STR_CODE_NO_ENTER) },	/* 集計システム(player_data)総コンティニュー回数 */
+	{	32+(48),	(160),	"Difficulty            ",	((1)|STR_CODE_NO_ENTER),	"   Lunatic.",	((7)|STR_CODE_NO_ENTER) },
 };
 
 static void render_game_over_result(void)
@@ -345,7 +345,7 @@ static MAIN_CALL_FUNC(stage_clear_result_screen_local_work)
 	//	cg.msg_time = byou60(5);	/* 約 5 秒 */
 		cg.msg_time = (65536);	/* 約 18 分 */
 		{
-		strcpy(my_font_text, "CHALLENGE NEXT STAGE!　　少女祈祷中..." );
+		strcpy(my_font_text, "CHALLENGE NEXT STAGE!　Teenage girl praying..." );
 		//
 		ml_font[ML_LINE_08].x		= (40);
 		ml_font[ML_LINE_08].y		= (230);
