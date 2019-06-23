@@ -50,19 +50,19 @@ static void draw_spec_message(unsigned int set_mode)
 	kanji_window_all_clear();				/* 漢字画面を全行消す。漢字カーソルをホームポジションへ移動。 */
 	static const char *const_player_spec_str[(8)/*(8人)*/+(4)/*(4難易度)*/][(2)/*(白文字+黄文字)*/] =
 	{	/*"針巫女の攻撃力の解説は、おかしい気がするけど貼りつかなければ弱い。"*/
-		{	"楽園の素敵な巫女\\n"	"博麗 霊夢 (霊符)\\n"		"ホーミングアミュレット\\n" "夢想封印\\n",					"移動速度★★☆\\n" 				"攻撃範囲★★★\\n" 	"攻撃力　★☆☆",	},// No. 0 霊夢 A(霊符)
-		{	"楽園の素敵な巫女\\n"	"博麗 霊夢 (夢符)\\n"		"封魔針\\n" 				"夢想結界\\n",					"移動速度★★☆\\n" 				"攻撃範囲★★☆\\n" 	"攻撃力　★★☆",	},// No. 1 霊夢 B(夢符)
-		{	"普通の黒魔術師\\n" 	"霧雨 魔理沙 (魔符)\\n" 	"マジックミサイル\\n"		"スターダストレヴァリエ\\n",	"移動速度★★★\\n" 				"攻撃範囲★★★\\n" 	"攻撃力　★☆☆",	},// No. 2 魔理沙 A(魔符)
-		{	"古風な魔法使い\\n" 	"霧雨 魔理沙 (恋符)\\n" 	"イリュージョンレーザー\\n" "マスタースパーク\\n",			"移動速度★★★\\n" 				"攻撃範囲★☆☆\\n" 	"攻撃力　★★★",	},// No. 3 魔理沙 B(恋符)
-		{	"吸血鬼\\n" 			"レミリア スカーレット\\n"	"ナイトダンス\\n"			"不夜城ブレッド\\n",			"移動速度★★☆\\n" 				"攻撃範囲★★☆\\n" 	"攻撃力　★★☆",	},// No. 4 レミリア(血符)
-		{	"華胥の亡霊\\n" 		"西行寺 幽々子\\n"			"対岸の誘い\\n" 			"ギャストリドリーム\\n",		"移動速度☆☆☆\\n" 				"攻撃範囲★★☆\\n" 	"攻撃力　★★★",	},// No. 5 幽々子(符蝶)
-		{	"湖上の氷精\\n" 		"チルノ (氷符)\\n"			"アイシクルニードル\\n" 	"アイシクルストライク\\n",		"移動速度★★★★\\n"				"攻撃範囲？？？\\n" 	"攻撃力　★★☆",	},// No. 6 チルノ A(氷符)
+		{	"Shrine Maiden of Paradise\\n"	"Reimu Hakurei (Spirit Mark)\\n"		"Homing Amulet\\n" "Fantasy Seal\\n",					"Moving Speed ★★☆\\n" 				"Attack Range ★★★\\n" 	"Attack Power ★☆☆",	},// No. 0 霊夢 A(霊符)
+		{	"Shrine Maiden of Paradise\\n"	"Reimu Hakurei (Dream sign)\\n"		"Persuation Needle\\n" 				"Evil Sealing Circle\\n",					"Moving Speed ★★☆\\n" 				"Attack Range ★★☆\\n" 	"Attack Power ★★☆",	},// No. 1 霊夢 B(夢符)
+		{	"Ordinary Magician\\n" 	"Marisa Kirisame (Magic Symbol)\\n" 	"Magic Missile\\n"		"Stardust Reverie\\n",	"Moving Speed ★★★\\n" 				"Attack Range ★★★\\n" 	"Attack Power　★☆☆",	},// No. 2 魔理沙 A(魔符)
+		{	"Ordinary Magician\\n" 	"Marisa Kirisame (Love Symbol)\\n" 	"Illusion Laser\\n" "Master Spark\\n",			"Moving Speed ★★★\\n" 				"Attack Range ★☆☆\\n" 	"Attack Power ★★★",	},// No. 3 魔理沙 B(恋符)
+		{	"The Scarlet Devil\\n" 			"Remilia Scarlet\\n"	"Night Dance\\n"			"Bombard Night\\n",			"Moving Speed ★★☆\\n" 				"Attack Range ★★☆\\n" 	"Attack Power ★★☆",	},// No. 4 レミリア(血符)
+		{	"Dreaming Ghost\\n" 		"Yuyuko Saigyouji\\n"			"Spirit Sign\\n" 			"Ageless Dream\\n",		"Moving Speed ☆☆☆\\n" 				"Attack Range ★★☆\\n" 	"Attack Power ★★★",	},// No. 5 幽々子(符蝶)
+		{	"Fairy of the Ice\\n" 		"Cirno (Ice Fairy)\\n"			"Ice Sign\\n" 	"Icicle Fall\\n",		"Moving Speed ★★★★\\n"				"Attack Range ？？？\\n" 	"Attack Power　★★☆",	},// No. 6 チルノ A(氷符)
 	//	{	"湖上の氷精\\n" 		"チルノ (⑨符)\\n"			"アイシクルニードル\\n" 	"ガッチガチ\\n",				"移動速度★☆★☆★☆★☆★\\n" 	"攻撃範囲？？？\\n" 	"攻撃力　⑨⑨⑨",	},// No. 7 チルノ Q(⑨系)
-		{	"湖上の氷精\\n" 		"チルノ (⑨符)\\n"			"★アイスソ\ード\\n" 		"冷凍剣+99999\\n",				"移動速度★★★★★\\n" 		 	"攻撃範囲？？？\\n" 	"攻撃力　⑨⑨⑨",	},// No. 7 チルノ Q(⑨系)
-		{	"Easy\\n"				"簡単かどうかは人による。\\n",															"エンディング無し\\n"	"(全５面)", },// No. 0 easy
-		{	"Normal\\n" 			"普通な人にはハード。\\n",																"(全６面)", },// No. 1 normal
-		{	"Hard\\n"				"ハードな人には普通。\\n",																"(全６面)", },// No. 2 hard
-		{	"Lunatic\\n"			"つきが必要。\\n",																		"(全６面)", },// No. 3 lunatic
+		{	"Fairy of the Ice\\n" 		"Cirno (⑨idiot)\\n"			"★Ice Sign\\n" 		"Frozen Sword+99999\\n",				"Moving Speed ★★★★★\\n" 		 	"Attack Range ？？？\\n" 	"Attack Power ⑨⑨⑨",	},// No. 7 チルノ Q(⑨系)
+		{	"Easy\\n"				"For people who aren't good at STG's\\n",															"No ending\\n"	"(5 Stages Total)", },// No. 0 easy
+		{	"Normal\\n" 			"For most people\\n",																"(6 Stages Total)", },// No. 1 normal
+		{	"Hard\\n"				"Arcade Difficulty\\n",																"(6 Stages Total)", },// No. 2 hard
+		{	"Lunatic\\n"			"For weird people\\n",																		"(6 Stages Total)", },// No. 3 lunatic
 		// 1節目(白)																										// 2節目(黄色)
 	};/* 氷柱 == Icicle == アイシクル */
 	//
@@ -70,7 +70,7 @@ static void draw_spec_message(unsigned int set_mode)
 	// 文字を決める。													// 色を決める。 				// 描画する。
 	strcpy(my_font_text, (char *)const_player_spec_str[((aaa))][0]);	kanji_color(7);/*(白色)*/		kanji_draw();
 	strcpy(my_font_text, (char *)const_player_spec_str[((aaa))][1]);	kanji_color(14);/*(黄色)*/		kanji_draw();
-	strcpy(my_font_text, (spec_message_00_SELECT_PLAYER==set_mode)?("\\n誰が行くの？"):("\\n\\n\\n\\n\\nモードを選択してね") );
+	strcpy(my_font_text, (spec_message_00_SELECT_PLAYER==set_mode)?("\\nSelect Player"):("\\n\\n\\n\\n\\nSelect Difficulty") );
 																		kanji_color(9);/*(青/白色)*/	kanji_draw();
 }
 // "簡単に言えば、ボムゲです。"
