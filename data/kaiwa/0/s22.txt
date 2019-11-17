@@ -18,14 +18,14 @@ OBJ wait
 ;; オブジェ1に注目
 OBJ look,1
 DRAW color,4
-TEXT 道はあちらね。
+TEXT The road is over there.
 HOLD
 
 ;; オブジェ0に注目
 OBJ look,0
 DRAW color,2
 OBJ_LOAD tachie/reimu6.png,0
-TEXT うーん、どこかで見たようなお屋敷。\n何処だっけ？
+TEXT Well where is the mansion\nyou saw somewhere？
 HOLD
 
 ;; オブジェ1に注目
@@ -33,17 +33,17 @@ OBJ look,1
 DRAW color,4
 OBJ_LOAD tachie/mima3.png,1
 ;TEXT いにしえの遺跡かもよ。
-TEXT あ－ん、巫女相手ぐらいじゃ\n暴れ足りないなぁ……。
+TEXT Ahn its not enough to be rampant\nwith a shrine maiden……。
 HOLD
 ;話の流れに関係なく暴れ足りない(全シナリオ共通)
 
 ;; オブジェ0に注目
 OBJ look,0
 DRAW color,2
-TEXT いにしえの宝船？
+TEXT An ancient treasure ship?
 HOLD
 OBJ_LOAD tachie/reimu2.png,0
-TEXT そっか慧音の仕業ね。\n魅魔ありがとお。
+TEXT Its a roaring work\nthank you.
 HOLD
 
 ;霊夢は誤解してますが、元を質せば永琳のせいです。
@@ -65,7 +65,7 @@ OBJ look,1
 DRAW color,4
 OBJ_LOAD tachie/mima6.png,1
 ;TEXT 今度は巫女でもやろうかな……。
-TEXT お礼は神社の破壊ぐらいで良いわよ……。
+TEXT Thank you for destroying the shrine...
 HOLD
 
 ;; 通常退避位置[1]へ

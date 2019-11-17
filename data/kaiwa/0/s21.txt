@@ -21,32 +21,32 @@ BOSS load,2
 ;; オブジェ1に注目
 OBJ look,1
 DRAW color,4
-TEXT ふふっ、道にまよったん\nじゃないの？
+TEXT Huh\narent you lost？
 HOLD
 
 ;説明文
 DRAW color,7
 ;TEXT Revengeful Ghost悪霊\n
 ;TEXT 久遠の夢に運命を任せる精神\n
-TEXT 博麗神社の祟り神\n
+TEXT Hakurei Shrine Evil Spirit\n
 ;TEXT 忘れられた悪霊\n
-TEXT 魅魔
+TEXT Mima
 HOLD
 
 ; Revengeful Ghost==怨霊(==地縛霊)
 
 OBJ_LOAD tachie/mima1.png,1
 DRAW color,4
-TEXT あなたは、相変わらず\n修行不足のようね。
+TEXT You still seem\nto be under trained.
 HOLD
-TEXT 陰陽玉を使いこなせてる\nようには思えないわ。
+TEXT I dont think I can\nmanage Yin Yang.
 HOLD
 
 ;; オブジェ0に注目
 OBJ look,0
 DRAW color,2
 OBJ_LOAD tachie/reimu5.png,0
-TEXT ほっといてよ、\n道が迷ったのよ。
+TEXT Relieved\nI lost my way.
 HOLD
 
 ;; オブジェ1に注目
@@ -55,12 +55,12 @@ DRAW color,4
 OBJ_LOAD tachie/mima4.png,1
 ;; TEXT ンフフ、世迷言ね……。
 ;TEXT ンフフ、夜迷いごとね……。
-TEXT ンフフ、夜迷い事ね……。
+TEXT Nhufu you get lost at night ...
 HOLD
 ; (C)ZUN
 
 OBJ_LOAD tachie/mima2.png,1
-TEXT 道を教えてあげてもいいわ。\n私を倒せたらね。
+TEXT I can tell you the way\nif you can beat me.
 HOLD
 
 ;; オブジェ0に注目
@@ -68,10 +68,10 @@ OBJ look,0
 DRAW color,2
 OBJ_LOAD tachie/reimu4.png,0
 ;TEXT もう倒したから\n必要ないわ。
-TEXT あんたはもう倒したから\n必要ないわ。
+TEXT Prepare to tell me\nyou have already lost.
 HOLD
 ;TEXT それにどうせ修行の道でしょ？\n興味ないわね。
-TEXT 修行の道とかは興味ないから\nおことわりよ。
+TEXT I am not interested in\ntraining
 HOLD
 
 ;; 通常退避位置[1]へ
@@ -82,7 +82,7 @@ BGM ,23
 DRAW color,7
 ;--------12345678901234567890123456789012345678
 ;EXT \n\n　　　　　　　　　 ♪Complete Darkness
-TEXT \n\n　　　　　　 ♪少女綺想曲 ～ capriccio
+TEXT \n\n　　　　　　 ♪Shoujo Kisoukyoku ～ capriccio
 HOLD
 
 ; 全オブジェ移動完了まで待つ。

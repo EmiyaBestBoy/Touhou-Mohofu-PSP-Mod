@@ -17,7 +17,7 @@ OBJ draw,0,1
 OBJ draw,1,1
 
 DRAW color,7
-TEXT STAGE 02 迷いの竹林
+TEXT STAGE 02 Bamboo Forest of the Lost
 
 BGM ,2
 
@@ -28,7 +28,7 @@ OBJ wait
 
 DRAW color,7
 ;--------12345678901234567890123456789012345678
-TEXT \n\n　　　　BGM ロマンティック・チルドレン
+TEXT \n\n　　　　BGM Romantic Children
 ;HOLD
 
 ; タイトルセット
