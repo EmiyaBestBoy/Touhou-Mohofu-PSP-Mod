@@ -345,7 +345,7 @@ static MAIN_CALL_FUNC(stage_clear_result_screen_local_work)
 	//	cg.msg_time = byou60(5);	/* ñÒ 5 ïb */
 		cg.msg_time = (65536);	/* ñÒ 18 ï™ */
 		{
-		strcpy(my_font_text, "CHALLENGE NEXT STAGE!Å@Teenage girl praying..." );
+		strcpy(my_font_text, "CHALLENGE NEXT STAGE!Å@Girl praying..." );
 		//
 		ml_font[ML_LINE_08].x		= (40);
 		ml_font[ML_LINE_08].y		= (230);
